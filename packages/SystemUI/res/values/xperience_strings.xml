@@ -90,4 +90,10 @@
         <item quantity="one">%d device connected</item>
         <item quantity="other">%d devices connected</item>
     </plurals>
+
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+
 </resources>

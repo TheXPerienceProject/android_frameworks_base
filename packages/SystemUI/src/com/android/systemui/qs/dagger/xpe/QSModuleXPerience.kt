@@ -20,6 +20,7 @@ import com.android.systemui.qs.tileimpl.QSTileImpl
 import com.android.systemui.qs.tiles.DcDimmingTile
 import com.android.systemui.qs.tiles.CaffeineTile
 import com.android.systemui.qs.tiles.PowerShareTile
+import com.android.systemui.qs.tiles.HeadsUpTile
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -46,4 +47,9 @@ interface QSModuleXPerience {
     @StringKey(PowerShareTile.TILE_SPEC)
     fun PowerShareTile(powerShareTile: PowerShareTile): QSTileImpl<*>
 
+    /** Inject HeadsUpTile into tileMap in QSModule */
+    @Binds
+    @IntoMap
+    @StringKey(HeadsUpTile.TILE_SPEC)
+    fun bindHeadsUpTile(headsUpTile: HeadsUpTile): QSTileImpl<*>
 }
