@@ -18,6 +18,7 @@ package com.android.systemui.qs.dagger.xpe
 
 import com.android.systemui.qs.tileimpl.QSTileImpl
 import com.android.systemui.qs.tiles.DcDimmingTile
+import com.android.systemui.qs.tiles.CaffeineTile
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -26,9 +27,15 @@ import dagger.multibindings.StringKey
 @Module
 interface QSModuleXPerience {
 
-    /** Inject PowerShareTile into tileMap in QSModule */
+    /** Inject DcDimmingTile into tileMap in QSModule */
     @Binds
     @IntoMap
-    @StringKey(PowerShareTile.TILE_SPEC)
+    @StringKey(DcDimmingTile.TILE_SPEC)
     fun bindDcDimmingTile(DcDimmingTile: DcDimmingTile): QSTileImpl<*>
+
+    /** Inject CaffeineTile into tileMap in QSModule */
+    @Binds
+    @IntoMap
+    @StringKey(CaffeineTile.TILE_SPEC)
+    fun bindCaffeineTile(CaffeineTile: CaffeineTile): QSTileImpl<*>
 }
