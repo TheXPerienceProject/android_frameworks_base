@@ -80,4 +80,6 @@ interface INetworkPolicyManager {
 
     boolean isUidNetworkingBlocked(int uid, boolean meteredNetwork);
     boolean isUidRestrictedOnMeteredNetworks(int uid);
+
+    void notifyDenylistChanged(in int[] uidsAdded, in int[] uidsRemoved);
 }
