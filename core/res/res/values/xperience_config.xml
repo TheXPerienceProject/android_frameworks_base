@@ -201,4 +201,7 @@
     <string name="config_batteryProtectionSysfsNode" translatable="false">/sys/class/power_supply/battery/charging_enabled</string>
     <string name="config_batteryProtectionSuspendValue" translatable="false">0</string>
     <string name="config_batteryProtectionResumeValue" translatable="false">1</string>
+
+    <!-- Whether device has dash charging support -->
+    <bool name="config_hasDashCharger">false</bool>
 </resources>
