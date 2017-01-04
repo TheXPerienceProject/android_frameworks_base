@@ -80,7 +80,6 @@ public class BatteryStatus {
         this.temperature = temperature;
     }
 
-
     public BatteryStatus(Intent batteryChangedIntent) {
         this(batteryChangedIntent, Optional.empty());
     }
