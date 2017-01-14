@@ -39,6 +39,7 @@ public class NavigationHandle extends View implements ButtonInterface {
     private @ColorInt final int mDarkColor;
     protected final int mRadius;
     protected final int mBottom;
+    private int mVerticalShift;
     private boolean mRequiresInvalidate;
 
     public NavigationHandle(Context context) {
@@ -129,5 +130,10 @@ public class NavigationHandle extends View implements ButtonInterface {
 
     @Override
     public void setDelayTouchFeedback(boolean shouldDelay) {
+    }
+
+    public void shiftHandle(int verticalShift) {
+        mVerticalShift = verticalShift;
+        invalidate();
     }
 }
