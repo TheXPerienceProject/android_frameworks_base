@@ -42,4 +42,7 @@
 
     <!-- Title of statusbar tuner -->
     <string name="status_bar_icons">Status bar icons</string>
+
+    <!-- Name of the VoLTE/VoWiFi icon. -->
+    <string name="status_bar_ims" translatable="false">VoLTE/VoWiFi</string>
 </resources>
