@@ -897,6 +897,16 @@ public class StatusBarManagerService extends IStatusBarService.Stub implements D
     }
 
     // TODO(b/117478341): make it aware of multi-display if needed.
+    @Override
+    public void toggleCameraFlash() {
+        if (mBar != null) {
+            try {
+                mbar.toggleCameraFlash();
+            }catch (RemoteException ex) {
+            }
+        }
+    }
+
     /**
      * Disable additional status bar features. Pass the bitwise-or of the DISABLE2_* flags.
      * To re-enable everything, pass {@link #DISABLE2_NONE}.
