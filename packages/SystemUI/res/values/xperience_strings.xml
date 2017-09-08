@@ -39,6 +39,9 @@
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB tethering</string>
 
-   <!-- Volte icon tuner -->
-   <string name="xpe_volte" translatable="false" >VoLTE</string>
+    <!-- Volte icon tuner -->
+    <string name="xpe_volte" translatable="false" >VoLTE</string>
+
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Statusbar icon</string>
 </resources>
