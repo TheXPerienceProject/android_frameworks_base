@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <!--
-     Copyright (C) 2011-2021 The XPerience Project
+     Copyright (C) 2011-2021 Thje XPerience Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,17 +13,17 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
+
 -->
 <resources>
 
-    <string-array translatable="false" name="config_rebootActionsList">
-        <item>restart</item>
-        <item>reboot_recovery</item>
-        <item>reboot_bootloader</item>
+
+    <!-- Paths to the libraries that contain device specific key handlers -->
+    <string-array name="config_deviceKeyHandlerLibs" translatable="false">
     </string-array>
 
-    <!-- Device keyhandlers -->
-    <java-symbol type="array" name="config_deviceKeyHandlerLibs" />
-    <java-symbol type="array" name="config_deviceKeyHandlerClasses" />
+    <!-- Names of the key handler classes -->
+    <string-array name="config_deviceKeyHandlerClasses" translatable="false">
+    </string-array>
 
 </resources>
