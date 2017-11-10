@@ -6826,6 +6826,7 @@ public class NotificationManagerService extends SystemService {
 
     protected void doChannelWarningToast(int forUid, CharSequence toastText) {
         Binder.withCleanCallingIdentity(() -> {
+            final int defaultWarningEnabled = Build.TYPE.equals("eng") ? 1 : 0;
             final boolean warningEnabled = Settings.Global.getInt(getContext().getContentResolver(),
                     Settings.Global.SHOW_NOTIFICATION_CHANNEL_WARNINGS, 0) != 0;
             if (warningEnabled) {
