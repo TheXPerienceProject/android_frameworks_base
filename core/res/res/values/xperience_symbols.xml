@@ -15,6 +15,11 @@
 -->
 <resources>
 
+    <!-- Alert Slider -->
+    <java-symbol type="string" name="alert_slider_state_path" />
+    <java-symbol type="string" name="alert_slider_uevent_match_path" />
+    <java-symbol type="bool" name="config_hasAlertSlider" />
+
     <!-- Power Menu Reboot -->
     <java-symbol name="reboot_to_bootloader_title" type="string" />
     <java-symbol name="reboot_to_bootloader_message" type="string" />
