@@ -89,6 +89,7 @@ public class CameraDeviceImpl extends CameraDevice
 
     private static final int REQUEST_ID_NONE = -1;
     private int customOpMode = 0;
+
     // TODO: guard every function with if (!mRemoteDevice) check (if it was closed)
     private ICameraDeviceUserWrapper mRemoteDevice;
     private boolean mRemoteDeviceInit = false;
