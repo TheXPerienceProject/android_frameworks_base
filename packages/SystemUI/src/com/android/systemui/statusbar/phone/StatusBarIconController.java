@@ -16,6 +16,7 @@ package com.android.systemui.statusbar.phone;
 
 import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_ICON;
 import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_MOBILE;
+import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_NETWORK_TRAFFIC;
 import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_WIFI;
 import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_IMS;
 
@@ -52,6 +53,7 @@ import com.android.systemui.statusbar.phone.StatusBarSignalPolicy.CallIndicatorI
 import com.android.systemui.statusbar.phone.StatusBarSignalPolicy.MobileIconState;
 import com.android.systemui.statusbar.phone.StatusBarSignalPolicy.WifiIconState;
 import com.android.systemui.util.Assert;
+import com.android.systemui.statusbar.policy.NetworkTraffic;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -321,6 +323,8 @@ public interface StatusBarIconController {
                 case TYPE_IMS:
                     return addImsIcon(index, slot, holder.getImsState());
 
+                case TYPE_NETWORK_TRAFFIC:
+                    return addNetworkTraffic(index, slot);
             }
 
             return null;
@@ -354,6 +358,12 @@ public interface StatusBarIconController {
             return view;
         }
 
+        protected NetworkTraffic addNetworkTraffic(int index, String slot) {
+            NetworkTraffic view = onCreateNetworkTraffic(slot);
+            mGroup.addView(view, index, onCreateLayoutParams());
+            return view;
+        }
+
         @VisibleForTesting
         protected StatusBarMobileView addMobileIcon(int index, String slot, MobileIconState state) {
             StatusBarMobileView view = onCreateStatusBarMobileView(slot);
@@ -384,6 +394,12 @@ public interface StatusBarIconController {
             StatusBarMobileView view = StatusBarMobileView.fromContext(
                             mContext, slot,
                     mFeatureFlags.isEnabled(Flags.COMBINED_STATUS_BAR_SIGNAL_ICONS));
+            return view;
+        }
+
+        private NetworkTraffic onCreateNetworkTraffic(String slot) {
+            NetworkTraffic view = new NetworkTraffic(mContext);
+            view.setPadding(4, 0, 4, 0);
             return view;
         }
 
