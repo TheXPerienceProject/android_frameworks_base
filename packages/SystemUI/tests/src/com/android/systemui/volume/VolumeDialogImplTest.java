@@ -57,6 +57,7 @@ import com.android.systemui.statusbar.policy.DeviceProvisionedController;
 import com.android.systemui.util.DeviceConfigProxyFake;
 import com.android.systemui.util.concurrency.FakeExecutor;
 import com.android.systemui.util.time.FakeSystemClock;
+import com.android.systemui.tuner.TunerService;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -99,6 +100,7 @@ public class VolumeDialogImplTest extends SysuiTestCase {
     @Mock
     ActivityStarter mActivityStarter;
     @Mock
+    TunerService mTunerService;
     InteractionJankMonitor mInteractionJankMonitor;
     @Mock
     private DumpManager mDumpManager;
@@ -121,6 +123,7 @@ public class VolumeDialogImplTest extends SysuiTestCase {
                 mMediaOutputDialogFactory,
                 mVolumePanelFactory,
                 mActivityStarter,
+                mTunerService,
                 mInteractionJankMonitor,
                 mDeviceConfigProxy,
                 mExecutor,
