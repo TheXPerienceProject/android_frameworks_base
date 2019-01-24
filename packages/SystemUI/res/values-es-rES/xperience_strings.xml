@@ -38,11 +38,32 @@
     <string name="accessibility_quick_settings_heads_up_changed_off">Desactivando notificaciones emergentes.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Notificaciones emergentes activadas.</string>
     <!-- HW Keys Tile -->
+    <string name="accessibility_quick_settings_hwkeys_on">Teclas físicas encendidas</string>
+    <string name="accessibility_quick_settings_hwkeys_off">Teclas físicas desactivadas</string>
+    <string name="quick_settings_hwkeys_label">Teclas físicas</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time">Cargando con Dash (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> para completarse)</string>
+    <string name="keyguard_plugged_in_dash_charging">Carga Rápida Dash</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_turbo_power_time">TurboPower conectado (<xliff:g id="charging_time_left">%s</xliff:g> hasta completar)</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">TurboPower conectado</string>
     <!-- Omni Weather -->
+    <string name="omnijaws_service_error">Error</string>
+    <string name="omnijaws_service_unkown">No hay datos metereológicos</string>
+    <string name="omnijaws_service_error_long">Error al cargar datos meteorológicos</string>
+    <string name="omnijaws_service_disabled">Servicio deshabilitado</string>
+    <string name="omnijaws_detail_header">Clima</string>
+    <string name="omnijaws_label_default">Clima</string>
+    <string name="omnijaws_current_text">Ahora</string>
+    <string name="omnijaws_package_not_available">OmniJaws no está disponible</string>
+    <string name="omnijaws_service_last_update">Última actualización:</string>
     <!-- Screen pinning dialog description. (for devices without navbar) -->
+    <string name="screen_pinning_description_no_navbar">Esto fija la pantalla en esta vista hasta que es liberada. Pulsa y Mantén presionado el para liberarla.</string>
     <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
+    <string name="screen_pinning_toast_no_navbar">Para anular la fijación, mantenga presionado el botón de atrás</string>
     <!-- Button that controls inversion of layout of navigation bar -->
+    <string name="nav_bar_layout_inverse">Diseño invertido</string>
     <!-- Smart Pixels QS Tile -->
+    <string name="quick_settings_smart_pixels">Píxeles inteligentes</string>
+    <string name="quick_settings_smart_pixels_on_power_save">Habilitar automáticamente Smart Pixels</string>
 </resources>
