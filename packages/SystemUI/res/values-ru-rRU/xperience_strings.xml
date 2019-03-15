@@ -18,16 +18,52 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Advanced powermenu -->
+    <string name="global_action_restart_advanced">Варианты перезагрузки</string>
+    <string name="global_action_restart_system">Перезагрузка</string>
+    <string name="global_action_restart_recovery">Меню восстановления</string>
+    <string name="global_action_restart_bootloader">Загрузчик</string>
+    <string name="global_action_restart_ui">Интерфейс системы</string>
+    <string name="statusbar_items_title">Значки строки состояния</string>
     <!--Tiles-->
     <!-- Caffeine QS tile -->
+    <string name="quick_settings_caffeine_label">Запрет сна</string>
+    <string name="accessibility_quick_settings_caffeine_off">Запрет сна выкл.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Запрет сна вкл.</string>
     <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">USB-модем</string>
     <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Всплывающие уведомления</string>
+    <string name="accessibility_quick_settings_heads_up_off">Всплывающие уведомления выкл.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Всплывающие уведомления вкл.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Всплывающие уведомления были выключены.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Всплывающие уведомления включены.</string>
     <!-- HW Keys Tile -->
+    <string name="accessibility_quick_settings_hwkeys_on">Аппаратные кнопки включены</string>
+    <string name="accessibility_quick_settings_hwkeys_off">Аппаратные кнопки выключены</string>
+    <string name="quick_settings_hwkeys_label">Аппаратные кнопки</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time">Быстрая зарядка (<xliff:g id="charging_time_left" example="4 часа и 2 минуты">%s</xliff:g> до окончания)</string>
+    <string name="keyguard_plugged_in_dash_charging">Быстрая зарядка</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_turbo_power_time">Быстрая зарядка активна (<xliff:g id="charging_time_left">%s</xliff:g> до полной зарядки)</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">Быстрая зарядка подключена</string>
     <!-- Omni Weather -->
+    <string name="omnijaws_service_error">Ошибка</string>
+    <string name="omnijaws_service_unkown">Нет данных о погоде</string>
+    <string name="omnijaws_service_error_long">Ошибка при загрузке данных о погоде</string>
+    <string name="omnijaws_service_disabled">Служба отключена</string>
+    <string name="omnijaws_detail_header">Погода</string>
+    <string name="omnijaws_label_default">Погода</string>
+    <string name="omnijaws_current_text">Сейчас</string>
+    <string name="omnijaws_package_not_available">OmniJaws недоступен</string>
+    <string name="omnijaws_service_last_update">Последнее обновление:</string>
     <!-- Screen pinning dialog description. (for devices without navbar) -->
+    <string name="screen_pinning_description_no_navbar">Это будет активным до открепления. Нажите &amp; держите «Назад» для открепления.</string>
     <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
+    <string name="screen_pinning_toast_no_navbar">Чтобы открепить экран, нажмите &amp; удерживайте кнопку «Назад»</string>
     <!-- Button that controls inversion of layout of navigation bar -->
+    <string name="nav_bar_layout_inverse">Инвертировать порядок кнопок</string>
     <!-- Smart Pixels QS Tile -->
+    <string name="quick_settings_smart_pixels">Умные пиксели</string>
+    <string name="quick_settings_smart_pixels_on_power_save">Автоматическое включение Умных Пикселей</string>
 </resources>
