@@ -19,6 +19,7 @@
     <java-symbol type="string" name="alert_slider_state_path" />
     <java-symbol type="string" name="alert_slider_uevent_match_path" />
     <java-symbol type="bool" name="config_hasAlertSlider" />
+    <java-symbol type="integer" name="config_alertSliderLocation" />
 
     <!-- Power Menu Reboot -->
     <java-symbol name="reboot_to_bootloader_title" type="string" />
