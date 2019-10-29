@@ -167,4 +167,8 @@
     <string name="config_batterymeterLandPowersavePathMiUIPill" translatable="false">@string/config_batterymeterLandPerimeterPathMiUIPill</string>
     <string name="config_batterymeterLandErrorPerimeterPathMiUIPill" translatable="false">@string/config_batterymeterLandPerimeterPathMiUIPill</string>
 
+    <!-- Defines the sysfs attribute path used by pocket bridge
+         to communicate pocket state to the pocket judge kernel driver. -->
+    <string name="config_pocketBridgeSysfsInpocket"></string>
+
 </resources>
