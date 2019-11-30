@@ -99,11 +99,19 @@
         android:title="@string/quick_settings_camera_label"
         android:icon="@drawable/ic_statusbar_camera" />
 
-    <com.android.systemui.tuner.BatteryPreference
-        android:title="@string/battery"
+    <!-- other weird signal stuff -->
+
+    <com.android.systemui.tuner.StatusBarSwitch
         android:icon="@*android:drawable/ic_battery"
-        android:summary="%s"
-        android:entries="@array/battery_options" />
+        android:key="battery"
+        android:title="@string/battery" />
+
+    <com.android.systemui.tuner.StatusBarSwitch
+        android:key="alarm_clock"
+        android:title="@string/status_bar_alarm"
+        android:icon="@drawable/ic_statusbar_alarm" />
+
+    <!-- secure -->
 
     <com.android.systemui.tuner.ClockPreference
         android:title="@string/tuner_time"
