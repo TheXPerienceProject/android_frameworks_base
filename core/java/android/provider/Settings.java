@@ -11441,6 +11441,16 @@ public final class Settings {
         public static final String FEATURE_TOUCH_HOVERING = "feature_touch_hovering";
 
         /**
+         * Display style of the status bar battery information
+         * 0: Display the battery an icon in portrait mode
+         * 1: Display the battery as a circle
+         * 2: Display the battery as plain text
+         * default: 0
+         * @hide
+         */
+        public static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
+
+        /**
          * @hide
          */
         public static final String FACE_UNLOCK_METHOD = "face_unlock_method";
