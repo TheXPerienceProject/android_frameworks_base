@@ -207,7 +207,7 @@ public class PowerShareTile extends QSTileImpl<BooleanState>
 
     @Override
     public int getMetricsCategory() {
-        return LineageMetricsLogger.RAINBOW_UNICORN;
+        return MetricsEvent.QS_CUSTOM;
     }
 
     @Override
