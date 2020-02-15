@@ -989,6 +989,10 @@ final class DefaultPermissionGrantPolicy {
 
         // DownloadProviders
         grantSystemFixedPermissionsToSystemPackage(pm,"com.android.providers.downloads.DownloadProvider", userId, STORAGE_PERMISSIONS);
+
+        // XPerience Updater
+        grantSystemFixedPermissionsToSystemPackage(pm,"org.lineageos.updater", userId, STORAGE_PERMISSIONS);
+        grantSystemFixedPermissionsToSystemPackage(pm,"mx.xperience.updater", userId, STORAGE_PERMISSIONS);
     }
 
     private String getDefaultSystemHandlerActivityPackageForCategory(PackageManagerWrapper pm,
