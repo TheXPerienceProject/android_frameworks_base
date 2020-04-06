@@ -38,4 +38,7 @@
     <bool name="flag_smartspace">true</bool>
     <string name="config_systemUIFactoryComponent">org.pixelexperience.systemui.SystemUIGoogleFactory</string>
     <string name="config_systemUIVendorServiceComponent">org.pixelexperience.systemui.GoogleServices</string>
+
+    <!-- Whether usage of the proximity sensor during doze is supported -->
+    <bool name="doze_proximity_sensor_supported">true</bool>
 </resources>
