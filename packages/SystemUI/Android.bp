@@ -179,6 +179,7 @@ android_library {
         "LowLightDreamLib",
         "motion_tool_lib",
         "bcsmartspace-google",
+        "vendor.xperience.powershare-V1.0-java",
     ],
     manifest: "AndroidManifest.xml",
     libs: [
@@ -322,6 +323,7 @@ android_library {
         "motion_tool_lib",
         "androidx.core_core-animation-testing-nodeps",
         "androidx.compose.ui_ui",
+        "vendor.xperience.powershare-V1.0-java",
     ],
 }
 
