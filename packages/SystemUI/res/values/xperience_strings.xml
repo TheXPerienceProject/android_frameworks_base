@@ -49,4 +49,10 @@
     <!-- Name of the roaming status bar icon. -->
     <string name="status_bar_roaming">Roaming indicator</string>
 
+    <!-- PowerShare QS tile -->
+    <string name="quick_settings_powershare_label">PowerShare</string>
+    <string name="quick_settings_powershare_off_powersave_label">PowerShare off\nBattery saver</string>
+    <string name="quick_settings_powershare_off_low_battery_label">PowerShare off\nBattery too low</string>
+    <string name="quick_settings_powershare_enabled_label">PowerShare is enabled</string>
+
 </resources>
