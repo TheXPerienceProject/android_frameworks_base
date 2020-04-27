@@ -174,11 +174,6 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
         @Override
         public void onChange(boolean selfChange, Uri uri) {
             super.onChange(selfChange, uri);
-            if (TextUtils.equals(uri.getLastPathSegment(),
-                    Settings.Global.BATTERY_ESTIMATES_LAST_UPDATE_TIME)) {
-                // update the text for sure if the estimate in the cache was updated
-                mView.updatePercentText();
-            }
         }
     }
 }
