@@ -54,6 +54,7 @@ import com.android.systemui.util.leak.GarbageMonitor;
 import com.android.systemui.qs.tiles.CaffeineTile;
 import com.android.systemui.qs.tiles.AmbientDisplayTile;
 import com.android.systemui.qs.tiles.UsbTetherTile;
+import com.android.systemui.qs.tiles.DcDimmingTile;
 
 import org.pixelexperience.systemui.qs.tiles.BatterySaverTileGoogle;
 import org.pixelexperience.systemui.qs.tiles.ReverseChargingTile;
@@ -93,6 +94,7 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<GarbageMonitor.MemoryTile> memoryTileProvider,
             Provider<UiModeNightTile> uiModeNightTileProvider,
             Provider<ScreenRecordTile> screenRecordTileProvider,
+            Provider<DcDimmingTile> dcDimTileProvider,
             Provider<ReduceBrightColorsTile> reduceBrightColorsTileProvider,
             Provider<CameraToggleTile> cameraToggleTileProvider,
             Provider<MicrophoneToggleTile> microphoneToggleTileProvider,
@@ -129,6 +131,7 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 memoryTileProvider,
                 uiModeNightTileProvider,
                 screenRecordTileProvider,
+                dcDimTileProvider,
                 reduceBrightColorsTileProvider,
                 cameraToggleTileProvider,
                 microphoneToggleTileProvider,
