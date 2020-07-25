@@ -116,6 +116,8 @@ import com.android.systemui.wmshell.BubblesManager;
 import com.android.systemui.R;
 import com.android.wm.shell.bubbles.Bubbles;
 
+import com.android.systemui.qs.dagger.xpe.QSModuleXPerience;
+
 import java.util.Optional;
 import java.util.concurrent.Executor;
 
@@ -185,7 +187,8 @@ import dagger.Provides;
             UserModule.class,
             UtilModule.class,
             NoteTaskModule.class,
-            WalletModule.class
+            WalletModule.class,
+            QSModuleXPerience
         },
         subcomponents = {
             CentralSurfacesComponent.class,
