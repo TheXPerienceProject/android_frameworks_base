@@ -2259,6 +2259,17 @@ public class StatusBarManagerService extends IStatusBarService.Stub implements D
         }
     }
 
+    @Override
+    public void startAssist(Bundle args) {
+        enforceStatusBarService();
+        if (mBar != null) {
+            try {
+                mBar.startAssist(args);
+            } catch (RemoteException ex) {
+            }
+        }
+    }
+
     /** @hide */
     public void passThroughShellCommand(String[] args, FileDescriptor fd) {
         enforceStatusBarOrShell();
