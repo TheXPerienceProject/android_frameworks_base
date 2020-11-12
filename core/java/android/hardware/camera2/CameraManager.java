@@ -1964,6 +1964,7 @@ public final class CameraManager {
 
         private String[] extractCameraIdListLocked() {
             boolean exposeAuxCamera = false;
+	    int size = exposeAuxCamera ? mDeviceStatus.size() : 2;
             String packageName = ActivityThread.currentOpPackageName();
             String packageList = SystemProperties.get("vendor.camera.aux.packagelist");
             if (packageList.length() > 0) {
@@ -1977,8 +1978,8 @@ public final class CameraManager {
                 }
             }
 	    List<String> cameraIdList = new ArrayList<>();
-            for (int i = 0; i < mDeviceStatus.size(); i++) {
-                if(!exposeAuxCamera && (i == 2)) break;
+            for (int i = 0; i < size; i++) {
+//                if(!exposeAuxCamera && (i == 2)) break;
                 int status = mDeviceStatus.valueAt(i);
                 if (status == ICameraServiceListener.STATUS_NOT_PRESENT
                         || status == ICameraServiceListener.STATUS_ENUMERATING) {
