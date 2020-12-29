@@ -213,4 +213,7 @@
 
     <!-- Whether device has Xiaomi Mi Turbo charging support -->
     <bool name="config_hasMiTurboCharger">false</bool>
+
+    <!-- Whether device has turbo power charging support -->
+    <bool name="config_hasTurboPowerCharger">false</bool>
 </resources>

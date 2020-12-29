@@ -31,6 +31,7 @@ import static android.os.BatteryManager.EXTRA_DASH_CHARGER;
 import static android.os.BatteryManager.EXTRA_WARP_CHARGER;
 import static android.os.BatteryManager.EXTRA_VOOC_CHARGER;
 import static android.os.BatteryManager.EXTRA_MI_TURBO_CHARGER;
+import static android.os.BatteryManager.EXTRA_TURBO_POWER;
 
 import android.content.Context;
 import android.content.Intent;
@@ -53,6 +54,7 @@ public class BatteryStatus {
     public static final int CHARGING_WARP = 4;
     public static final int CHARGING_VOOC = 5;
     public static final int CHARGING_MI_TURBO_CHARGER = 6;
+    public static final int CHARGING_TURBO_POWER = 7;
 
     public final int status;
     public final int level;
@@ -65,11 +67,13 @@ public class BatteryStatus {
     public final boolean warpChargeStatus;
     public final boolean voocChargeStatus;
     public final boolean miturboChargerStatus;
+    public final boolean turboPowerStatus;
 
     public BatteryStatus(int status, int level, int plugged, int health,
             int maxChargingWattage,
             boolean dashChargeStatus, boolean warpChargeStatus, 
-            boolean voocChargeStatus, boolean miturboChargerStatus, boolean present) {
+            boolean voocChargeStatus, boolean miturboChargerStatus, 
+            boolean turboPowerStatus, boolean present) {
         this.status = status;
         this.level = level;
         this.plugged = plugged;
@@ -78,7 +82,8 @@ public class BatteryStatus {
         this.dashChargeStatus = dashChargeStatus;
         this.warpChargeStatus = warpChargeStatus;
         this.voocChargeStatus = voocChargeStatus;
-        this.miturboChargerStatus= miturboChargerStatus;
+        this.miturboChargerStatus = miturboChargerStatus;
+        this.turboPowerStatus = turboPowerStatus;
         this.present = present;
     }
 
@@ -91,6 +96,7 @@ public class BatteryStatus {
         warpChargeStatus = batteryChangedIntent.getBooleanExtra(EXTRA_WARP_CHARGER, false);
         voocChargeStatus = batteryChangedIntent.getBooleanExtra(EXTRA_VOOC_CHARGER, false);
         miturboChargerStatus = batteryChangedIntent.getBooleanExtra(EXTRA_MI_TURBO_CHARGER, false);
+        turboPowerStatus = batteryChangedIntent.getBooleanExtra(EXTRA_TURBO_POWER, false);
         present = batteryChangedIntent.getBooleanExtra(EXTRA_PRESENT, true);
 
         final int maxChargingMicroAmp = batteryChangedIntent.getIntExtra(EXTRA_MAX_CHARGING_CURRENT,
@@ -193,6 +199,7 @@ public class BatteryStatus {
                 warpChargeStatus ? CHARGING_WARP :
                 voocChargeStatus ? CHARGING_VOOC :
                 miturboChargerStatus ? CHARGING_MI_TURBO_CHARGER :
+                turboPowerStatus ? CHARGING_TURBO_POWER :
                 maxChargingWattage <= 0 ? CHARGING_UNKNOWN :
                 maxChargingWattage < slowThreshold ? CHARGING_SLOWLY :
                         maxChargingWattage > fastThreshold ? CHARGING_FAST :
