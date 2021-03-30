@@ -130,6 +130,7 @@ public class PhoneStatusBarPolicy
     private final DateFormatUtil mDateFormatUtil;
     private final TelecomManager mTelecomManager;
 
+    private final Context mContext;
     private final Handler mHandler;
     private final CastController mCast;
     private final HotspotController mHotspot;
@@ -170,7 +171,7 @@ public class PhoneStatusBarPolicy
     private NfcAdapter mAdapter;
 
     @Inject
-    public PhoneStatusBarPolicy(StatusBarIconController iconController,
+    public PhoneStatusBarPolicy(Context context,StatusBarIconController iconController,
             CommandQueue commandQueue, BroadcastDispatcher broadcastDispatcher,
             @Main Executor mainExecutor, @UiBackground Executor uiBgExecutor, @Main Looper looper,
             @Main Resources resources, CastController castController,
@@ -189,6 +190,7 @@ public class PhoneStatusBarPolicy
             RingerModeTracker ringerModeTracker,
             PrivacyItemController privacyItemController,
             PrivacyLogger privacyLogger) {
+        mContext = context;
         mIconController = iconController;
         mCommandQueue = commandQueue;
         mBroadcastDispatcher = broadcastDispatcher;
