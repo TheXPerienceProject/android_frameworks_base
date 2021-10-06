@@ -121,6 +121,8 @@ android_library {
         "lottie",
         "faceunlock_framework",
         "tensorflowlite_java",
+        "colorkt",
+        "themelib",
     ],
     manifest: "AndroidManifest.xml",
 
