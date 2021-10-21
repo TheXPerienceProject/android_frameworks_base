@@ -61,6 +61,7 @@ import com.android.systemui.statusbar.SysuiStatusBarStateController;
 import com.android.systemui.statusbar.VibratorHelper;
 import com.android.systemui.statusbar.notification.stack.NotificationStackScrollLayoutController;
 import com.android.systemui.statusbar.phone.dagger.CentralSurfacesComponent;
+import com.android.systemui.statusbar.policy.FlashlightController;
 import com.android.systemui.statusbar.policy.DeviceProvisionedController;
 import com.android.systemui.statusbar.policy.FlashlightController;
 import com.android.systemui.statusbar.policy.HeadsUpManager;
@@ -97,12 +98,12 @@ public class CentralSurfacesCommandQueueCallbacks implements CommandQueue.Callba
     private final VibratorHelper mVibratorHelper;
     private final Optional<Vibrator> mVibratorOptional;
     private final LightBarController mLightBarController;
+    private final FlashlightController mFlashlightController;
     private final DisableFlagsLogger mDisableFlagsLogger;
     private final int mDisplayId;
     private final FlashlightController mFlashlightController;
     private final boolean mVibrateOnOpening;
     private final VibrationEffect mCameraLaunchGestureVibrationEffect;
-
 
     private static final VibrationAttributes HARDWARE_FEEDBACK_VIBRATION_ATTRIBUTES =
             VibrationAttributes.createForUsage(VibrationAttributes.USAGE_HARDWARE_FEEDBACK);
@@ -133,6 +134,7 @@ public class CentralSurfacesCommandQueueCallbacks implements CommandQueue.Callba
             VibratorHelper vibratorHelper,
             Optional<Vibrator> vibratorOptional,
             LightBarController lightBarController,
+            FlashlightController flashlightController,
             DisableFlagsLogger disableFlagsLogger,
             @DisplayId int displayId,
             FlashlightController flashlightController) {
@@ -160,6 +162,7 @@ public class CentralSurfacesCommandQueueCallbacks implements CommandQueue.Callba
         mVibratorHelper = vibratorHelper;
         mVibratorOptional = vibratorOptional;
         mLightBarController = lightBarController;
+        mFlashlightController = flashlightController;
         mDisableFlagsLogger = disableFlagsLogger;
         mDisplayId = displayId;
         mFlashlightController = flashlightController;
