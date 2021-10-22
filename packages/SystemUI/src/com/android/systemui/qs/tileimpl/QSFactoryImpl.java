@@ -32,7 +32,6 @@ import com.android.systemui.qs.tiles.BluetoothTile;
 import com.android.systemui.qs.tiles.CameraToggleTile;
 import com.android.systemui.qs.tiles.CastTile;
 import com.android.systemui.qs.tiles.CellularTile;
-import com.android.systemui.qs.tiles.CaffeineTile;
 import com.android.systemui.qs.tiles.ColorInversionTile;
 import com.android.systemui.qs.tiles.DataSaverTile;
 import com.android.systemui.qs.tiles.DeviceControlsTile;
@@ -91,7 +90,6 @@ public class QSFactoryImpl implements QSFactory {
     private final Provider<DeviceControlsTile> mDeviceControlsTileProvider;
     private final Provider<AlarmTile> mAlarmTileProvider;
     private final Provider<QuickAccessWalletTile> mQuickAccessWalletTileProvider;
-    private final Provider<CaffeineTile> mCaffeineTileProvider;
 
     private final Lazy<QSHost> mQsHostLazy;
     private final Provider<CustomTile.Builder> mCustomTileBuilderProvider;
@@ -126,8 +124,7 @@ public class QSFactoryImpl implements QSFactory {
             Provider<MicrophoneToggleTile> microphoneToggleTileProvider,
             Provider<DeviceControlsTile> deviceControlsTileProvider,
             Provider<AlarmTile> alarmTileProvider,
-            Provider<QuickAccessWalletTile> quickAccessWalletTileProvider
-            Provider<CaffeineTile> caffeineTileProvider) {
+            Provider<QuickAccessWalletTile> quickAccessWalletTileProvider) {
         mQsHostLazy = qsHostLazy;
         mCustomTileBuilderProvider = customTileBuilderProvider;
 
@@ -158,7 +155,6 @@ public class QSFactoryImpl implements QSFactory {
         mDeviceControlsTileProvider = deviceControlsTileProvider;
         mAlarmTileProvider = alarmTileProvider;
         mQuickAccessWalletTileProvider = quickAccessWalletTileProvider;
-        mCaffeineTileProvider = caffeineTileProvider;
     }
 
     public QSTile createTile(String tileSpec) {
@@ -225,8 +221,6 @@ public class QSFactoryImpl implements QSFactory {
                 return mAlarmTileProvider.get();
             case "wallet":
                 return mQuickAccessWalletTileProvider.get();
-            case "caffeine":
-                return mCaffeineTileProvider.get();
         }
 
         // Custom tiles
