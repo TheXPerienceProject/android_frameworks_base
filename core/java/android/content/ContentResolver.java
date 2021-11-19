@@ -31,6 +31,7 @@ import android.app.ActivityManager;
 import android.app.ActivityThread;
 import android.app.AppGlobals;
 import android.app.UriGrantsManager;
+import android.app.compat.gms.GmsCompat;
 import android.compat.annotation.UnsupportedAppUsage;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -71,6 +72,7 @@ import android.util.Size;
 import android.util.SparseArray;
 
 import com.android.internal.annotations.GuardedBy;
+import com.android.internal.gmscompat.PlayStoreHooks;
 import com.android.internal.util.MimeIconUtils;
 
 import dalvik.system.CloseGuard;
@@ -2180,6 +2182,9 @@ public abstract class ContentResolver implements ContentInterface {
             @Nullable ContentValues values, @Nullable Bundle extras) {
         android.util.SeempLog.record_uri(37, url);
         Objects.requireNonNull(url, "url");
+        if (GmsCompat.isPlayStore()) {
+            PlayStoreHooks.filterContentValues(url, values);
+        }
 
         try {
             if (mWrapped != null) return mWrapped.insert(url, values, extras);
