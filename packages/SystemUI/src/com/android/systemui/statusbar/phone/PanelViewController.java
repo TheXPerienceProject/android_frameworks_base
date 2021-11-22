@@ -1359,7 +1359,7 @@ public abstract class PanelViewController {
                         onTrackingStarted();
                     }
                     if (isFullyCollapsed() && !mHeadsUpManager.hasPinnedHeadsUp()
-                            && !mCentralSurfaces.isBouncerShowing() && !mIsSbDoubleTapEnabled) {
+                            && !mCentralSurfaces.isBouncerShowing()) {
                         startOpening(event);
                     }
                     break;
