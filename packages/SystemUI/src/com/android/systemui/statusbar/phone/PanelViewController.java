@@ -203,6 +203,7 @@ public abstract class PanelViewController {
     protected final SystemClock mSystemClock;
 
     protected boolean mIsSbDoubleTapEnabled;
+    protected boolean mIsDoubleTapNoLandscapeEnabled;
 
     protected abstract void onExpandingFinished();
 
