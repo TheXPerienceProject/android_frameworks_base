@@ -4102,12 +4102,20 @@ public class NotificationPanelViewController extends PanelViewController {
         updateMaxDisplayedNotifications(true);
     }
 
+    private boolean isLandscape() {
+        return mView.getContext().getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+    }
+
     public void setLockscreenDoubleTapToSleep(boolean isDoubleTapEnabled) {
         mIsLockscreenDoubleTapEnabled = isDoubleTapEnabled;
     }
 
     public void setSbDoubleTapToSleep(boolean isDoubleTapEnabled) {
         mIsSbDoubleTapEnabled = isDoubleTapEnabled;
+    }
+
+    public void setSbDoubleTapNoLandscape(boolean isDouleTapNoLandscapeEnabled) {
+        mIsDoubleTapNoLandscapeEnabled = isDouleTapNoLandscapeEnabled;
     }
 
     public void setAlpha(float alpha) {
@@ -4244,7 +4252,8 @@ public class NotificationPanelViewController extends PanelViewController {
                 if ((mIsLockscreenDoubleTapEnabled && !mPulsing && !mDozing
                         && mBarState == StatusBarState.KEYGUARD) ||
                         (!mQsExpanded && mIsSbDoubleTapEnabled
-                        && event.getY() < mStatusBarHeaderHeight)) {
+                        && event.getY() < mStatusBarHeaderHeight
+                        && !(mIsDoubleTapNoLandscapeEnabled && isLandscape()))) {
                     mDoubleTapToSleepGesture.onTouchEvent(event);
                 }
 
