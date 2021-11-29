@@ -5599,6 +5599,12 @@ public final class Settings {
                 "high_touch_sensitivity_enable";
 
         /**
+         * Controls whether double tap gesture is enabled in landscape.
+         * @hide
+         */
+        public static final String DOUBLE_TAP_NO_LANDSCAPE = "double_tap_no_landscape";
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -5741,6 +5747,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK);
             PRIVATE_SETTINGS.add(HIGH_TOUCH_POLLING_RATE_ENABLE);
             PRIVATE_SETTINGS.add(HIGH_TOUCH_SENSITIVITY_ENABLE);
+            PRIVATE_SETTINGS.add(DOUBLE_TAP_NO_LANDSCAPE);
         }
 
         /**
@@ -9690,7 +9697,7 @@ public final class Settings {
         public static final String ATTENTIVE_TIMEOUT = "attentive_timeout";
 
         /**
-         * Controls whether double tap to wake is enabled.
+         * Controls whether double tap gesture is enabled.
          * @hide
          */
         @Readable

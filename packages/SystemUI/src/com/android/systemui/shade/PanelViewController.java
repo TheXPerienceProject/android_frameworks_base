@@ -210,6 +210,7 @@ public abstract class PanelViewController {
 
     protected final ShadeLogger mShadeLog;
     protected boolean mIsSbDoubleTapEnabled;
+    protected boolean mIsDoubleTapNoLandscapeEnabled;
 
     protected abstract void onExpandingFinished();
 

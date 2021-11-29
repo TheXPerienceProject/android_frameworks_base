@@ -4006,13 +4006,18 @@ public class CentralSurfacesImpl extends CoreStartable implements
             resolver.registerContentObserver(Settings.Secure.getUriFor(
                     Settings.Secure.DOUBLE_TAP_TO_WAKE),
                     false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.DOUBLE_TAP_NO_LANDSCAPE),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
         public void onChange(boolean selfChange, Uri uri) {
             super.onChange(selfChange, uri);
             if (uri.equals(Settings.Secure.getUriFor(
-                    Settings.Secure.DOUBLE_TAP_TO_WAKE))) {
+                    Settings.Secure.DOUBLE_TAP_TO_WAKE))
+                    || uri.equals(Settings.System.getUriFor(
+                    Settings.System.DOUBLE_TAP_NO_LANDSCAPE))) {
                 setDoubleTapToSleepGesture();
             }
         }
