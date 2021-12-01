@@ -16,8 +16,23 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Power Menu -->
+    <string name="global_action_reboot">Mulai ulang</string>
+    <string name="global_action_reboot_more">Memulai ulang\u2026</string>
+    <string name="global_action_reboot_sub">Sistem</string>
+    <string name="global_action_reboot_recovery">Pemulihan</string>
+    <string name="global_action_reboot_bootloader">Bootloader</string>
+    <string name="global_action_settings">Setelan</string>
     <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">Batas Waktu Layar</string>
+    <string name="accessibility_quick_settings_caffeine_off">Batas Waktu Layar dimatikan</string>
+    <string name="accessibility_quick_settings_caffeine_on">Batas Waktu Layar diaktifkan</string>
     <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Tampilan Ambien</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Tampilan ambien mati.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Tampilan ambien aktif.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Layar ambien dimatikan.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Tampilan ambien diaktifkan.</string>
     <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">Tethering USB</string>
     <!-- Volte icon tuner -->
 </resources>
