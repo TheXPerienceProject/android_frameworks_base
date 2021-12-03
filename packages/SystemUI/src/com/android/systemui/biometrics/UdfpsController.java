@@ -107,6 +107,7 @@ import kotlin.Unit;
 @SysUISingleton
 public class UdfpsController implements DozeReceiver {
     private static final String TAG = "UdfpsController";
+    private static final String PULSE_ACTION = "com.android.systemui.doze.pulse";
     private static final long AOD_INTERRUPT_TIMEOUT_MILLIS = 1000;
 
     // Minimum required delay between consecutive touch logs in milliseconds.
