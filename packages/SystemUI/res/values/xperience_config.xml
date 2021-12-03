@@ -32,4 +32,8 @@
 
     <!-- Doze: does the long press sensor need a proximity check? -->
     <bool name="doze_long_press_proximity_check">false</bool>
+
+    <!-- Whether to pulse onFingerDown actions instead
+        of waking the screen while the screen is off or in lpm. -->
+    <bool name="config_pulseOnFingerDown">false</bool>
 </resources>
