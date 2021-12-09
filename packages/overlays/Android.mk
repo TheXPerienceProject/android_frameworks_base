@@ -56,6 +56,11 @@ LOCAL_REQUIRED_MODULES := \
     IconPackRoundedSettingsOverlay \
     IconPackRoundedSystemUIOverlay \
     IconPackRoundedThemePickerOverlay \
+    IconPackPUIAndroidOverlay \
+    IconPackPUILauncherOverlay \
+    IconPackPUISettingsOverlay \
+    IconPackPUISystemUIOverlay \
+    IconPackPUIThemePickerOverlay \
     IconPackOOSAndroidOverlay \
     IconPackOOSLauncherOverlay \
     IconPackOOSSettingsOverlay \
