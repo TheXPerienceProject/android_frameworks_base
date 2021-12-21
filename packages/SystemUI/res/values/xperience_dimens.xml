@@ -50,4 +50,8 @@
     <dimen name="status_bar_battery_icon_width_landscape_origami">20.0dip</dimen>
     <dimen name="status_bar_battery_icon_width_landscape_miui_pill">24.0dip</dimen>
 
+    <!-- Udfps fingerprint animation -->
+    <dimen name="udfps_animation_size">280dp</dimen>
+    <dimen name="udfps_animation_offset">0dp</dimen>
+
 </resources>
