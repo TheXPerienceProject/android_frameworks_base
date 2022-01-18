@@ -7439,5 +7439,9 @@ message MetricsEvent {
     // END OF AOSP CONSTANTS
     //Rainbow unicorn xpe
     RAINBOW_UNICORN = 3000;
+
+    // OPEN: Settings > Display > Full screen apps
+    // OS: T
+    DISPLAY_CUTOUT_FORCE_FULLSCREEN = 1999;
   }
 }
