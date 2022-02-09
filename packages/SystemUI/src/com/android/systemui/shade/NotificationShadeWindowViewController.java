@@ -457,7 +457,7 @@ public class NotificationShadeWindowViewController {
 
     public void setDoubleTapToSleepGesture() {
         boolean isDoubleTapToWakeEnabled = Settings.Secure.getIntForUser(mView.getContext().getContentResolver(),
-                Settings.Secure.DOUBLE_TAP_TO_WAKE, 0, UserHandle.USER_CURRENT) == 1;
+                Settings.Secure.DOUBLE_TAP_TO_WAKE, 1, UserHandle.USER_CURRENT) == 1;
         boolean isDoubleTapNoLandscapeEnabled = Settings.System.getIntForUser(mView.getContext().getContentResolver(),
                 Settings.System.DOUBLE_TAP_NO_LANDSCAPE, 0, UserHandle.USER_CURRENT) == 1;
         if (mNotificationPanelViewController != null) {
