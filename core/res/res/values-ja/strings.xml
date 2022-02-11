@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"顔認証または画面ロックの使用"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"続行するには顔認証を使用してください"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"続行するには、顔認証または画面ロックを使用してください"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"エラーが発生しました。もう一度お試しください。"</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"顔アイコン"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"同期設定の読み取り"</string>

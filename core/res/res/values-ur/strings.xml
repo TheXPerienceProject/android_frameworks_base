@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"فیس یا اسکرین لاک استعمال کریں"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"جاری رکھنے کے لیے اپنے چہرے کا استعمال کریں"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"جاری رکھنے کے لیے اپنے چہرے یا اسکرین لاک کا استعمال کریں"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"کچھ غلط ہو گیا۔ دوبارہ کوشش کریں۔"</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"چہرے کا آئیکن"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"مطابقت پذیری کی ترتیبات پڑھیں"</string>

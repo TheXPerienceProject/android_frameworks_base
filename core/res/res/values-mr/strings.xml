@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"फेस किंवा स्क्रीन लॉक वापरा"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"पुढे सुरू ठेवण्यासाठी तुमचा चेहरा वापरा"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"पुढे सुरू ठेवण्यासाठी तुमचा चेहरा किंवा स्क्रीन लॉक वापरा"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"काहीतरी चूक झाली. पुन्हा प्रयत्न करा."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"चेहरा आयकन"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"सिंक सेटिंग्‍ज वाचा"</string>

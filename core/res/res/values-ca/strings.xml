@@ -684,8 +684,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"Utilitza el desbloqueig facial o de pantalla"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"Utilitza la teva cara per continuar"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"Utilitza la cara o el bloqueig de pantalla per continuar"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"S\'ha produït un error. Torna-ho a provar."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"Icona facial"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"llegir la configuració de sincronització"</string>

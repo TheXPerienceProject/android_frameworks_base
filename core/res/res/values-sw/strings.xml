@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"Tumia uso au mbinu ya kufunga skrini"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"Tumia uso wako ili uendelee"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"Tumia uso au mbinu yako ya kufunga skrini ili uendelee"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"Hitilafu fulani imetokea. Jaribu tena."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"Aikoni ya uso"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"kusoma mipangilio ya usawazishaji"</string>

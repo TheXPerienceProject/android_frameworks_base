@@ -684,8 +684,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"Usar Desbloqueo facial o Bloqueo de pantalla"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"Usa tu cara para continuar"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"Usa tu cara o tu bloqueo de pantalla para continuar"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"Se ha producido un error. Inténtalo de nuevo."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"Icono cara"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"leer la configuración de sincronización"</string>

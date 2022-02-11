@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"\'फ़ेस अनलॉक\' या स्क्रीन लॉक का क्रेडेंशियल इस्तेमाल करें"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"जारी रखने के लिए, अपने चेहरे की मदद से पुष्टि करें"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"जारी रखने के लिए, अपना चेहरा दिखाकर या स्क्रीन लॉक क्रेडेंशियल डालकर पुष्टि करें"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"कोई गड़बड़ी हुई. फिर से कोशिश करें."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"चेहरे का आइकॉन"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"समन्वयन सेटिंग पढ़ें"</string>

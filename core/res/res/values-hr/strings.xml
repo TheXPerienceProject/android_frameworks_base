@@ -684,8 +684,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"Upotreba otključavanja licem ili zaključavanja zaslona"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"Autentificirajte se licem da biste nastavili"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"Za nastavak se identificirajte licem ili vjerodajnicom zaključavanja zaslona"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"Nešto nije u redu. Pokušajte ponovo."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"Ikona lica"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"čitanje postavki sinkronizacije"</string>

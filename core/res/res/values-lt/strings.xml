@@ -685,8 +685,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"Naudoti atrakinimą pagal veidą arba ekrano užraktą"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"Jei norite tęsti, naudokite atpažinimą pagal veidą"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"Jei norite tęsti, naudokite veido atpažinimo funkciją arba ekrano užraktą"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"Kažkas nepavyko. Bandykite dar kartą."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"Veido pkt."</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"skaityti sinchronizavimo nustatymus"</string>

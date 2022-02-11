@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"Gumamit ng mukha o lock ng screen"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"Gamitin ang iyong mukha para magpatuloy"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"Gamitin ang iyong mukha o lock ng screen para magpatuloy"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"Nagkaproblema. Subukan ulit."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"Face icon"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"basahin ang mga setting ng sync"</string>
