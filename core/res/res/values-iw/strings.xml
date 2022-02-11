@@ -684,8 +684,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"שימוש בזיהוי פנים או בנעילת מסך"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"יש להשתמש באימות פנים כדי להמשיך"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"יש להשתמש בזיהוי הפנים או בנעילת המסך כדי להמשיך"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"משהו השתבש. עליך לנסות שוב."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"סמל הפנים"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"קריאת הגדרות הסנכרון"</string>

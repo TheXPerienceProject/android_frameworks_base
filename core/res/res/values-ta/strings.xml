@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"முகம் காட்டித் திறத்தல் / திரைப் பூட்டைப் பயன்படுத்து"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"தொடர்வதற்கு உங்கள் முகத்தைப் பயன்படுத்துங்கள்"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"தொடர, உங்கள் முகத்தையோ திரைப் பூட்டையோ பயன்படுத்துங்கள்"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"ஏதோ தவறாகிவிட்டது. மீண்டும் முயலவும்."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"முக ஐகான்"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"ஒத்திசைவு அமைப்புகளைப் படித்தல்"</string>

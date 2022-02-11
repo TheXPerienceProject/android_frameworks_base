@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"မျက်နှာမှတ်သော့ဖွင့်ခြင်း (သို့) ဖန်သားပြင်လော့ခ်ချခြင်းကို သုံးခြင်း"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"ရှေ့ဆက်ရန် သင့်မျက်နှာကို သုံးပါ"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"ရှေ့ဆက်ရန် သင်၏ မျက်နှာ (သို့) ဖန်သားပြင်လော့ခ်ကို သုံးပါ"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"တစ်ခုခုမှားသွားသည်။ ထပ်စမ်းကြည့်ပါ။"</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"မျက်နှာသင်္ကေတ"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"ထပ်တူပြုအဆင်အပြင်အားဖတ်ခြင်း"</string>

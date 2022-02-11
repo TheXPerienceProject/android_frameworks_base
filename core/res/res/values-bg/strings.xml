@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"Използване на отключването с лице или опцията за заключване на екрана"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"Използвайте лицето си, за да продължите"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"Използвайте лицето си или опцията за заключване на екрана, за да продължите"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"Нещо се обърка. Опитайте отново."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"Икона на лице"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"четене на настройките за синхронизиране"</string>

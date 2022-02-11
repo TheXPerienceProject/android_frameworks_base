@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"ಫೇಸ್ ಅಥವಾ ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಅನ್ನು ಬಳಸಿ"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"ಮುಂದುವರಿಸಲು ನಿಮ್ಮ ಮುಖವನ್ನು ಬಳಸಿ"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"ಮುಂದುವರಿಸಲು ನಿಮ್ಮ ಮುಖ ಅಥವಾ ಸ್ಕ್ರೀನ್ ಲಾಕ್ ಅನ್ನು ಬಳಸಿ"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"ಏನೋ ತಪ್ಪಾಗಿದೆ. ಪುನಃ ಪ್ರಯತ್ನಿಸಿ."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"ಮುಖದ ಐಕಾನ್‌"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"ಸಿಂಕ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ರೀಡ್‌ ಮಾಡು"</string>

@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"Χρήση προσώπου ή κλειδώματος οθόνης"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"Χρησιμοποιήστε το πρόσωπό σας για να συνεχίσετε"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"Χρησιμοποιήστε το πρόσωπό σας ή το κλείδωμα οθόνης για συνέχεια"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"Παρουσιάστηκε κάποιο πρόβλημα. Δοκιμάστε ξανά."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"Εικ. προσ."</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"διαβάζει τις ρυθμίσεις συγχρονισμού"</string>

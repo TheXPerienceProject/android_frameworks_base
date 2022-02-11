@@ -684,8 +684,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"Autorizācijas pēc sejas vai ekrāna bloķēšanas metodes izmantošana"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"Lai turpinātu, veiciet autorizāciju pēc sejas"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"Izmantojiet autorizāciju pēc sejas vai ekrāna bloķēšanas opciju, lai turpinātu"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"Radās kļūda. Mēģiniet vēlreiz."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"Sejas ikona"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"lasīt sinhronizācijas iestatījumus"</string>

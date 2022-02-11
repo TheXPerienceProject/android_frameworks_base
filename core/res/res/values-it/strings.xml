@@ -684,8 +684,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"Usa lo sblocco con il volto o il blocco schermo"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"Usa il tuo volto per continuare"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"Per continuare devi usare il tuo volto o il tuo blocco schermo"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"Si è verificato un errore. Riprova."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"Icona volto"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"lettura impostazioni di sincronizz."</string>

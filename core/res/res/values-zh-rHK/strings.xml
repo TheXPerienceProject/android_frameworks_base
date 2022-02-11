@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"使用面孔或螢幕鎖定"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"如要繼續操作，請使用您的面孔驗證身分"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"請使用面孔解鎖或螢幕鎖定功能驗證身分，才能繼續操作"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"發生錯誤，請再試一次。"</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"面孔圖示"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"讀取同步處理設定"</string>

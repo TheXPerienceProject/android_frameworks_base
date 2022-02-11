@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"使用人脸解锁或屏幕锁定凭据"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"使用您的面孔验证身份才能继续"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"使用人脸解锁或屏幕锁定凭据验证身份，才能继续操作"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"出了点问题。请重试。"</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"面孔图标"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"读取同步设置"</string>

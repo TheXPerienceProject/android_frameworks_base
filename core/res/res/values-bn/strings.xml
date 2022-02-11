@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"ফেস অথবা স্ক্রিন লক ব্যবহার করুন"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"চালিয়ে যেতে আপনার মুখ ব্যবহার করুন"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"চালিয়ে যেতে আপনার ফেস বা স্ক্রিন লক ব্যবহার করুন"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"কোনও সমস্যা হয়েছে। আবার করে দেখুন।"</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"ফেস আইকন"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"সিঙ্ক সেটিংস পড়ে"</string>

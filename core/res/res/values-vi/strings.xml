@@ -683,8 +683,6 @@
     <string name="face_or_screen_lock_app_setting_name" msgid="1603149075605709106">"Dùng khuôn mặt hoặc phương thức khóa màn hình"</string>
     <string name="face_dialog_default_subtitle" msgid="6620492813371195429">"Hãy dùng khuôn mặt của bạn để tiếp tục"</string>
     <string name="face_or_screen_lock_dialog_default_subtitle" msgid="5006381531158341844">"Dùng khuôn mặt của bạn hoặc phương thức khóa màn hình để tiếp tục"</string>
-  <string-array name="face_error_vendor">
-  </string-array>
     <string name="face_error_vendor_unknown" msgid="7387005932083302070">"Đã xảy ra lỗi. Hãy thử lại."</string>
     <string name="face_icon_content_description" msgid="465030547475916280">"Biểu tượng khuôn mặt"</string>
     <string name="permlab_readSyncSettings" msgid="6250532864893156277">"đọc cài đặt đồng bộ hóa"</string>
