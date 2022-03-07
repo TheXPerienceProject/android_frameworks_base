@@ -45,4 +45,8 @@
 
     <!-- Name of the VoLTE/VoWiFi icon. -->
     <string name="status_bar_ims" translatable="false">VoLTE/VoWiFi</string>
+
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Roaming indicator</string>
+
 </resources>
