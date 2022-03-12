@@ -104,4 +104,6 @@
     <!-- Name of the firewall status bar icon. -->
     <string name="status_bar_firewall">Firewall</string>
     <string name="status_bar_firewall_slot" translatable="false">firewall</string>
+
+    <string name="status_bar_call_strength">Call strength</string>
 </resources>
