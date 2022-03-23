@@ -2022,8 +2022,8 @@ public class StatusBar extends SystemUI implements
             mFlashlightController.setFlashlight(!mFlashlightController.isEnabled());
         }
     }
-
-    public void setBlockedGesturalNavigation(boolean blocked) {
+   
+ public void setBlockedGesturalNavigation(boolean blocked) {
         if (getNavigationBarView() != null) {
             getNavigationBarView().setBlockedGesturalNavigation(blocked);
         }
