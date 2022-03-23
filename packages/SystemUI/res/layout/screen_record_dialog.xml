@@ -32,7 +32,6 @@
             android:paddingStart="24dp"
             android:paddingTop="23dp"
             android:paddingBottom="27dp"
-            android:paddingBottom="30dp"
             android:orientation="vertical">
 
             <!-- Header -->

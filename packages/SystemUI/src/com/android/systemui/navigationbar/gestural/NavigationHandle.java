@@ -80,7 +80,7 @@ public class NavigationHandle extends View implements ButtonInterface {
         int height = mRadius * 2;
         int defWidth = getWidth();
         int lengthType = Settings.System.getInt(mContext.getContentResolver(),
-            Settings.System.GESTURE_NAVBAR_LENGHT, 0);
+            Settings.System.GESTURE_NAVBAR_LENGTH, 0);
         int newWidth = defWidth;
         final Resources res = mContext.getResources();
         switch (lengthType) {
