@@ -605,4 +605,11 @@ public class CentralSurfacesCommandQueueCallbacks implements CommandQueue.Callba
         }
         return VibrationEffect.createWaveform(timings, /* repeat= */ -1);
     }
+
+    @Override
+    public void setBlockedGesturalNavigation(boolean blocked) {
+        if (mStatusBar.getNavigationBarView() != null) {
+            mStatusBar.getNavigationBarView().setBlockedGesturalNavigation(blocked);
+        }
+    }
 }
