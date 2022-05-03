@@ -15,7 +15,9 @@
      limitations under the License.
 -->
 <resources>
-  
+    <!-- Face unlock -->
+    <string name="face_unlock_disabled_idle">Face unlock disabled due to inactivity</string>
+
     <!-- Whether to cancel fingerprint operation if not idle -->
-    <bool name="config_fpCancelIfNotIdle">false</bool>    
+    <java-symbol type="bool" name="config_fpCancelIfNotIdle" />
 </resources>
