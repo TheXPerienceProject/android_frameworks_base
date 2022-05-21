@@ -109,6 +109,7 @@ import kotlin.Unit;
 @SysUISingleton
 public class UdfpsController implements DozeReceiver {
     private static final String TAG = "UdfpsController";
+    private static final String PULSE_ACTION = "com.android.systemui.doze.pulse";
     private static final long AOD_INTERRUPT_TIMEOUT_MILLIS = 1000;
     private static final long DEFAULT_VIBRATION_DURATION = 1000; // milliseconds
 
@@ -170,8 +171,8 @@ public class UdfpsController implements DozeReceiver {
     private boolean mScreenOn;
     private Runnable mAodInterruptRunnable;
     private boolean mOnFingerDown;
-    private boolean mAttemptedToDismissKeyguard;
     private final int mUdfpsVendorCode;
+    private boolean mAttemptedToDismissKeyguard;
     private Set<Callback> mCallbacks = new HashSet<>();
     private final AmbientDisplayConfiguration mAmbientDisplayConfiguration;
     private final SecureSettings mSecureSettings;
@@ -682,7 +683,6 @@ public class UdfpsController implements DozeReceiver {
         context.registerReceiver(mBroadcastReceiver, filter);
 
         udfpsHapticsSimulator.setUdfpsController(this);
-        mUdfpsVendorCode = mContext.getResources().getInteger(R.integer.config_udfps_vendor_code);
 
         mPerf = new BoostFramework();
         mUdfpsVendorCode = mContext.getResources().getInteger(R.integer.config_udfps_vendor_code);
@@ -705,7 +705,6 @@ public class UdfpsController implements DozeReceiver {
         boolean isSupported = mContext.getResources().getBoolean(
                 com.android.internal.R.bool.config_supportsScreenOffUdfps);
         mScreenOffFod = isSupported && mSecureSettings.getInt(Settings.Secure.SCREEN_OFF_UDFPS_ENABLED, 1) == 1;
-
     }
 
     /**
