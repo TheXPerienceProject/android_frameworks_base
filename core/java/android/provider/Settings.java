@@ -10298,14 +10298,6 @@ public final class Settings {
          * @hide
          */
         public static final String FACE_UNLOCK_METHOD = "face_unlock_method";
-        
-        /**
-         * Enable udfps detection even when screen is off
-         * Default value is 0
-         * @hide
-         */
-        @Readable
-        public static final String SCREEN_OFF_UDFPS_ENABLED = "screen_off_udfps_enabled";
 
         /**
          * Enable udfps detection even when screen is off
