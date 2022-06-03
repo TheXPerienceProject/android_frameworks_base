@@ -6225,6 +6225,12 @@ public final class ActivityRecord extends WindowToken implements WindowManagerSe
 
     /** Called when the windows associated app window container are drawn. */
     private void onWindowsDrawn(long timestampNs) {
+        if (mPerf != null && perfActivityBoostHandler > 0) {
+            mPerf.perfLockReleaseHandler(perfActivityBoostHandler);
+            perfActivityBoostHandler = -1;
+        } else if (perfActivityBoostHandler > 0) {
+            Slog.w(TAG, "activity boost didn't release as expected");
+        }
         final TransitionInfoSnapshot info = mTaskSupervisor
                 .getActivityMetricsLogger().notifyWindowsDrawn(this, timestampNs);
         final boolean validInfo = info != null;
@@ -7477,7 +7483,8 @@ public final class ActivityRecord extends WindowToken implements WindowManagerSe
         mSizeCompatBounds = null;
         mCompatDisplayInsets = null;
 
-        onRequestedOverrideConfigurationChanged(getRequestedOverrideConfiguration());
+        // Clear config override in #updateCompatDisplayInsets().
+        onRequestedOverrideConfigurationChanged(EMPTY);
     }
 
     @Override

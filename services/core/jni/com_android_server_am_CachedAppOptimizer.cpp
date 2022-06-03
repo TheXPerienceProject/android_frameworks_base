@@ -57,6 +57,19 @@ using android::base::unique_fd;
 #define ASYNC_RECEIVED_WHILE_FROZEN (2)
 #define TXNS_PENDING_WHILE_FROZEN (4)
 
+#define MAX_RW_COUNT (INT_MAX & PAGE_MASK)
+
+// Defines the maximum amount of VMAs we can send per process_madvise syscall.
+// Currently this is set to UIO_MAXIOV which is the maximum segments allowed by
+// iovec implementation used by process_madvise syscall
+#define MAX_VMAS_PER_COMPACTION UIO_MAXIOV
+
+// Maximum bytes that we can send per process_madvise syscall once this limit
+// is reached we split the remaining VMAs into another syscall. The MAX_RW_COUNT
+// limit is imposed by iovec implementation. However, if you want to use a smaller
+// limit, it has to be a page aligned value, otherwise, compaction would fail.
+#define MAX_BYTES_PER_COMPACTION MAX_RW_COUNT
+
 namespace android {
 
 static bool cancelRunningCompaction;
@@ -70,8 +83,10 @@ static inline void compactProcessProcfs(int pid, const std::string& compactionTy
 }
 
 // Compacts a set of VMAs for pid using an madviseType accepted by process_madvise syscall
-// On success returns the total bytes that where compacted. On failure it returns
-// a negative error code from the standard linux error codes.
+// Returns the total bytes that where madvised.
+//
+// If any VMA fails compaction due to -EINVAL it will be skipped and continue.
+// However, if it fails for any other reason, it will bail out and forward the error
 static int64_t compactMemory(const std::vector<Vma>& vmas, int pid, int madviseType) {
     // UIO_MAXIOV is currently a small value and we might have more addresses
     // we do multiple syscalls if we exceed its maximum
@@ -138,7 +153,12 @@ static int getAnyPageAdvice(const Vma& vma) {
 }
 
 // Perform a full process compaction using process_madvise syscall
-// reading all filtering VMAs and filtering pages as specified by pageFilter
+// using the madvise behavior defined by vmaToAdviseFunc per VMA.
+//
+// Currently supported behaviors are MADV_COLD and MADV_PAGEOUT.
+//
+// Returns the total number of bytes compacted or forwards an
+// process_madvise error.
 static int64_t compactProcess(int pid, VmaToAdviseFunc vmaToAdviseFunc) {
     ProcMemInfo meminfo(pid);
     std::vector<Vma> pageoutVmas, coldVmas;
