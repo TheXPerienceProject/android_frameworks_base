@@ -326,7 +326,7 @@ public class DozeTriggers implements DozeMachine.Part {
                         mDozeHost.onSlpiTap(screenX, screenY);
                     }
                     gentleWakeUp(pulseReason);
-                } else if (isPickup) {
+                } else if (isPickup && rawValues[0] == 1) {
                     if (shouldDropPickupEvent())  {
                         mDozeLog.traceSensorEventDropped(pulseReason, "keyguard occluded");
                         return;
