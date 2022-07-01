@@ -17,18 +17,30 @@
 
 package com.android.systemui.qs.tiles;
 
+import static com.android.internal.logging.MetricsLogger.VIEW_UNKNOWN;
+
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 import android.provider.Settings.Global;
 import android.service.quicksettings.Tile;
+import android.view.View;
 
+import androidx.annotation.Nullable;
+
+import com.android.internal.logging.MetricsLogger;
+import com.android.systemui.R;
+import com.android.systemui.dagger.qualifiers.Background;
+import com.android.systemui.dagger.qualifiers.Main;
+import com.android.systemui.plugins.ActivityStarter;
+import com.android.systemui.plugins.FalsingManager;
 import com.android.systemui.plugins.qs.QSTile.BooleanState;
+import com.android.systemui.plugins.statusbar.StatusBarStateController;
 import com.android.systemui.qs.GlobalSetting;
 import com.android.systemui.qs.QSHost;
+import com.android.systemui.qs.logging.QSLogger;
 import com.android.systemui.qs.tileimpl.QSTileImpl;
-import com.android.systemui.R;
-
-import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 
 import javax.inject.Inject;
 
@@ -43,8 +55,18 @@ public class HeadsUpTile extends QSTileImpl<BooleanState> {
     private final GlobalSetting mSetting;
 
     @Inject
-    public HeadsUpTile(QSHost host) {
-        super(host);
+    public HeadsUpTile(
+            QSHost host,
+            @Background Looper backgroundLooper,
+            @Main Handler mainHandler,
+            FalsingManager falsingManager,
+            MetricsLogger metricsLogger,
+            StatusBarStateController statusBarStateController,
+            ActivityStarter activityStarter,
+            QSLogger qsLogger
+    ) {
+        super(host, backgroundLooper, mainHandler, falsingManager, metricsLogger,
+                statusBarStateController, activityStarter, qsLogger);
 
         mSetting = new GlobalSetting(mContext, mHandler, Global.HEADS_UP_NOTIFICATIONS_ENABLED) {
             @Override
@@ -60,7 +82,7 @@ public class HeadsUpTile extends QSTileImpl<BooleanState> {
     }
 
     @Override
-    protected void handleClick() {
+    protected void handleClick(@Nullable View view) {
         setEnabled(!mState.value);
         refreshState();
     }
@@ -110,7 +132,7 @@ public class HeadsUpTile extends QSTileImpl<BooleanState> {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.RAINBOW_UNICORN;
+        return VIEW_UNKNOWN;
     }
 
     @Override

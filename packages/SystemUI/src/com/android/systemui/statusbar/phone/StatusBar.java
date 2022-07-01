@@ -2018,7 +2018,6 @@ public class StatusBar extends SystemUI implements
         }
     }
 
-    @Override
     public void toggleCameraFlash() {
         if (DEBUG) {
              Log.d(TAG, "Toggling camera flashlight");
