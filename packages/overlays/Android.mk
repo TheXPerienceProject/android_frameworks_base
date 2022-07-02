@@ -86,6 +86,9 @@ LOCAL_REQUIRED_MODULES := \
     IconShapeTaperedRectOverlay \
     IconShapeTeardropOverlay \
     IconShapeVesselOverlay \
+    IconPackXperiaAndroidOverlay \
+    IconPackXperiaSettingsOverlay \
+    IconPackXperiaSystemUIOverlay \
     NavigationBarMode3ButtonOverlay \
     NavigationBarModeGesturalOverlay \
     NavigationBarModeGesturalOverlayNarrowBack \
