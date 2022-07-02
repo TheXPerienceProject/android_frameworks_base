@@ -16,4 +16,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Face Unlock -->
+    <!-- Power Menu -->
+    <!-- Title of statusbar tuner -->
+    <!-- Custom QS tiles -->
+    <!-- PowerShare QS tile -->
+    <!-- Caffeine QS Tile -->
+    <!-- Ambient display QS tile -->
+    <!-- USB tethering QS tile -->
+    <!-- Heads up QS tile -->
+    <!-- Data usage info in QS footer -->
 </resources>

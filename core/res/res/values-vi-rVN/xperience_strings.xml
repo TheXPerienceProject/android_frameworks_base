@@ -17,4 +17,5 @@
 <resources>
     <!-- Face unlock -->
     <!-- Whether to cancel fingerprint operation if not idle -->
+    <!-- Global actions -->
 </resources>
