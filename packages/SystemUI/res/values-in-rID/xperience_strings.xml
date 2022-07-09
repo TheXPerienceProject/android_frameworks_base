@@ -19,12 +19,41 @@
     <string name="face_unlock_recognizing">Mengenali wajah...</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">Mulai ulang</string>
+    <string name="global_action_reboot_more">Memulai ulang\u2026</string>
+    <string name="global_action_reboot_sub">Sistem</string>
+    <string name="global_action_reboot_recovery">Pemulihan</string>
+    <string name="global_action_reboot_bootloader">Bootloader</string>
+    <string name="global_action_reboot_fastboot">Fastboot</string>
+    <string name="global_action_settings">Setelan</string>
     <!-- Title of statusbar tuner -->
+    <string name="status_bar_icons">Ikon bilah status</string>
     <!-- Custom QS tiles -->
     <!-- PowerShare QS tile -->
+    <string name="quick_settings_powershare_label">Berbagi Baterai</string>
+    <string name="quick_settings_powershare_off_powersave_label">Berbagi Baterai nonaktif\nPenghemat baterai</string>
+    <string name="quick_settings_powershare_off_low_battery_label">Berbagi Baterai nonaktif\nBaterai lemah</string>
+    <string name="quick_settings_powershare_enabled_label">Berbagi Baterai diaktifkan</string>
     <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">Mode Kafein</string>
+    <string name="accessibility_quick_settings_caffeine_off">Mode Kafein nonaktif</string>
+    <string name="accessibility_quick_settings_caffeine_on">Mode Kafein aktif</string>
     <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Tampilan Ambien</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Tampilan Ambien nonaktif.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Tampilan Ambien aktif.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Tampilan Ambien dinonaktifkan.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Tampilan Ambien diaktifkan.</string>
     <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">Tethering USB</string>
     <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Notifikasi mengambang</string>
+    <string name="accessibility_quick_settings_heads_up_off">Notifikasi mengambang nonaktif.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Notifikasi mengambang aktif.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Notifikasi mengambang dinonaktifkan.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Notifikasi mengambang diaktifkan.</string>
     <!-- Data usage info in QS footer -->
+    <string name="usage_data">digunakan hari ini</string>
+    <string name="usage_data_default_suffix">Data</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
+    <!-- Smart Pixels QS Tile -->
 </resources>
