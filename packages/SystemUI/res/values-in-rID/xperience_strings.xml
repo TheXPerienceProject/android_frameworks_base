@@ -56,4 +56,6 @@
     <string name="usage_data_default_suffix">Data</string>
     <string name="usage_wifi_default_suffix">Wi-Fi</string>
     <!-- Smart Pixels QS Tile -->
+    <string name="quick_settings_smart_pixels">Piksel Cerdas</string>
+    <string name="quick_settings_smart_pixels_on_power_save">Aktifkan otomatis Piksel Cerdas</string>
 </resources>
