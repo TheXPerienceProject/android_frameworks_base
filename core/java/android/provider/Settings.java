@@ -5293,7 +5293,7 @@ public final class Settings {
          */
         public static final String SCREEN_OFF_ANIMATION = "screen_off_animation";
 
-        /*
+        /**
          * Whether to display 4G icon instead LTE
          * @hide
          */
@@ -5315,7 +5315,7 @@ public final class Settings {
         /**
          * @hide
          */
-        public static final String USE_OLD_MOBILETYPE = "use_old_mobiletype";        
+        public static final String USE_OLD_MOBILETYPE = "use_old_mobiletype";
 
         /**
          * Three Finger Gesture from Oppo
