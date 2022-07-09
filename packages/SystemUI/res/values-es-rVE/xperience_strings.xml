@@ -55,4 +55,7 @@
     <string name="usage_data">Usado hoy</string>
     <string name="usage_data_default_suffix">Datos</string>
     <string name="usage_wifi_default_suffix">Wi-Fi</string>
+    <!-- Smart Pixels QS Tile -->
+    <string name="quick_settings_smart_pixels">Píxeles inteligentes</string>
+    <string name="quick_settings_smart_pixels_on_power_save">Habilitar píxeles inteligentes automáticamente</string>
 </resources>
