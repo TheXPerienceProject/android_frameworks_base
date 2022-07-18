@@ -29,6 +29,7 @@ import android.view.InputDevice;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 
+import com.android.internal.util.ArrayUtils;
 import com.android.internal.statusbar.IStatusBarService;
 
 /**
@@ -49,6 +50,13 @@ public class XPerienceUtils {
 
     public static void toggleCameraFlash() {
         FireActions.toggleCameraFlash();
+    }
+
+    public static boolean hasUdfpsSupport(Context ctx) {
+        int[] udfpsProps = ctx.getResources().getIntArray(
+                com.android.internal.R.array.config_udfps_sensor_props);
+
+        return !ArrayUtils.isEmpty(udfpsProps);
     }
 
     public static void sendKeycode(int keycode) {
