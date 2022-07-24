@@ -77,7 +77,7 @@ public class Flags {
             new BooleanFlag(401, true);
 
     public static final BooleanFlag SMARTSPACE =
-            new BooleanFlag(402, false, true);
+            new BooleanFlag(402, false, R.bool.flag_smartspace);
 
     /***************************************/
     // 500 - quick settings
