@@ -26,4 +26,8 @@
     <!-- Heads up QS tile -->
     <!-- Data usage info in QS footer -->
     <!-- Smart Pixels QS Tile -->
+    <!-- Screen record delete action -->
+    <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
+    <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
+    <!-- Screenrecord QS tile -->
 </resources>

@@ -58,4 +58,13 @@
     <!-- Smart Pixels QS Tile -->
     <string name="quick_settings_smart_pixels">Píxeles inteligentes</string>
     <string name="quick_settings_smart_pixels_on_power_save">Habilitar píxeles inteligentes automáticamente</string>
+    <!-- Screen record delete action -->
+    <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
+    <string name="screenrecord_delete_label">Eliminar</string>
+    <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
+    <string name="screenrecord_delete_description">Se ha eliminado la grabación de pantalla</string>
+    <!-- Screenrecord QS tile -->
+    <string name="screenrecord_stopdot_label">Mostrar punto para detener grabación.\nMantenlo pulsado para moverlo</string>
+    <string name="screenrecord_lowquality_label">Menor calidad para que el tamaño del archivo sea más pequeño</string>
+    <string name="screenrecord_longer_timeout_switch_label">Mayor límite de tamaño de archivo\nLimitar tamaño de grabación a 15GB</string>
 </resources>
