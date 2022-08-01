@@ -16,16 +16,48 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Face Unlock -->
+    <string name="face_unlock_recognizing">Yüz algılanıyor...</string>
     <!-- Power Menu -->
+    <string name="global_action_reboot">Yeniden Başlat</string>
+    <string name="global_action_reboot_more">Yeniden Başlatılıyor</string>
+    <string name="global_action_reboot_sub">Sistem</string>
+    <string name="global_action_reboot_recovery">Kurtarma Modu</string>
+    <string name="global_action_reboot_bootloader">Ön Yükleyici (Bootloader)</string>
+    <string name="global_action_reboot_fastboot">Fastboot</string>
+    <string name="global_action_settings">Ayarlar</string>
     <!-- Title of statusbar tuner -->
+    <string name="status_bar_icons">Durum çubuğu simgeleri</string>
     <!-- Custom QS tiles -->
     <!-- PowerShare QS tile -->
+    <string name="quick_settings_powershare_label">Güç paylaşımı</string>
+    <string name="quick_settings_powershare_off_powersave_label">Pil Aktarımı kapalı\nPil tasarrufu modu</string>
+    <string name="quick_settings_powershare_off_low_battery_label">Pil Aktarımı kapalı\nPil çok düşük</string>
+    <string name="quick_settings_powershare_enabled_label">Pil Aktarımı etkin</string>
     <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">Kafein modu</string>
+    <string name="accessibility_quick_settings_caffeine_off">Kafein modu kapalı</string>
+    <string name="accessibility_quick_settings_caffeine_on">Kafein modu açık</string>
     <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Ortam ekranı</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Ortam ekranı kapalı.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Ortam ekranı açık.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Ortam ekranı kapatıldı.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Ortam ekranı açıldı.</string>
     <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">USB internet paylaşımı</string>
     <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Bildirim pencereleri</string>
+    <string name="accessibility_quick_settings_heads_up_off">Bildirim pencereleri kapalı.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Bildirim pencereleri açık.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Bildirim pencereleri kapatıldı.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Bildirim pencereleri açıldı.</string>
     <!-- Data usage info in QS footer -->
+    <string name="usage_data">bugün kullanılan</string>
+    <string name="usage_data_default_suffix">Veri</string>
+    <string name="usage_wifi_default_suffix">Kablosuz ağ</string>
     <!-- Smart Pixels QS Tile -->
+    <string name="quick_settings_smart_pixels">Akıllı pikseller</string>
+    <string name="quick_settings_smart_pixels_on_power_save">Akıllı pikselleri otomatik etkinleştir</string>
     <!-- Screen record delete action -->
     <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
     <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
