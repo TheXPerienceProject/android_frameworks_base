@@ -68,4 +68,7 @@
     <string name="screenrecord_lowquality_label">Kualitas lebih rendah untuk ukuran file yang lebih kecil</string>
     <string name="screenrecord_longer_timeout_switch_label">Batas ukuran file lebih besar\nBatasi ukuran perekaman hingga 15GB</string>
     <!-- DC Dimming -->
+    <string name="quick_settings_dc_dimming_label">Peredupan DC</string>
+    <string name="quick_settings_dc_brightness_mode">Mode kecerahan</string>
+    <string name="quick_settings_dc_full_auto">Mode otomatis</string>
 </resources>
