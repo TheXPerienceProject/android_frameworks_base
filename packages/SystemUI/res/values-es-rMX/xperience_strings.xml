@@ -68,4 +68,7 @@
     <string name="screenrecord_lowquality_label">Menor calidad para que el tamaño del archivo sea más pequeño</string>
     <string name="screenrecord_longer_timeout_switch_label">Mayor límite de tamaño de archivo\nLimitar tamaño de grabación a 15GB</string>
     <!-- DC Dimming -->
+    <string name="quick_settings_dc_dimming_label">Ajuste de Brillo alternativo [DC-Diming]</string>
+    <string name="quick_settings_dc_brightness_mode">Modo de brillo</string>
+    <string name="quick_settings_dc_full_auto">Automático</string>
 </resources>
