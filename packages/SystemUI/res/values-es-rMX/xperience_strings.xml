@@ -67,4 +67,5 @@
     <string name="screenrecord_stopdot_label">Mostrar punto para detener grabación.\nMantenlo pulsado para moverlo</string>
     <string name="screenrecord_lowquality_label">Menor calidad para que el tamaño del archivo sea más pequeño</string>
     <string name="screenrecord_longer_timeout_switch_label">Mayor límite de tamaño de archivo\nLimitar tamaño de grabación a 15GB</string>
+    <!-- DC Dimming -->
 </resources>
