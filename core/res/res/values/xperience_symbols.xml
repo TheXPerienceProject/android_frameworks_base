@@ -59,9 +59,10 @@
     <java-symbol type="string" name="config_lightFontFamily" />
     <java-symbol type="string" name="config_regularFontFamily" />
 
-    <!-- Fingerprint from a certified device against current platform SPL level -->
+    <!-- PropImitationHooks -->
     <java-symbol type="string" name="config_certifiedFingerprint" />
-
-    <!-- Fingerprint from stock ROM -->
+    <java-symbol type="string" name="config_certifiedModel" />
     <java-symbol type="string" name="config_stockFingerprint" />
+    <java-symbol type="bool" name="config_spoofGoogleApps" />
+
 </resources>
