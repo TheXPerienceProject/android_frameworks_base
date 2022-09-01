@@ -259,6 +259,7 @@ import com.android.internal.protolog.common.ProtoLog;
 import com.android.internal.util.ArrayUtils;
 import com.android.internal.util.FastPrintWriter;
 import com.android.internal.util.FrameworkStatsLog;
+import com.android.internal.util.PropImitationHooks;
 import com.android.internal.util.function.pooled.PooledLambda;
 import com.android.server.LocalManagerRegistry;
 import com.android.server.LocalServices;
@@ -1978,7 +1979,9 @@ public class ActivityTaskManagerService extends IActivityTaskManager.Stub {
 
     @Override
     public RootTaskInfo getFocusedRootTaskInfo() throws RemoteException {
-        enforceTaskPermission("getFocusedRootTaskInfo()");
+        if (!PropImitationHooks.shouldBypassTaskPermission(mContext)) {
+            enforceTaskPermission("getFocusedRootTaskInfo()");
+        }
         final long ident = Binder.clearCallingIdentity();
         try {
             synchronized (mGlobalLock) {
@@ -3088,7 +3091,9 @@ public class ActivityTaskManagerService extends IActivityTaskManager.Stub {
     /** Sets the task stack listener that gets callbacks when a task stack changes. */
     @Override
     public void registerTaskStackListener(ITaskStackListener listener) {
-        enforceTaskPermission("registerTaskStackListener()");
+        if (!PropImitationHooks.shouldBypassTaskPermission(mContext)) {
+            enforceTaskPermission("registerTaskStackListener()");
+        }
         mTaskChangeNotificationController.registerTaskStackListener(listener);
     }
 
