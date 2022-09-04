@@ -118,10 +118,13 @@
     <java-symbol type="string" name="config_batterymeterLandPowersavePathStyleB" />
     <java-symbol type="string" name="config_batterymeterLandErrorPerimeterPathStyleB" />
 
-  <!-- Bootleg unneccesary gradient declaration | Just for our shishu bars -->
-  <java-symbol type="color" name="bootleg_accent_gradient_end_color" />
+    <!-- Bootleg unneccesary gradient declaration | Just for our shishu bars -->
+    <java-symbol type="color" name="bootleg_accent_gradient_end_color" />
 
-  <!-- Transparent color variants -->
-  <java-symbol type="color" name="system_accent_transparent_background_light" />
-  <java-symbol type="color" name="system_accent_transparent_background_dark" />
+    <!-- Transparent color variants -->
+    <java-symbol type="color" name="system_accent_transparent_background_light" />
+    <java-symbol type="color" name="system_accent_transparent_background_dark" />
+
+    <!-- Wether to handle audio direction changes between major call states -->
+    <java-symbol type="bool" name="config_handleAudioDirectionChangesBetweenCallStateChanges" />
 </resources>
