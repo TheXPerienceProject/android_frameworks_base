@@ -63,6 +63,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.RotateDrawable;
+import android.media.AppVolume;
 import android.media.AudioManager;
 import android.media.AudioSystem;
 import android.os.Debug;
@@ -113,6 +114,7 @@ import com.android.internal.jank.InteractionJankMonitor;
 import com.android.internal.view.RotationPolicy;
 import com.android.settingslib.Utils;
 import com.android.systemui.Dumpable;
+import com.android.systemui.Dependency;
 import com.android.systemui.Prefs;
 import com.android.systemui.R;
 import com.android.systemui.animation.Interpolators;
@@ -239,6 +241,7 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
     private CaptionsToggleImageButton mODICaptionsIcon;
     private View mSettingsView;
     private ImageButton mSettingsIcon;
+    private View mAppVolumeView;
     private FrameLayout mZenIcon;
     private final List<VolumeRow> mRows = new ArrayList<>();
     private ConfigurableTexts mConfigurableTexts;
@@ -270,6 +273,10 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
     private boolean mHasSeenODICaptionsTooltip;
     private ViewStub mODICaptionsTooltipViewStub;
     private View mODICaptionsTooltipView = null;
+
+    private boolean mShowAppVolume;
+
+    private CustomSettingsObserver mCustomSettingsObserver;
 
     private final boolean mUseBackgroundBlur;
     private Consumer<Boolean> mCrossWindowBlurEnabledListener;
@@ -327,6 +334,9 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
             };
         }
 
+        mCustomSettingsObserver = new CustomSettingsObserver();
+        mCustomSettingsObserver.observe();
+
         initDimens();
     }
 
@@ -351,6 +361,7 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
         mController.removeCallback(mControllerCallbackH);
         mHandler.removeCallbacksAndMessages(null);
         mConfigurationController.removeCallback(this);
+        mCustomSettingsObserver.stop();
     }
 
     @Override
@@ -572,6 +583,9 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
         mSettingsView = mDialog.findViewById(R.id.settings_container);
         mSettingsIcon = mDialog.findViewById(R.id.settings);
 
+        mAppVolumeView = mDialog.findViewById(R.id.app_volume_container);
+        mAppVolumeIcon = mDialog.findViewById(R.id.app_volume);
+
         if (mRows.isEmpty()) {
             if (!AudioSystem.isSingleVolume(mContext)) {
                 addRow(STREAM_ACCESSIBILITY, R.drawable.ic_volume_accessibility,
@@ -599,6 +613,7 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
         updateRowsH(getActiveRow());
         initRingerH();
         initSettingsH(lockTaskModeState);
+        initAppVolumeH();
         initODICaptionsH();
     }
 
@@ -1068,6 +1083,34 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
         }
     }
 
+    private boolean shouldShowAppVolume() {
+        if (mShowAppVolume) {
+            AudioManager audioManager = mController.getAudioManager();
+            for (AppVolume av : audioManager.listAppVolumes()) {
+                if (av.isActive()) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public void initAppVolumeH() {
+        if (mAppVolumeView != null) {
+            mAppVolumeView.setVisibility(shouldShowAppVolume() ? VISIBLE : GONE);
+        }
+        if (mAppVolumeIcon != null) {
+            mAppVolumeIcon.setOnClickListener(v -> {
+                Events.writeEvent(Events.EVENT_SETTINGS_CLICK);
+                Intent intent = new Intent(Settings.Panel.ACTION_APP_VOLUME);
+                dismissH(DISMISS_REASON_SETTINGS_CLICKED);
+                Dependency.get(MediaOutputDialogFactory.class).dismiss();
+                Dependency.get(ActivityStarter.class).startActivity(intent,
+                        true /* dismissShade */);
+            });
+        }
+    }
+
     public void initRingerH() {
         if (mRingerIcon != null) {
             mRingerIcon.setAccessibilityLiveRegion(ACCESSIBILITY_LIVE_REGION_POLITE);
@@ -1329,6 +1372,7 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
         }
 
         initSettingsH(lockTaskModeState);
+        initAppVolumeH();
         mShowing = true;
         mIsAnimatingDismiss = false;
         mDialog.show();
@@ -2371,6 +2415,44 @@ public class VolumeDialogImpl implements VolumeDialog, Dumpable,
                 mRingerDrawerNewSelectionBg.animate()
                         .translationX(getTranslationInDrawerForRingerMode(mClickedRingerMode))
                         .start();
+            }
+        }
+    }
+
+    private class CustomSettingsObserver extends ContentObserver {
+
+        private final Uri SHOW_APP_VOLUME_URI = Settings.System.getUriFor(
+                Settings.System.SHOW_APP_VOLUME);
+
+        CustomSettingsObserver() {
+            super(new Handler(Looper.getMainLooper()));
+        }
+
+        void observe() {
+            final ContentResolver resolver = mContext.getContentResolver();
+            resolver.registerContentObserver(SHOW_APP_VOLUME_URI,
+                    false, this, UserHandle.USER_ALL);
+            updateVolumeDialog();
+        }
+
+        void stop() {
+            mContext.getContentResolver().unregisterContentObserver(this);
+        }
+
+        void updateVolumeDialog() {
+            mShowAppVolume = Settings.System.getIntForUser(
+                    mContext.getContentResolver(),
+                    Settings.System.SHOW_APP_VOLUME,
+                    1, UserHandle.USER_CURRENT) == 1;
+            mHandler.post(() -> {
+                    mConfigChanged = true;
+            });
+        }
+
+        @Override
+        public void onChange(boolean selfChange, Uri uri) {
+            if (uri.equals(SHOW_APP_VOLUME_URI)) {
+                updateVolumeDialog();
             }
         }
     }
