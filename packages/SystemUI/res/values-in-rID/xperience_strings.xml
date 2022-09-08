@@ -20,12 +20,15 @@
     <!-- Custom QS tiles -->
     <!-- Caffeine QS tile -->
     <string name="quick_settings_caffeine_label">Kafein</string>
-    <string name="accessibility_quick_settings_caffeine_off">Batas Waktu Layar dimatikan</string>
-    <string name="accessibility_quick_settings_caffeine_on">Batas Waktu Layar diaktifkan</string>
-    <!-- Heads up QS tile -->
-    <string name="quick_settings_heads_up_label">Notifikasi mengambang</string>
-    <string name="accessibility_quick_settings_heads_up_off">Notifikasi mengambang mati.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Notifikasi mengambang hidup.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Notifikasi mengambang dimatikan.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Notifikasi mengambang dihidupkan.</string>
+    <string name="accessibility_quick_settings_caffeine_off">Caffeine off.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Caffeine on.</string>
+    <!-- Power Menu -->
+    <string name="global_action_reboot">Mulai ulang</string>
+    <string name="global_action_reboot_more">Memulai ulang\u2026</string>
+    <string name="global_action_reboot_sub">Sistem</string>
+    <string name="global_action_reboot_recovery">Pemulihan</string>
+    <string name="global_action_reboot_bootloader">Bootloader</string>
+    <string name="global_action_settings">Setelan</string>
+    <!-- DC Dimming -->
+    <string name="quick_settings_dc_dimming_label">Peredupan DC</string>
 </resources>

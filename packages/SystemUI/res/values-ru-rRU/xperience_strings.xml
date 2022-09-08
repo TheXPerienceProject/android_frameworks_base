@@ -20,12 +20,14 @@
     <!-- Custom QS tiles -->
     <!-- Caffeine QS tile -->
     <string name="quick_settings_caffeine_label">Запрет сна</string>
-    <string name="accessibility_quick_settings_caffeine_off">Запрет сна выкл</string>
-    <string name="accessibility_quick_settings_caffeine_on">Запрет сна вкл</string>
-    <!-- Heads up QS tile -->
-    <string name="quick_settings_heads_up_label">Всплывающие уведомления</string>
-    <string name="accessibility_quick_settings_heads_up_off">Всплывающие уведомления выключены.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Всплывающие уведомления включены.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Всплывающие уведомления выключены.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Всплывающие уведомления включены.</string>
+    <string name="accessibility_quick_settings_caffeine_off">Запрет сна выкл.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Запрет сна вкл.</string>
+    <!-- Power Menu -->
+    <string name="global_action_reboot">Перезагрузка</string>
+    <string name="global_action_reboot_more">Перезагрузка\u2026</string>
+    <string name="global_action_reboot_sub">Система</string>
+    <string name="global_action_reboot_recovery">Рекавери</string>
+    <string name="global_action_reboot_bootloader">Загрузчик</string>
+    <string name="global_action_settings">Настройки</string>
+    <!-- DC Dimming -->
 </resources>
