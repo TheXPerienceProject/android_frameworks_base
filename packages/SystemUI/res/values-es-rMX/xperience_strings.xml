@@ -20,12 +20,15 @@
     <!-- Custom QS tiles -->
     <!-- Caffeine QS tile -->
     <string name="quick_settings_caffeine_label">Cafeína</string>
-    <string name="accessibility_quick_settings_caffeine_off">Cafeína desactivada</string>
-    <string name="accessibility_quick_settings_caffeine_on">Cafeína activada</string>
-    <!-- Heads up QS tile -->
-    <string name="quick_settings_heads_up_label">Notificaciones emergentes</string>
-    <string name="accessibility_quick_settings_heads_up_off">Notificaciones emergentes desactivadas.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Notificaciones emergentes activadas.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Notificaciones emergentes desactivadas.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Se han activado las notificaciones flotantes.</string>
+    <string name="accessibility_quick_settings_caffeine_off">Cafeína desactivada.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Cafeína activada.</string>
+    <!-- Power Menu -->
+    <string name="global_action_reboot">Reiniciar</string>
+    <string name="global_action_reboot_more">Reiniciar\u2026</string>
+    <string name="global_action_reboot_sub">Sistema</string>
+    <string name="global_action_reboot_recovery">Modo Recovery</string>
+    <string name="global_action_reboot_bootloader">Bootloader</string>
+    <string name="global_action_settings">Configuración</string>
+    <!-- DC Dimming -->
+    <string name="quick_settings_dc_dimming_label">Ajuste de Brillo alternativo [DC-Diming]</string>
 </resources>
