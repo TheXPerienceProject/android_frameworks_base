@@ -5560,6 +5560,7 @@ public final class Settings {
         public static final String DESKTOP_MODE = "desktop_mode";
 
         /**
+         * @hide
          */
         public static final String GLOBAL_ACTIONS_LIST = "global_actions_list";
 
