@@ -20,10 +20,8 @@
     <!-- Custom QS tiles -->
     <!-- Caffeine QS tile -->
     <string name="quick_settings_caffeine_label">カフェイン</string>
-    <!-- Heads up QS tile -->
-    <string name="quick_settings_heads_up_label">Heads Up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads Up オフ</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads Up オン</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads Upをオフにしました</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads Upをオンにしました</string>
+    <string name="accessibility_quick_settings_caffeine_off">カフェイン オフ</string>
+    <string name="accessibility_quick_settings_caffeine_on">カフェイン オン</string>
+    <!-- Power Menu -->
+    <!-- DC Dimming -->
 </resources>

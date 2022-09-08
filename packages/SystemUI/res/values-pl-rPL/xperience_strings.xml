@@ -20,10 +20,8 @@
     <!-- Custom QS tiles -->
     <!-- Caffeine QS tile -->
     <string name="quick_settings_caffeine_label">Kofeina</string>
-    <!-- Heads up QS tile -->
-    <string name="quick_settings_heads_up_label">Wyskakujące powiadomienia</string>
-    <string name="accessibility_quick_settings_heads_up_off">Wyskakujące powiadomienia wył.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Wyskakujące powiadomienia wł.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Wyskakujące powiadomienia wyłączone.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Wyskakujące powiadomienia włączone.</string>
+    <string name="accessibility_quick_settings_caffeine_off">Kofeina wył.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Kofeina wł.</string>
+    <!-- Power Menu -->
+    <!-- DC Dimming -->
 </resources>
