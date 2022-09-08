@@ -20,5 +20,8 @@
     <!-- Custom QS tiles -->
     <!-- Caffeine QS tile -->
     <string name="quick_settings_caffeine_label">Cafeïne</string>
-    <!-- Heads up QS tile -->
+    <string name="accessibility_quick_settings_caffeine_off">Cafeïne uit.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Cafeïne aan.</string>
+    <!-- Power Menu -->
+    <!-- DC Dimming -->
 </resources>

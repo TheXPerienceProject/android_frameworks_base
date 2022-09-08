@@ -20,10 +20,8 @@
     <!-- Custom QS tiles -->
     <!-- Caffeine QS tile -->
     <string name="quick_settings_caffeine_label">Modo cafeína</string>
-    <!-- Heads up QS tile -->
-    <string name="quick_settings_heads_up_label">Notificações pop-up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Notificações pop-up desativadas.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Notificações pop-up ativadas.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Notificações pop-up foram desativadas.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Notificações pop-up foram ativadas.</string>
+    <string name="accessibility_quick_settings_caffeine_off">Modo cafeína desativado.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Modo cafeína ativado.</string>
+    <!-- Power Menu -->
+    <!-- DC Dimming -->
 </resources>

@@ -19,5 +19,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Custom QS tiles -->
     <!-- Caffeine QS tile -->
-    <!-- Heads up QS tile -->
+    <!-- Power Menu -->
+    <string name="global_action_reboot">Yeniden Başlat</string>
+    <string name="global_action_reboot_more">Yeniden başlatılıyor\u2026</string>
+    <string name="global_action_reboot_sub">Sistem</string>
+    <string name="global_action_reboot_recovery">Kurtarma Modu</string>
+    <string name="global_action_reboot_bootloader">Ön Yükleyici (Bootloader)</string>
+    <string name="global_action_settings">Ayarlar</string>
+    <!-- DC Dimming -->
 </resources>
