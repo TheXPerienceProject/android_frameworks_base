@@ -5525,6 +5525,7 @@ public final class Settings {
         public static final String MULTI_AUDIO_FOCUS_ENABLED = "multi_audio_focus_enabled";
 
         /**
+         * @hide
          */
         public static final String GLOBAL_ACTIONS_LIST = "global_actions_list";
 
