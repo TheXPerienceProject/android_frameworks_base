@@ -31,4 +31,7 @@
     <string name="global_action_settings">Setelan</string>
     <!-- DC Dimming -->
     <string name="quick_settings_dc_dimming_label">Peredupan DC</string>
+    <!-- Screenshot delete action -->
+    <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
 </resources>
