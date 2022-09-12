@@ -30,4 +30,7 @@
     <string name="global_action_reboot_bootloader">Загрузчик</string>
     <string name="global_action_settings">Настройки</string>
     <!-- DC Dimming -->
+    <!-- Screenshot delete action -->
+    <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
 </resources>
