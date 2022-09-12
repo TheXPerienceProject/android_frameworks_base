@@ -27,4 +27,7 @@
     <string name="global_action_reboot_bootloader">Ön Yükleyici (Bootloader)</string>
     <string name="global_action_settings">Ayarlar</string>
     <!-- DC Dimming -->
+    <!-- Screenshot delete action -->
+    <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
 </resources>

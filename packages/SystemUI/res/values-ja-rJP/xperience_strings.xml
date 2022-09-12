@@ -24,4 +24,9 @@
     <string name="accessibility_quick_settings_caffeine_on">カフェイン オン</string>
     <!-- Power Menu -->
     <!-- DC Dimming -->
+    <!-- Screenshot delete action -->
+    <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <string name="screenshot_delete_label">削除</string>
+    <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
+    <string name="screenshot_delete_description">スクリーンショットを削除する</string>
 </resources>
