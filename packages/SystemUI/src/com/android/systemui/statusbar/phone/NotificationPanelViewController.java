@@ -204,7 +204,7 @@ import com.android.systemui.util.time.SystemClock;
 import com.android.systemui.wallet.controller.QuickAccessWalletController;
 import com.android.wm.shell.animation.FlingAnimationUtils;
 
-import com.android.internal.util.derp.derpUtils;
+import com.android.internal.util.xpe.xperienceUtils;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -922,7 +922,7 @@ public class NotificationPanelViewController extends PanelViewController {
                 new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onDoubleTap(MotionEvent e) {
-                derpUtils.switchScreenOff(mView.getContext());
+                xperienceUtils.switchScreenOff(mView.getContext());
                 return true;
             }
         });
