@@ -96,9 +96,6 @@ public class NotificationShadeWindowViewController {
 
     private boolean mIsTrackingBarGesture = false;
 
-    // custom additions start
-    private boolean mDoubleTapEnabledNative;
-
     @Inject
     public NotificationShadeWindowViewController(
             LockscreenShadeTransitionController transitionController,
