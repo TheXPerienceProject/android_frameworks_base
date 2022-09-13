@@ -68,7 +68,6 @@ import com.android.systemui.statusbar.phone.panelstate.PanelExpansionStateManage
 import com.android.systemui.statusbar.policy.BatteryController;
 import com.android.systemui.statusbar.policy.ConfigurationController;
 import com.android.systemui.statusbar.policy.KeyguardStateController;
-import com.android.systemui.tuner.TunerService;
 import com.android.systemui.util.CarrierConfigTracker;
 import com.android.systemui.util.settings.SecureSettings;
 
@@ -222,7 +221,6 @@ public abstract class StatusBarViewModule {
     static BatteryMeterViewController getBatteryMeterViewController(
             @Named(SPLIT_SHADE_BATTERY_VIEW) BatteryMeterView batteryMeterView,
             ConfigurationController configurationController,
-            TunerService tunerService,
             BroadcastDispatcher broadcastDispatcher,
             @Main Handler mainHandler,
             ContentResolver contentResolver,
@@ -231,7 +229,6 @@ public abstract class StatusBarViewModule {
         return new BatteryMeterViewController(
                 batteryMeterView,
                 configurationController,
-                tunerService,
                 broadcastDispatcher,
                 mainHandler,
                 contentResolver,
