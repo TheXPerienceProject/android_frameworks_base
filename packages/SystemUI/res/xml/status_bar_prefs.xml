@@ -86,7 +86,8 @@
 
     <com.android.systemui.tuner.StatusBarSwitch
         android:key="roaming"
-        android:title="@string/status_bar_roaming" />
+        android:title="@string/status_bar_roaming"
+        android:icon="@drawable/ic_statusbar_roaming" />
 
     <com.android.systemui.tuner.StatusBarSwitch
         android:key="alarm_clock"
