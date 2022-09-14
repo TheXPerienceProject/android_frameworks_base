@@ -30,4 +30,7 @@
     <!-- Screenshot delete action -->
     <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
+    <!-- Title of statusbar tuner -->
+    <string name="status_bar_icons">Durum çubuğu simgeleri</string>
+    <!-- Name of the VoLTE/VoWiFi icon. -->
 </resources>

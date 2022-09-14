@@ -36,4 +36,7 @@
     <string name="screenshot_delete_label">Eliminar</string>
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
     <string name="screenshot_delete_description">Eliminar captura de pantalla</string>
+    <!-- Title of statusbar tuner -->
+    <string name="status_bar_icons">Iconos de la barra de estado</string>
+    <!-- Name of the VoLTE/VoWiFi icon. -->
 </resources>
