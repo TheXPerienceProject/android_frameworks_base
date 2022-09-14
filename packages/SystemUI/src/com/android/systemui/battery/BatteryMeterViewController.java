@@ -91,7 +91,7 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
                 public void onUserChanged(int newUser, @NonNull Context userContext) {
                     mContentResolver.unregisterContentObserver(mSettingObserver);
                     registerShowBatteryPercentObserver(newUser);
-                    registerBatteryStyleObserver(newUserId);
+                    registerBatteryStyleObserver(newUser);
                     mView.updateShowPercent();
                 }
             };
@@ -127,7 +127,7 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
         mBatteryController.addCallback(mBatteryStateChangeCallback);
 
         registerShowBatteryPercentObserver(mUserTracker.getUserId());
-        registerBatteryStyleObserver(ActivityManager.getCurrentUser());
+        registerBatteryStyleObserver(mUserTracker.getUserId());
         registerGlobalBatteryUpdateObserver();
         mUserTracker.addCallback(mUserChangedCallback, new HandlerExecutor(mMainHandler));
 

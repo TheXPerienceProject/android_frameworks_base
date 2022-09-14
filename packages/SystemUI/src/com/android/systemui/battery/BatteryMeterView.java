@@ -72,7 +72,7 @@ import java.util.ArrayList;
 
 public class BatteryMeterView extends LinearLayout implements DarkReceiver {
 
-    protected static final String STATUS_BAR_BATTERY_STYLE = Settings.Secure.STATUS_BAR_BATTERY_STYLE;
+    protected static final String STATUS_BAR_BATTERY_STYLE = Settings.System.STATUS_BAR_BATTERY_STYLE;
 
     @Retention(SOURCE)
     @IntDef({MODE_DEFAULT, MODE_ON, MODE_OFF, MODE_ESTIMATE})
@@ -596,7 +596,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         if (mBatteryStateUnknown) {
             mBatteryIconView.setImageDrawable(getUnknownStateDrawable());
         } else {
-            updateBatteryStyle(mThemedDrawable);
+            updateBatteryStyle();
         }
 
         updateShowPercent();
