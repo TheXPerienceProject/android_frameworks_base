@@ -52,6 +52,7 @@ import com.android.systemui.assist.AssistManager;
 import com.android.systemui.camera.CameraIntents;
 import com.android.systemui.dagger.qualifiers.DisplayId;
 import com.android.systemui.dagger.qualifiers.Main;
+import com.android.systemui.model.SysUiState;
 import com.android.systemui.keyguard.WakefulnessLifecycle;
 import com.android.systemui.qs.QSPanelController;
 import com.android.systemui.statusbar.CommandQueue;
@@ -607,10 +608,9 @@ public class CentralSurfacesCommandQueueCallbacks implements CommandQueue.Callba
         return VibrationEffect.createWaveform(timings, /* repeat= */ -1);
     }
 
-    @Override
-    public void setBlockedGesturalNavigation(boolean blocked) {
-        if (mStatusBar.getNavigationBarView() != null) {
-            mStatusBar.getNavigationBarView().setBlockedGesturalNavigation(blocked);
+    public void setBlockedGesturalNavigation(boolean blocked, SysUiState sysUiState) {
+        if (mCentralSurfaces.getNavigationBarView() != null) {
+            mCentralSurfaces.getNavigationBarView().setBlockedGesturalNavigation(blocked,sysUiState);
         }
     }
 }
