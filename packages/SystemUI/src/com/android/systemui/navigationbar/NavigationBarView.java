@@ -787,10 +787,10 @@ public class NavigationBarView extends FrameLayout {
                 mShowSwipeUpUi ? mQuickStepAccessibilityDelegate : null);
     }
 
-    public void setBlockedGesturalNavigation(boolean blocked) {
+    public void setBlockedGesturalNavigation(boolean blocked, SysUiState sysUiState) {
         mBlockedGesturalNavigation = blocked;
         mEdgeBackGestureHandler.setBlockedGesturalNavigation(blocked);
-        updateDisabledSystemUiStateFlags();
+        updateDisabledSystemUiStateFlags(sysUiState);
         updatePanelSystemUiStateFlags();
     }
 

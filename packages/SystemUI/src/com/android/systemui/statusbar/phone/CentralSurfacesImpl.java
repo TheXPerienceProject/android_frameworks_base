@@ -165,6 +165,7 @@ import com.android.systemui.keyguard.KeyguardUnlockAnimationController;
 import com.android.systemui.keyguard.KeyguardViewMediator;
 import com.android.systemui.keyguard.ScreenLifecycle;
 import com.android.systemui.keyguard.WakefulnessLifecycle;
+import com.android.systemui.model.SysUiState;
 import com.android.systemui.navigationbar.NavigationBarController;
 import com.android.systemui.navigationbar.NavigationBarView;
 import com.android.systemui.plugins.DarkIconDispatcher;
@@ -1985,9 +1986,9 @@ public class CentralSurfacesImpl extends CoreStartable implements
         }
     }
 
- public void setBlockedGesturalNavigation(boolean blocked) {
+ public void setBlockedGesturalNavigation(boolean blocked, SysUiState sysUiState) {
         if (getNavigationBarView() != null) {
-            getNavigationBarView().setBlockedGesturalNavigation(blocked);
+            getNavigationBarView().setBlockedGesturalNavigation(blocked,sysUiState);
         }
     }
 
