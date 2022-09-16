@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The XPerience Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_deep_sleep">(Deep sleep: %1$d%2$s)</string>
+
+    <!-- Label for estimated remaining duration of dash battery charging -->
+    <string name="power_remaining_dash_charging_duration_only">Dash charging (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
+
+    <!-- Battery use screen.  Battery status shown in chart label when charging from a dash source.  -->
+    <string name="battery_info_status_dash_charging">Dash charging</string>
+
+    <!-- Label for estimated remaining duration of warp battery charging -->
+    <string name="power_remaining_warp_charging_duration_only">Warp charging (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
+
+    <!-- Battery use screen. Battery status shown in chart label when charging from a warp source.  -->
+    <string name="battery_info_status_warp_charging">Warp charging</string>
+
+    <!-- Label for estimated remaining duration of vooc battery charging -->
+    <string name="power_remaining_vooc_charging_duration_only">VOOC charging (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
+
+    <!-- Battery use screen. Battery status shown in chart label when charging from a VOOC source.  -->
+    <string name="battery_info_status_vooc_charging">VOOC charging</string>
+
+    <!-- Label for estimated remaining duration of MI Turbo  battery charging -->
+    <string name="power_remaining_mi_turbo_charge_duration_only">Mi Turbo Charge (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
+
+    <!-- Battery use screen. Battery status shown in chart label when charging from a Mi Turbo source.  -->
+    <string name="battery_info_status_mi_turbo_charge">Mi Turbo Charge</string>
+
+    <!-- Label for estimated remaining duration of TurboPower battery charging -->
+    <string name="power_remaining_turbo_charging_duration_only">Turbo charging (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
+
+    <!-- Battery use screen. Battery status shown in chart label when charging from a TurboPower source.  -->
+    <string name="battery_info_status_turbo_charging">Turbo charging</string>
+
+    <!-- Roaming symbol (R) path for SignalDrawable as defined on a 24x24 canvas. -->
+    <string name="config_signalRoamingPath" translatable="false">
+        M 19.436 19.688 L 18.152 19.688 L 18.152 22 L 17 22 L 17 16 L 19.332 16 C 20.097 16 20.687 16.155 21.103 16.466 C 21.519 16.776 21.727 17.225 21.727 17.813 C 21.727 18.214 21.619 18.551 21.403 18.823 C 21.191 19.092 20.893 19.299 20.511 19.445 L 22 21.946 L 22 22 L 20.766 22 L 19.436 19.688 Z M 18.152 18.852 L 19.336 18.852 C 19.725 18.852 20.028 18.764 20.247 18.588 C 20.465 18.409 20.575 18.166 20.575 17.859 C 20.575 17.537 20.473 17.288 20.27 17.113 C 20.069 16.937 19.769 16.846 19.368 16.841 L 18.152 16.841 L 18.152 18.852 Z
+    </string>
+
+    <!-- config_roamingCutout{Height,Width}Fraction define fraction of the 24x24 canvas that
+         should be cut out to display config_signalRoamingPath. -->
+    <item name="config_roamingCutoutWidthFraction" format="float" type="dimen">8</item>
+    <item name="config_roamingCutoutHeightFraction" format="float" type="dimen">9</item>
+</resources>
