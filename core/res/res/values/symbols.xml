@@ -4954,4 +4954,7 @@
   <java-symbol type="bool" name="config_lockscreenWeatherEnabledByDefault" />
 
   <java-symbol type="integer" name="config_maximumDelayTimeToDeactivateDataCall" />
+
+  <java-symbol type="bool" name="config_spoofGoogleApps" />
+
 </resources>
