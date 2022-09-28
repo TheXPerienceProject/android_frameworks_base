@@ -5849,6 +5849,5 @@
     <string-array name="config_serviceStateLocationAllowedPackages">
         <item>"com.android.phone"</item>
     </string-array>
-    <bool name="config_proximityCheckOnWakeEnabledByDefault">false</bool>
 
 </resources>
