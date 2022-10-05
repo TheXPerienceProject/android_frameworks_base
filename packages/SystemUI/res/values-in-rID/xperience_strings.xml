@@ -33,8 +33,13 @@
     <string name="quick_settings_dc_dimming_label">Peredupan DC</string>
     <!-- Screenshot delete action -->
     <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <string name="screenshot_delete_label">Hapus</string>
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
+    <string name="screenshot_delete_description">Hapus tangkapan layar</string>
     <!-- Title of statusbar tuner -->
     <string name="status_bar_icons">Ikon bilah status</string>
     <!-- Name of the VoLTE/VoWiFi icon. -->
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Indikator Roaming</string>
+    <!-- PowerShare QS tile -->
 </resources>

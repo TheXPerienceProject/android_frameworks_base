@@ -26,4 +26,6 @@
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
     <!-- Title of statusbar tuner -->
     <!-- Name of the VoLTE/VoWiFi icon. -->
+    <!-- Name of the roaming status bar icon. -->
+    <!-- PowerShare QS tile -->
 </resources>
