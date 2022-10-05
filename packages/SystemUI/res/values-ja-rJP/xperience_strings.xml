@@ -32,5 +32,10 @@
     <!-- Title of statusbar tuner -->
     <!-- Name of the VoLTE/VoWiFi icon. -->
     <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">ローミングインジケーター</string>
     <!-- PowerShare QS tile -->
+    <string name="quick_settings_powershare_label">PowerShare（パワーシェア</string>
+    <string name="quick_settings_powershare_off_powersave_label">パワーシェアOFF\nバッテリーセーバー</string>
+    <string name="quick_settings_powershare_off_low_battery_label">バッテリーシェア OFF\nバッテリー残量低下</string>
+    <string name="quick_settings_powershare_enabled_label">PowerShareが有効</string>
 </resources>
