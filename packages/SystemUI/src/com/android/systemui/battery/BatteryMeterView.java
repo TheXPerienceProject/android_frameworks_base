@@ -220,7 +220,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         // Init to not dark at all.
         if (isNightMode()) {
             onDarkChanged(new ArrayList<Rect>(), 0, DarkIconDispatcher.DEFAULT_ICON_TINT);
-        }        
+        }
 
         setClipChildren(false);
         setClipToPadding(false);
