@@ -35,8 +35,6 @@ public class PropImitationHooks {
 
     private static final String sCertifiedFp =
             Resources.getSystem().getString(R.string.config_certifiedFingerprint);
-    private static final String sCertifiedModel =
-            Resources.getSystem().getString(R.string.config_certifiedModel);
 
     private static final String sStockFp =
             Resources.getSystem().getString(R.string.config_stockFingerprint);
@@ -103,9 +101,9 @@ public class PropImitationHooks {
         sIsPhotos = sSpoofGapps && packageName.equals(PACKAGE_GPHOTOS);
 
         if (!sCertifiedFp.isEmpty() && sIsGms) {
-            dlog("Setting certified fingerprint/model for GMS");
+            dlog("Spoofing build for GMS");
             setPropValue("FINGERPRINT", sCertifiedFp);
-            setPropValue("MODEL", sCertifiedModel);
+            setPropValue("MODEL", Build.MODEL + "\u200b");
         } else if (!sStockFp.isEmpty() && packageName.equals(PACKAGE_ARCORE)) {
             dlog("Setting stock fingerprint for: " + packageName);
             setPropValue("FINGERPRINT", sStockFp);
@@ -113,7 +111,7 @@ public class PropImitationHooks {
             dlog("Spoofing Pixel XL for Google Photos");
             sP1Props.forEach((k, v) -> setPropValue(k, v));
         } else if (sSpoofGapps && (packageName.equals(PACKAGE_VELVET)
-                || packageName.equals(PACKAGE_WALLPAPERS))) {
+-                || packageName.equals(PACKAGE_WALLPAPERS))) {
             dlog("Spoofing Pixel 6 Pro for: " + packageName);
             sP6Props.forEach((k, v) -> setPropValue(k, v));
         } else if (!sNetflixModel.isEmpty() && packageName.equals(PACKAGE_NETFLIX)) {
