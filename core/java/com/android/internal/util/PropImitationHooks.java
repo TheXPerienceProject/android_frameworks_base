@@ -111,7 +111,7 @@ public class PropImitationHooks {
             dlog("Spoofing Pixel XL for Google Photos");
             sP1Props.forEach((k, v) -> setPropValue(k, v));
         } else if (sSpoofGapps && (packageName.equals(PACKAGE_VELVET)
--                || packageName.equals(PACKAGE_WALLPAPERS))) {
+                || packageName.equals(PACKAGE_WALLPAPERS))) {
             dlog("Spoofing Pixel 6 Pro for: " + packageName);
             sP6Props.forEach((k, v) -> setPropValue(k, v));
         } else if (!sNetflixModel.isEmpty() && packageName.equals(PACKAGE_NETFLIX)) {
