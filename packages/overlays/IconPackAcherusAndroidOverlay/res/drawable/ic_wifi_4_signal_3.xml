@@ -7,7 +7,4 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#ff000000" android:pathData="M2,6Q2,2,6,2Q12,2,18,2Q22,2,22,6Q18,14,14,20Q12,22,10,20Q6,14,2,6" android:strokeColor="#ffffffff" android:strokeWidth="2.0" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeMiterLimit="1.8" android:strokeAlpha="1.0" android:fillAlpha="0.0" />
     <path android:fillColor="#ffffffff" android:pathData="M11.96,16.93L6.54,7.37L17.52,7.35L11.96,16.93" android:strokeColor="#ffffffff" android:strokeWidth="1.79" android:strokeLineCap="round" android:strokeLineJoin="round" android:strokeMiterLimit="1.61" android:strokeAlpha="1.0" android:fillAlpha="1.0" />
-    <path
-        android:fillColor="@android:color/white"
-        android:pathData="m 24.401344,17.117563 h -1.056598 v 1.849791 h -1.506209 v -1.849791 h -3.602534 v -1.359946 l 3.344006,-5.8716006 h 1.764737 v 5.8844916 h 1.056598 z M 21.838537,15.770508 V 12.79926 q 0,-0.348044 0.01967,-0.754093 0.01968,-0.406048 0.03092,-0.522067 v 0 q -0.146131,0.360936 -0.528296,1.044134 v 0 l -1.83781,3.203274 z"/>
 </vector>
