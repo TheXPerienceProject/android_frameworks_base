@@ -38,8 +38,11 @@
     <string name="screenshot_delete_description">Hapus tangkapan layar</string>
     <!-- Title of statusbar tuner -->
     <string name="status_bar_icons">Ikon bilah status</string>
-    <!-- Name of the VoLTE/VoWiFi icon. -->
     <!-- Name of the roaming status bar icon. -->
     <string name="status_bar_roaming">Indikator Roaming</string>
     <!-- PowerShare QS tile -->
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">digunakan hari ini</string>
+    <string name="usage_data_default_suffix">Data</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>

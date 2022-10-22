@@ -32,7 +32,10 @@
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
     <!-- Title of statusbar tuner -->
     <string name="status_bar_icons">Durum çubuğu simgeleri</string>
-    <!-- Name of the VoLTE/VoWiFi icon. -->
     <!-- Name of the roaming status bar icon. -->
     <!-- PowerShare QS tile -->
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">bugün kullanılan</string>
+    <string name="usage_data_default_suffix">Veri</string>
+    <string name="usage_wifi_default_suffix">Kablosuz ağ</string>
 </resources>
