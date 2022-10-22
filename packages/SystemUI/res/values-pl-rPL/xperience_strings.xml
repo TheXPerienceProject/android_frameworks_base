@@ -28,7 +28,7 @@
     <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
     <!-- Title of statusbar tuner -->
-    <!-- Name of the VoLTE/VoWiFi icon. -->
     <!-- Name of the roaming status bar icon. -->
     <!-- PowerShare QS tile -->
+    <!-- Data usage info in QS footer -->
 </resources>
