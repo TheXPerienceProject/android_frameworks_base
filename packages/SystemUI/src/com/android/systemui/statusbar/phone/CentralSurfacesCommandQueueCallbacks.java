@@ -61,7 +61,6 @@ import com.android.systemui.statusbar.SysuiStatusBarStateController;
 import com.android.systemui.statusbar.VibratorHelper;
 import com.android.systemui.statusbar.notification.stack.NotificationStackScrollLayoutController;
 import com.android.systemui.statusbar.phone.dagger.CentralSurfacesComponent;
-import com.android.systemui.statusbar.policy.FlashlightController;
 import com.android.systemui.statusbar.policy.DeviceProvisionedController;
 import com.android.systemui.statusbar.policy.FlashlightController;
 import com.android.systemui.statusbar.policy.HeadsUpManager;
@@ -101,7 +100,6 @@ public class CentralSurfacesCommandQueueCallbacks implements CommandQueue.Callba
     private final FlashlightController mFlashlightController;
     private final DisableFlagsLogger mDisableFlagsLogger;
     private final int mDisplayId;
-    private final FlashlightController mFlashlightController;
     private final boolean mVibrateOnOpening;
     private final VibrationEffect mCameraLaunchGestureVibrationEffect;
 
@@ -136,8 +134,7 @@ public class CentralSurfacesCommandQueueCallbacks implements CommandQueue.Callba
             LightBarController lightBarController,
             FlashlightController flashlightController,
             DisableFlagsLogger disableFlagsLogger,
-            @DisplayId int displayId,
-            FlashlightController flashlightController) {
+            @DisplayId int displayId) {
 
         mCentralSurfaces = centralSurfaces;
         mContext = context;
@@ -165,7 +162,6 @@ public class CentralSurfacesCommandQueueCallbacks implements CommandQueue.Callba
         mFlashlightController = flashlightController;
         mDisableFlagsLogger = disableFlagsLogger;
         mDisplayId = displayId;
-        mFlashlightController = flashlightController;
 
         mVibrateOnOpening = resources.getBoolean(R.bool.config_vibrateOnIconAnimation);
         mCameraLaunchGestureVibrationEffect = getCameraGestureVibrationEffect(
