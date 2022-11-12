@@ -527,6 +527,7 @@ public class VolumeDialogControllerImpl implements VolumeDialogController, Dumpa
         updateRingerModeExternalW(mRingerModeObservers.mRingerMode.getValue());
         updateZenModeW();
         updateZenConfig();
+        updateLinkNotificationConfigW();
         updateEffectsSuppressorW(mNoMan.getEffectsSuppressor());
         mCallbacks.onStateChanged(mState);
     }
@@ -1116,7 +1117,7 @@ public class VolumeDialogControllerImpl implements VolumeDialogController, Dumpa
                         30000, UserHandle.USER_CURRENT);
             }
             if (VOLUME_LINK_NOTIFICATION_URI.equals(uri)) {
-                changed = updateLinkNotificationConfigW();
+                changed |= updateLinkNotificationConfigW();
             }
 
             if (changed) {
