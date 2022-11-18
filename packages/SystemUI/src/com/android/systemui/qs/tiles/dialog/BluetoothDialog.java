@@ -269,7 +269,6 @@ public class BluetoothDialog extends SystemUIDialog implements Window.Callback {
         if (!enabled || devices == null) {
             mBluetoothRecyclerView.setVisibility(View.GONE);
             mSeeAllLayout.setVisibility(View.GONE);
-            updateTurnOnLayout(true);
             return;
         }
         boolean isOnCall = Utils.isAudioModeOngoingCall(mContext);
@@ -287,18 +286,5 @@ public class BluetoothDialog extends SystemUIDialog implements Window.Callback {
         mAdapter.setBluetoothDevices(new ArrayList(devices));
         mAdapter.setActiveDevice(activeDevice);
         mSeeAllLayout.setVisibility(devices.size() > MAX_DEVICES_COUNT ? View.VISIBLE : View.GONE);
-        updateTurnOnLayout(activeDevice == null);
-    }
-
-    private void updateTurnOnLayout(boolean showBackground) {
-        ViewGroup.LayoutParams lp = mTurnOnLayout.getLayoutParams();
-        lp.height = mContext.getResources().getDimensionPixelSize(
-                showBackground ? R.dimen.internet_dialog_wifi_network_height
-                : R.dimen.internet_dialog_wifi_toggle_height);
-        mTurnOnLayout.setLayoutParams(lp);
-        mTurnOnLayout.setBackground(showBackground ? mBackgroundOn : null);
-        mBluetoothToggleText.setTextAppearance(showBackground
-                    ? R.style.TextAppearance_InternetDialog_Active
-                    : R.style.TextAppearance_InternetDialog);
     }
 }
