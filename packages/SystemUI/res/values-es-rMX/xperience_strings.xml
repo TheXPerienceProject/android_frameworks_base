@@ -49,4 +49,10 @@
     <string name="usage_data">Usado hoy</string>
     <string name="usage_data_default_suffix">Datos</string>
     <string name="usage_wifi_default_suffix">Wi-Fi</string>
+    <!-- Bluetooth dialog -->
+    <string name="turn_on_bluetooth">Activar Bluetooth</string>
+    <string name="bluetooth_is_off">Bluetooth está desactivado</string>
+    <string name="tap_a_device_to_connect">Pulse sobre un dispositivo para conectarse</string>
+    <!-- Face Unlock -->
+    <string name="face_unlock_recognizing">Reconociendo rostro...</string>
 </resources>

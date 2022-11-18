@@ -31,4 +31,6 @@
     <!-- Name of the roaming status bar icon. -->
     <!-- PowerShare QS tile -->
     <!-- Data usage info in QS footer -->
+    <!-- Bluetooth dialog -->
+    <!-- Face Unlock -->
 </resources>
