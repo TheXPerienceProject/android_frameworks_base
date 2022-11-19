@@ -50,6 +50,9 @@
     <string name="usage_data_default_suffix">Veri</string>
     <string name="usage_wifi_default_suffix">Kablosuz ağ</string>
     <!-- Bluetooth dialog -->
+    <string name="turn_on_bluetooth">Bluetooth\'u kullan</string>
+    <string name="bluetooth_is_off">Bluetooth kapalı</string>
+    <string name="tap_a_device_to_connect">Bağlanmak için bir cihaza dokunun</string>
     <!-- Face Unlock -->
     <string name="face_unlock_recognizing">Yüz algılanıyor...</string>
 </resources>
