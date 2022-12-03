@@ -190,4 +190,8 @@
 
     <!-- Enable face auth only when swiping security view -->
     <bool name="config_faceAuthOnlyOnSecurityView">false</bool>
+
+    <!-- Props to spoof for netflix, if not empty -->
+    <bool name="config_dolbyAtmosSpoof">false</bool>
+
 </resources>
