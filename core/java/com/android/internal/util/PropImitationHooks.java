@@ -87,6 +87,19 @@ public class PropImitationHooks {
     private static final String sNetflixModel =
             Resources.getSystem().getString(R.string.config_netflixSpoofModel);
 
+    //dolby Atmos
+    private static final String PACKAGE_DAX_UI = "com.dolby.daxappui";
+    private static final String PACKAGE_DAX_SERVICE = "com.dolby.daxservice";
+    private static final boolean sDolbyAtmos =
+            Resources.getSystem().getBoolean(R.bool.config_dolbyAtmosSpoof);
+    private static final Map<String, Object> sDolbyAtmosProps = new HashMap<>();
+    static {
+        sDolbyAtmosProps.put("ro.vendor.product.device.db", "OP_DEVICE");
+        sDolbyAtmosProps.put("ro.vendor.product.manufacturer.db", "OP_PHONE");
+        sDolbyAtmosProps.put("vendor.product.device", "OP_PHONE");
+        sDolbyAtmosProps.put("vendor.product.manufacturer", "OPD");
+    }
+
     private static volatile boolean sIsGms = false;
     private static volatile boolean sIsFinsky = false;
     private static volatile boolean sIsPhotos = false;
@@ -120,6 +133,9 @@ public class PropImitationHooks {
         } else if (!sNetflixModel.isEmpty() && packageName.equals(PACKAGE_NETFLIX)) {
             dlog("Setting model to " + sNetflixModel + " for Netflix");
             setPropValue("MODEL", sNetflixModel);
+        } else if (sDolbyAtmos && packageName.equals(PACKAGE_DAX_UI) && packageName.equals(PACKAGE_DAX_SERVICE)) {
+            dlog("Spoofing OnePlus device for: " + packageName);
+            sDolbyAtmosProps.forEach((k, v) -> setPropValue(k, v));
         }
     }
 
