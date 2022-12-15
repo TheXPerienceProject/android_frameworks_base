@@ -4018,11 +4018,7 @@ public final class NotificationPanelViewController extends PanelViewController {
         }
     }
 
-    private boolean isLandscape() {
-        return mView.getContext().getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
-    }
-
-    public void dozeTimeTick() {
+     public void dozeTimeTick() {
         mLockIconViewController.dozeTimeTick();
         mKeyguardStatusViewController.dozeTimeTick();
         if (mInterpolatedDarkAmount > 0) {
@@ -5334,6 +5330,7 @@ public final class NotificationPanelViewController extends PanelViewController {
             PendingIntent reTickerIntent = notification.contentIntent;
             String mergedContentText = reTickerAppName + " " + reTickerContent;
             mReTickerComebackIcon.setImageDrawable(icon);
+            Drawable dw = mView.getContext().getDrawable(R.drawable.reticker_background);
             if (mReTickerColored) {
                 int col = notification.color;
                 // check if we need to override the color
