@@ -322,36 +322,6 @@ object KeyguardBottomAreaViewBinder {
         }
 
         view.isActivated = viewModel.isActivated
-        view.drawable.setTint(
-            Utils.getColorAttrDefaultColor(
-                view.context,
-                if (viewModel.isActivated) {
-                    com.android.internal.R.attr.textColorPrimaryInverse
-                } else {
-                    com.android.internal.R.attr.textColorPrimary
-                },
-            )
-        )
-
-        view.backgroundTintList =
-            if (!viewModel.isSelected) {
-                Utils.getColorAttr(
-                    view.context,
-                    if (viewModel.isActivated) {
-                        com.android.internal.R.attr.colorAccent
-                    } else {
-                        com.android.internal.R.attr.colorSurface
-                    }
-                )
-            } else {
-                null
-            }
-        view
-            .animate()
-            .scaleX(if (viewModel.isSelected) SCALE_SELECTED_BUTTON else 1f)
-            .scaleY(if (viewModel.isSelected) SCALE_SELECTED_BUTTON else 1f)
-            .start()
-
         view.isClickable = viewModel.isClickable
         if (viewModel.isClickable) {
             if (viewModel.useLongPress) {
