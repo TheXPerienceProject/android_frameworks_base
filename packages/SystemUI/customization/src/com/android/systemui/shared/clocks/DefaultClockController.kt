@@ -35,6 +35,8 @@ import java.io.PrintWriter
 import java.util.Locale
 import java.util.TimeZone
 
+import com.android.internal.util.xpe.xperienceUtils
+
 private val TAG = DefaultClockController::class.simpleName
 
 /**
@@ -265,7 +267,7 @@ class DefaultClockController(
     private fun currentClockNeedsMoreSpace(): Boolean {
         // The affected clock fonts were entered manually into this array. Maybe there is a more
         // elegant way, working with an attribute that is transported within the overlay.
-        var lockClockThemes = arrayOf("aclonica", "bariol", "comfortaa", "coolstory", "linotte", "nokiapure", "AlmonteSnow", "AlphaClouds", "AlphaFlowers", "AlphaWood", "Ampad3D2", "BetsyFlanagan", "Brandayolq", "BudmoJiggler", "BunnyRabbits", "CFBadNews", "EditPoints", "EditPointsFilled", "Fibography", "Floorlight", "HotSweat", "Karamuruh", "Klyukin", "LMSClifford", "MonbijouxClownpiece", "NINJAS", "Pinewood", "Romantiques", "Roundheads", "TH3MACHINE", "VTKSDURA3d", "alienleague", "balticbodden", "balticcoast", "balticdune", "balticstorm", "biko", "forta", "frankfrt", "museomod", "mxwasgard", "neon2", "neptuncat", "odibee", "prodeltco", "snowstorm", "tourney", "vg5000", "xtrusion")
+        var lockClockThemes = arrayOf("aclonica", "bariol", "comfortaa", "coolstory", "linotte", "nokiapure", "AlmonteSnow", "AlphaClouds", "AlphaFlowers", "AlphaWood", "Ampad3D2", "BetsyFlanagan", "Brandayolq", "BudmoJiggler", "BunnyRabbits", "CFBadNews", "EditPoints", "EditPointsFilled", "Fibography", "Floorlight", "HotSweat", "Karamuruh", "Klyukin", "LMSClifford", "MonbijouxClownpiece", "opposans", "opposans-clock", "NINJAS", "Pinewood", "Romantiques", "Roundheads", "TH3MACHINE", "VTKSDURA3d", "alienleague", "balticbodden", "balticcoast", "balticdune", "balticstorm", "biko", "forta", "frankfrt", "museomod", "mxwasgard", "neon2", "neptuncat", "odibee", "prodeltco", "snowstorm", "tourney", "vg5000", "xtrusion")
         for (item in lockClockThemes) {
             if (xperienceUtils.isClockFontEnabled(item)) {
                 return true
