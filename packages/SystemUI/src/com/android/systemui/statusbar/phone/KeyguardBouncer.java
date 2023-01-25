@@ -56,7 +56,9 @@ import javax.inject.Inject;
 
 /**
  * A class which manages the bouncer on the lockscreen.
+ * @deprecated Use KeyguardBouncerRepository
  */
+@Deprecated
 public class KeyguardBouncer {
 
     private static final String TAG = "KeyguardBouncer";
@@ -216,7 +218,21 @@ public class KeyguardBouncer {
 
             // Split up the work over multiple frames.
             DejankUtils.removeCallbacks(mResetRunnable);
+<<<<<<< HEAD
             DejankUtils.postAfterTraversal(mShowRunnable);
+=======
+            if (mKeyguardStateController.isFaceAuthEnabled()
+                    && !mKeyguardUpdateMonitor.getCachedIsUnlockWithFingerprintPossible(
+                            KeyguardUpdateMonitor.getCurrentUser())
+                    && !needsFullscreenBouncer()
+                    && !mKeyguardUpdateMonitor.isFaceLockedOut()
+                    && !mKeyguardUpdateMonitor.userNeedsStrongAuth()
+                    && !mKeyguardBypassController.getBypassEnabled()) {
+                mHandler.postDelayed(mShowRunnable, BOUNCER_FACE_DELAY);
+            } else {
+                DejankUtils.postAfterTraversal(mShowRunnable);
+            }
+>>>>>>> caf/ks-aosp.lnx.13.0.r1-rel
 
             mKeyguardStateController.notifyBouncerShowing(true /* showing */);
             dispatchStartingToShow();
@@ -257,6 +273,9 @@ public class KeyguardBouncer {
 
     private void setVisibility(@View.Visibility int visibility) {
         mContainer.setVisibility(visibility);
+        if (mKeyguardViewController != null) {
+            mKeyguardViewController.onBouncerVisibilityChanged(visibility);
+        }
         dispatchVisibilityChanged();
     }
 
@@ -386,10 +405,6 @@ public class KeyguardBouncer {
      */
     public boolean inTransit() {
         return mShowingSoon || mExpansion != EXPANSION_HIDDEN && mExpansion != EXPANSION_VISIBLE;
-    }
-
-    public boolean getShowingSoon() {
-        return mShowingSoon;
     }
 
     /**
@@ -635,6 +650,10 @@ public class KeyguardBouncer {
     public interface BouncerExpansionCallback {
         /**
          * Invoked when the bouncer expansion reaches {@link KeyguardBouncer#EXPANSION_VISIBLE}.
+         * This is NOT called each time the bouncer is shown, but rather only when the fully
+         * shown amount has changed based on the panel expansion. The bouncer's visibility
+         * can still change when the expansion amount hasn't changed.
+         * See {@link KeyguardBouncer#isShowing()} for the checks for the bouncer showing state.
          */
         default void onFullyShown() {
         }

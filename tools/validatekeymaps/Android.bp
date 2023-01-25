@@ -21,7 +21,11 @@ cc_binary_host {
     cflags: [
         "-Wall",
         "-Werror",
+<<<<<<< HEAD
 	"-O3",
+=======
+        "-Wextra",
+>>>>>>> caf/ks-aosp.lnx.13.0.r1-rel
     ],
 
     static_libs: [
@@ -31,6 +35,9 @@ cc_binary_host {
         "libcutils",
         "liblog",
         "libui-types",
+    ],
+    shared_libs: [
+        "libvintf",
     ],
     target: {
         host_linux: {

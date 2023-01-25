@@ -27,6 +27,7 @@ import android.hardware.TriggerEventListener
 import android.os.PowerManager
 import android.os.SystemClock
 import com.android.keyguard.ActiveUnlockConfig
+import com.android.keyguard.FaceAuthApiRequestReason
 import com.android.keyguard.KeyguardUpdateMonitor
 import com.android.keyguard.KeyguardUpdateMonitorCallback
 import com.android.systemui.CoreStartable
@@ -93,6 +94,16 @@ class KeyguardLiftController @Inject constructor(
             isListening = false
             isPickupWake = false
             updateListeningState()
+<<<<<<< HEAD
+=======
+            keyguardUpdateMonitor.requestFaceAuth(
+                true,
+                FaceAuthApiRequestReason.PICK_UP_GESTURE_TRIGGERED
+            )
+            keyguardUpdateMonitor.requestActiveUnlock(
+                ActiveUnlockConfig.ACTIVE_UNLOCK_REQUEST_ORIGIN.WAKE,
+                "KeyguardLiftController")
+>>>>>>> caf/ks-aosp.lnx.13.0.r1-rel
         }
     }
 

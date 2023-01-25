@@ -58,8 +58,7 @@ import javax.inject.Inject;
 import dagger.Lazy;
 
 /** Quick settings tile: Airplane mode **/
-public class AirplaneModeTile extends SecureQSTile<BooleanState> {
-    private final Icon mIcon = ResourceIcon.get(com.android.internal.R.drawable.ic_qs_airplane);
+public class AirplaneModeTile extends QSTileImpl<BooleanState> {
     private final SettingObserver mSetting;
     private final BroadcastDispatcher mBroadcastDispatcher;
     private final Lazy<ConnectivityManager> mLazyConnectivityManager;
@@ -141,11 +140,8 @@ public class AirplaneModeTile extends SecureQSTile<BooleanState> {
         final boolean airplaneMode = value != 0;
         state.value = airplaneMode;
         state.label = mContext.getString(R.string.airplane_mode);
-        state.icon = mIcon;
-        if (state.slash == null) {
-            state.slash = new SlashState();
-        }
-        state.slash.isSlashed = !airplaneMode;
+        state.icon = ResourceIcon.get(state.value
+                ? R.drawable.qs_airplane_icon_on : R.drawable.qs_airplane_icon_off);
         state.state = airplaneMode ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE;
         state.contentDescription = state.label;
         state.expandedAccessibilityClassName = Switch.class.getName();
