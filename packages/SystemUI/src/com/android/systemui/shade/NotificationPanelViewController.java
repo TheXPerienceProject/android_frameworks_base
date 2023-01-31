@@ -528,7 +528,7 @@ public final class NotificationPanelViewController implements Dumpable {
     private final FalsingCollector mFalsingCollector;
 
     // Edge light
-    private NotificationLightsView mPulseLightsView
+    private NotificationLightsView mPulseLightsView;
 
     private boolean mShowIconsWhenExpanded;
     private int mIndicationBottomPadding;
