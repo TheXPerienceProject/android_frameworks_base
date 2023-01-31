@@ -218,7 +218,7 @@ public class KeyguardIndicationController {
         public void onScreenTurnedOff() {
             if (mFaceDetectionRunning) {
                 mFaceDetectionRunning = false;
-                mMessageToShowOnScreenOn = null;
+                mBiometricErrorMessageToShowOnScreenOn = null;
                 hideFaceUnlockRecognizingMessage();
             }
         }
@@ -288,7 +288,7 @@ public class KeyguardIndicationController {
                 } else if (msg.what == MSG_RESET_ERROR_MESSAGE_ON_SCREEN_ON) {
                     mBiometricErrorMessageToShowOnScreenOn = null;
                 } else if (msg.what == MSG_SHOW_RECOGNIZING_FACE){
-                    mMessageToShowOnScreenOn = null;
+                    mBiometricErrorMessageToShowOnScreenOn = null;
                     showFaceUnlockRecognizingMessage();
                 } else if (msg.what == MSG_HIDE_RECOGNIZING_FACE){
                     hideFaceUnlockRecognizingMessage();

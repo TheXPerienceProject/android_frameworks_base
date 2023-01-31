@@ -1347,12 +1347,12 @@ public class StatusBarKeyguardViewManager implements RemoteInputController.Callb
     private void showFaceRecognizingMessage(){
         if (mFaceRecognitionRunning &&
                 mKeyguardUpdateManager.isUnlockWithFacePossible(mKeyguardUpdateManager.getCurrentUser())) {
-            showBouncerMessage(mContext.getString(R.string.face_unlock_recognizing), null);
+            setKeyguardMessage(mContext.getString(R.string.face_unlock_recognizing), null);
         }
     }
 
     private void hideFaceRecognizingMessage(){
-        showBouncerMessage("", null);
+        setKeyguardMessage("", null);
     }
 
     /** Display security message to relevant KeyguardMessageArea. */
