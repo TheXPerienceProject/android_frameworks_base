@@ -226,8 +226,8 @@ public class DozeSensors {
                         true /* touchscreen */,
                         false /* ignoresSetting */,
                         dozeParameters.longPressUsesProx() /* requiresProx */,
-                        true /* immediatelyReRegister */,
-                        !dozeParameters.longPressNeedsProximityCheck() /* performsProxCheck */),
+                        !dozeParameters.longPressNeedsProximityCheck() /* performsProxCheck */,
+                        true /* immediatelyReRegister */),
                 new TriggerSensor(
                         findSensor(config.udfpsLongPressSensorType()),
                         "doze_pulse_on_auth",
@@ -238,8 +238,8 @@ public class DozeSensors {
                         true /* touchscreen */,
                         false /* ignoresSetting */,
                         dozeParameters.longPressUsesProx(),
-                        false /* immediatelyReRegister */,
-                        !dozeParameters.longPressNeedsProximityCheck() /* performsProxCheck */),
+                        !dozeParameters.longPressNeedsProximityCheck() /* performsProxCheck */,
+                        false /* immediatelyReRegister */),
                 new PluginSensor(
                         new SensorManagerPlugin.Sensor(TYPE_WAKE_DISPLAY),
                         Settings.Secure.DOZE_WAKE_DISPLAY_GESTURE,
@@ -551,8 +551,8 @@ public class DozeSensors {
                     requiresTouchscreen,
                     false /* ignoresSetting */,
                     false /* requiresProx */,
-                    true /* immediatelyReRegister */,
-                    performsProxCheck
+                    performsProxCheck,
+                    true /* immediatelyReRegister */
             );
         }
 
@@ -578,7 +578,8 @@ public class DozeSensors {
                     requiresTouchscreen,
                     ignoresSetting,
                     requiresProx,
-                    true
+                    true,
+                    immediatelyReRegister
             );
         }
 
@@ -592,7 +593,8 @@ public class DozeSensors {
                 boolean requiresTouchscreen,
                 boolean ignoresSetting,
                 boolean requiresProx,
-                boolean performsProxCheck
+                boolean performsProxCheck,
+                boolean immediatelyReRegister
         ) {
             this(
                     new Sensor[]{ sensor },
@@ -604,8 +606,8 @@ public class DozeSensors {
                     requiresTouchscreen,
                     ignoresSetting,
                     requiresProx,
-                    immediatelyReRegister,
                     performsProxCheck,
+                    immediatelyReRegister,
                     DevicePostureController.DEVICE_POSTURE_UNKNOWN
             );
         }
@@ -634,6 +636,7 @@ public class DozeSensors {
                     ignoresSetting,
                     requiresProx,
                     true,
+                    immediatelyReRegister,
                     posture
             );
         }
@@ -649,6 +652,7 @@ public class DozeSensors {
                 boolean ignoresSetting,
                 boolean requiresProx,
                 boolean performsProxCheck,
+                boolean immediatelyReRegister,
                 @DevicePostureController.DevicePostureInt int posture
         ) {
             mSensors = sensors;
@@ -787,7 +791,6 @@ public class DozeSensors {
                     screenX = event.values[0];
                     screenY = event.values[1];
                 }
-
                 mSensorCallback.onSensorPulse(mPulseReason, mPerformsProxCheck,
                         screenX, screenY, event.values);
                 if (!mRegistered && mImmediatelyReRegister) {
