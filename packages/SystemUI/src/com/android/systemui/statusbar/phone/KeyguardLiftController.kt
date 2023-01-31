@@ -86,7 +86,7 @@ class KeyguardLiftController @Inject constructor(
                 powerManager.goToSleep(SystemClock.uptimeMillis())
             } else if (ev == 1f && isFaceEnabled()) {
                 keyguardUpdateMonitor.requestFaceAuth(true,
--                FaceAuthApiRequestReason.PICK_UP_GESTURE_TRIGGERED)
+                FaceAuthApiRequestReason.PICK_UP_GESTURE_TRIGGERED)
                 keyguardUpdateMonitor.requestActiveUnlock(
                     ActiveUnlockConfig.ACTIVE_UNLOCK_REQUEST_ORIGIN.WAKE,
                    "KeyguardLiftController")

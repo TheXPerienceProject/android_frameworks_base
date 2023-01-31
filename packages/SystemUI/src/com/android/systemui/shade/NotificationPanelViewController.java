@@ -497,7 +497,7 @@ public final class NotificationPanelViewController extends PanelViewController {
     private final FalsingCollector mFalsingCollector;
 
     // Edge light
-    private NotificationLightsView mPulseLightsView
+    private NotificationLightsView mPulseLightsView;
 
     private final Runnable mHeadsUpExistenceChangedRunnable = () -> {
         setHeadsUpAnimatingAway(false);

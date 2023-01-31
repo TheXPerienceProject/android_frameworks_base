@@ -5989,6 +5989,4 @@
          when user turned off mobile data or data roaming during CIWLAN -->
     <integer name="config_maximumDelayTimeToDeactivateDataCall">7000</integer>
 
-    <bool name="config_proximityCheckOnWakeEnabledByDefault">false</bool>
-
 </resources>
