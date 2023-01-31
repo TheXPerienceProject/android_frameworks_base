@@ -426,7 +426,7 @@ public class ScreenshotController {
         mPm = mContext.getPackageManager();
 
         // Register task stack listener
-        TaskStackChangeListeners.getInstance().registerTaskStackListener(mTaskListener);
+       // ActivityManagerWrapper.getInstance().registerTaskStackListener(mTaskListener);
 
         // Initialize current foreground package name
         updateForegroundTaskSync();

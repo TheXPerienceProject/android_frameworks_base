@@ -214,7 +214,7 @@ public class RecordingService extends Service implements ScreenMediaRecorderList
                 break;
             case ACTION_SHOW_DIALOG:
                 if (mController != null) {
-                    mController.createScreenRecordDialog(this, null).show();
+                    mController.createScreenRecordDialog(this, null, null, null, null).show();
                 }
                 break;
         }
@@ -510,7 +510,7 @@ public class RecordingService extends Service implements ScreenMediaRecorderList
     }
 
 
-    private class RecordingServiceBinder extends IRemoteRecording.Stub
+   private class RecordingServiceBinder extends IRemoteRecording.Stub
             implements RecordingController.RecordingStateChangeCallback {
 
         private ArrayList<IRecordingCallback> mCallbackList = new ArrayList<>();

@@ -1142,8 +1142,6 @@ public final class NotificationPanelViewController implements Dumpable {
         addTrackingHeadsUpListener(mNotificationStackScrollLayoutController::setTrackingHeadsUp);
         setKeyguardBottomArea(mView.findViewById(R.id.keyguard_bottom_area));
 
-        mPreviewContainer = mView.findViewById(R.id.preview_container);
-        mKeyguardBottomArea.setPreviewContainer(mPreviewContainer);
         mPulseLightsView = (NotificationLightsView) mView.findViewById(R.id.lights_container);
 
         mReTickerComeback = mView.findViewById(R.id.ticker_comeback);
