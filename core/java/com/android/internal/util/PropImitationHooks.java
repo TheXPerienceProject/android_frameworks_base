@@ -77,7 +77,7 @@ public class PropImitationHooks {
         sP6Props.put("DEVICE", "raven");
         sP6Props.put("PRODUCT", "raven");
         sP6Props.put("MODEL", "Pixel 6 Pro");
-        sP6Props.put("FINGERPRINT", "google/raven/raven:13/TP1A.220624.021/8877034:user/release-keys");
+        sP6Props.put("FINGERPRINT", "google/raven/raven:13/TQ1A.221205.011/9244662:user/release-keys");
     }
 
     private static final boolean sSpoofGapps =
