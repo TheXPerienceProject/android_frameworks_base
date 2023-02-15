@@ -33,4 +33,11 @@
     <!-- Data usage info in QS footer -->
     <!-- Bluetooth dialog -->
     <!-- Face Unlock -->
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">헤드 업</string>
+    <string name="accessibility_quick_settings_heads_up_off">피킹 알람 끔.</string>
+    <string name="accessibility_quick_settings_heads_up_on">헤드업 알림이 켜짐.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">헤드 업 알림 꺼짐</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">헤드 업 켜짐.</string>
+    <!-- DataSwitch Tile -->
 </resources>

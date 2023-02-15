@@ -55,4 +55,14 @@
     <string name="tap_a_device_to_connect">Bağlanmak için bir cihaza dokunun</string>
     <!-- Face Unlock -->
     <string name="face_unlock_recognizing">Yüz algılanıyor...</string>
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Bildirim pencereleri</string>
+    <string name="accessibility_quick_settings_heads_up_off">Bildirim pencereleri kapalı.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Bildirim pencereleri açık.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Bildirim pencereleri kapatıldı.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Bildirim pencereleri açıldı.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Mobil veri Sim\'ini değiştir</string>
+    <string name="qs_data_switch_toast_0">Şuan takılı SIM kart yok</string>
+    <string name="qs_data_switch_toast_1">Şuan sadece bir SIM kart takılı</string>
 </resources>

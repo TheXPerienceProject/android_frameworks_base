@@ -55,4 +55,14 @@
     <string name="tap_a_device_to_connect">Выберите устройство для подключения</string>
     <!-- Face Unlock -->
     <string name="face_unlock_recognizing">Распознавание лица...</string>
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Всплывающие уведомления</string>
+    <string name="accessibility_quick_settings_heads_up_off">Всплывающие уведомления выключены.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Всплывающие уведомления включены.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Всплывающие уведомления выключены.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Всплывающие уведомления включены.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Переключить сим-карту для интернета</string>
+    <string name="qs_data_switch_toast_0">Нет SIM карты</string>
+    <string name="qs_data_switch_toast_1">Установлена только одна SIM-карта</string>
 </resources>

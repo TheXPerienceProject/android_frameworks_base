@@ -40,4 +40,11 @@
     <!-- Data usage info in QS footer -->
     <!-- Bluetooth dialog -->
     <!-- Face Unlock -->
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Heads Up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads Up オフ</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads Up オン</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads Upをオフにしました</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads Upをオンにしました</string>
+    <!-- DataSwitch Tile -->
 </resources>
