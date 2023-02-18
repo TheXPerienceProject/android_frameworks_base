@@ -39,6 +39,9 @@
     <string name="quick_settings_powershare_enabled_label">PowerShareが有効</string>
     <!-- Data usage info in QS footer -->
     <!-- Bluetooth dialog -->
+    <string name="turn_on_bluetooth">Bluetooth を使用</string>
+    <string name="bluetooth_is_off">Bluetoothがオフ</string>
+    <string name="tap_a_device_to_connect">端末をタップして接続</string>
     <!-- Face Unlock -->
     <!-- Heads up QS tile -->
     <string name="quick_settings_heads_up_label">Heads Up</string>
@@ -47,4 +50,8 @@
     <string name="accessibility_quick_settings_heads_up_changed_off">Heads Upをオフにしました</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Heads Upをオンにしました</string>
     <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_text_1">SIM 1</string>
+    <string name="qs_data_switch_text_2">SIM 2</string>
+    <string name="qs_data_switch_changed_1">データカードをSIM 1に入れ替えた。</string>
+    <string name="qs_data_switch_changed_2">データカードをSIM 2に入れ替えた。</string>
 </resources>
