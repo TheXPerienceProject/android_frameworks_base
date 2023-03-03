@@ -818,14 +818,14 @@ public final class PowerManagerService extends SystemService
     }
 
     // Smart charging
-    private boolean mSmartChargingAvailable;
-    private boolean mSmartChargingEnabled;
-    private boolean mSmartChargingResetStats;
+    private boolean mBatteryProtectionAvailable;
+    private boolean mBatteryProtectionEnabled;
+    private boolean mBatteryProtectionResetStats;
     private boolean mPowerInputSuspended = false;
-    private int mSmartChargingLevel;
-    private int mSmartChargingResumeLevel;
-    private int mSmartChargingLevelDefaultConfig;
-    private int mSmartChargingResumeLevelDefaultConfig;
+    private int mBatteryProtectionLevel;
+    private int mBatteryProtectionResumeLevel;
+    private int mBatteryProtectionLevelDefaultConfig;
+    private int mBatteryProtectionResumeLevelDefaultConfig;
     private static String mPowerInputSuspendSysfsNode;
     private static String mPowerInputSuspendValue;
     private static String mPowerInputResumeValue;
@@ -1394,16 +1394,16 @@ public final class PowerManagerService extends SystemService
                 Settings.System.PROXIMITY_ON_WAKE),
                 false, mSettingsObserver, UserHandle.USER_ALL);
         resolver.registerContentObserver(Settings.System.getUriFor(
-                Settings.System.SMART_CHARGING),
+                Settings.System.BATTERY_PROTECTION),
                 false, mSettingsObserver, UserHandle.USER_ALL);
         resolver.registerContentObserver(Settings.System.getUriFor(
-                Settings.System.SMART_CHARGING_LEVEL),
+                Settings.System.BATTERY_PROTECTION_LEVEL),
                 false, mSettingsObserver, UserHandle.USER_ALL);
         resolver.registerContentObserver(Settings.System.getUriFor(
-                Settings.System.SMART_CHARGING_RESUME_LEVEL),
+                Settings.System.BATTERY_PROTECTION_RESUME_LEVEL),
                 false, mSettingsObserver, UserHandle.USER_ALL);
         resolver.registerContentObserver(Settings.System.getUriFor(
-                Settings.System.SMART_CHARGING_RESET_STATS),
+                Settings.System.BATTERY_PROTECTION_RESET_STATS),
                 false, mSettingsObserver, UserHandle.USER_ALL);
         IVrManager vrManager = IVrManager.Stub.asInterface(getBinderService(Context.VR_SERVICE));
         if (vrManager != null) {
@@ -1493,18 +1493,18 @@ public final class PowerManagerService extends SystemService
         }
 
 	// Smart charging
-        mSmartChargingAvailable = resources.getBoolean(
-                com.android.internal.R.bool.config_smartChargingAvailable);
-        mSmartChargingLevelDefaultConfig = resources.getInteger(
-                com.android.internal.R.integer.config_smartChargingBatteryLevel);
-        mSmartChargingResumeLevelDefaultConfig = resources.getInteger(
-                com.android.internal.R.integer.config_smartChargingBatteryResumeLevel);
+        mBatteryProtectionAvailable = resources.getBoolean(
+                com.android.internal.R.bool.config_batteryProtectionAvailable);
+        mBatteryProtectionLevelDefaultConfig = resources.getInteger(
+                com.android.internal.R.integer.config_batteryProtectionBatteryLevel);
+        mBatteryProtectionResumeLevelDefaultConfig = resources.getInteger(
+                com.android.internal.R.integer.config_batteryProtectionBatteryResumeLevel);
         mPowerInputSuspendSysfsNode = resources.getString(
-                com.android.internal.R.string.config_smartChargingSysfsNode);
+                com.android.internal.R.string.config_batteryProtectionSysfsNode);
         mPowerInputSuspendValue = resources.getString(
-                com.android.internal.R.string.config_smartChargingSuspendValue);
+                com.android.internal.R.string.config_batteryProtectionSuspendValue);
         mPowerInputResumeValue = resources.getString(
-                com.android.internal.R.string.config_smartChargingResumeValue);
+                com.android.internal.R.string.config_batteryProtectionResumeValue);
     }
 
     @GuardedBy("mLock")
@@ -1534,16 +1534,16 @@ public final class PowerManagerService extends SystemService
                 UserHandle.USER_CURRENT);
         mStayOnWhilePluggedInSetting = Settings.Global.getInt(resolver,
                 Settings.Global.STAY_ON_WHILE_PLUGGED_IN, BatteryManager.BATTERY_PLUGGED_AC);
-        mSmartChargingEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.SMART_CHARGING, 0, UserHandle.USER_CURRENT) == 1;
-        mSmartChargingLevel = Settings.System.getIntForUser(resolver,
-                Settings.System.SMART_CHARGING_LEVEL,
-                mSmartChargingLevelDefaultConfig, UserHandle.USER_CURRENT);
-        mSmartChargingResumeLevel = Settings.System.getIntForUser(resolver,
-                Settings.System.SMART_CHARGING_RESUME_LEVEL,
-                mSmartChargingResumeLevelDefaultConfig, UserHandle.USER_CURRENT);
-        mSmartChargingResetStats = Settings.System.getIntForUser(resolver,
-                Settings.System.SMART_CHARGING_RESET_STATS, 0, UserHandle.USER_CURRENT) == 1;
+        mBatteryProtectionEnabled = Settings.System.getIntForUser(resolver,
+                Settings.System.BATTERY_PROTECTION, 0, UserHandle.USER_CURRENT) == 1;
+        mBatteryProtectionLevel = Settings.System.getIntForUser(resolver,
+                Settings.System.BATTERY_PROTECTION_LEVEL,
+                mBatteryProtectionLevelDefaultConfig, UserHandle.USER_CURRENT);
+        mBatteryProtectionResumeLevel = Settings.System.getIntForUser(resolver,
+                Settings.System.BATTERY_PROTECTION_RESUME_LEVEL,
+                mBatteryProtectionResumeLevelDefaultConfig, UserHandle.USER_CURRENT);
+        mBatteryProtectionResetStats = Settings.System.getIntForUser(resolver,
+                Settings.System.BATTERY_PROTECTION_RESET_STATS, 0, UserHandle.USER_CURRENT) == 1;
         mTheaterModeEnabled = Settings.Global.getInt(mContext.getContentResolver(),
                 Settings.Global.THEATER_MODE_ON, 0) == 1;
         mAlwaysOnEnabled = mAmbientDisplayConfiguration.alwaysOnEnabled(UserHandle.USER_CURRENT);
@@ -2616,9 +2616,9 @@ public final class PowerManagerService extends SystemService
     }
 
     private void updateSmartChargingStatus() {
-        if (!mSmartChargingAvailable) return;
-        if (mPowerInputSuspended && ((mSmartChargingResumeLevel < mSmartChargingLevel &&
-            mBatteryLevel <= mSmartChargingResumeLevel) || !mSmartChargingEnabled)) {
+        if (!mBatteryProtectionAvailable) return;
+        if (mPowerInputSuspended && ((mBatteryProtectionResumeLevel < mBatteryProtectionLevel &&
+            mBatteryLevel <= mBatteryProtectionResumeLevel) || !mBatteryProtectionEnabled)) {
             try {
                 FileUtils.stringToFile(mPowerInputSuspendSysfsNode, mPowerInputResumeValue);
                 mPowerInputSuspended = false;
@@ -2628,9 +2628,9 @@ public final class PowerManagerService extends SystemService
             return;
         }
 
-        if (mSmartChargingEnabled && !mPowerInputSuspended && (mBatteryLevel >= mSmartChargingLevel)) {
-            Slog.i(TAG, "Smart charging reset stats: " + mSmartChargingResetStats);
-            if (mSmartChargingResetStats) {
+        if (mBatteryProtectionEnabled && !mPowerInputSuspended && (mBatteryLevel >= mBatteryProtectionLevel)) {
+            Slog.i(TAG, "Smart charging reset stats: " + mBatteryProtectionResetStats);
+            if (mBatteryProtectionResetStats) {
                 try {
                      mBatteryStats.resetStatistics();
                 } catch (RemoteException e) {

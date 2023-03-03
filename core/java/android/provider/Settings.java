@@ -5730,22 +5730,22 @@ public final class Settings {
         /**
          * @hide
          */
-        public static final String SMART_CHARGING = "smart_charging";
+        public static final String BATTERY_PROTECTION = "battery_protection";
 
         /**
          * @hide
          */
-        public static final String SMART_CHARGING_RESET_STATS = "smart_charging_reset_stats";
+        public static final String BATTERY_PROTECTION_RESET_STATS = "battery_protection_reset_stats";
 
         /**
          * @hide
          */
-        public static final String SMART_CHARGING_LEVEL = "smart_charging_level";
+        public static final String BATTERY_PROTECTION_LEVEL = "battery_protection_level";
 
         /**
          * @hide
          */
-        public static final String SMART_CHARGING_RESUME_LEVEL = "smart_charging_resume_level";
+        public static final String BATTERY_PROTECTION_RESUME_LEVEL = "battery_protection_resume_level";
 
         /**
          * Keys we no longer back up under the current schema, but want to continue to
