@@ -124,6 +124,17 @@ open class LandscapeBatteryDrawable(private val context: Context, frameColor: In
         p.strokeJoin = Paint.Join.ROUND
     }
 
+    private val fillColorStrokePaintCharging = Paint(Paint.ANTI_ALIAS_FLAG).also { p ->
+        p.color = Color.MAGENTA
+        p.alpha = 255
+        p.isDither = true
+        p.strokeWidth = 5f
+        p.style = Paint.Style.STROKE
+        p.blendMode = BlendMode.SRC
+        p.strokeMiter = 5f
+        p.strokeJoin = Paint.Join.ROUND
+    }
+
     private val fillColorStrokeProtection = Paint(Paint.ANTI_ALIAS_FLAG).also { p ->
         p.isDither = true
         p.strokeWidth = 5f
@@ -251,7 +262,8 @@ open class LandscapeBatteryDrawable(private val context: Context, frameColor: In
         if (charging) {
             c.clipOutPath(scaledBolt)
             if (invertFillIcon) {
-                c.drawPath(scaledBolt, fillColorStrokePaint)
+                //c.drawPath(scaledBolt, fillColorStrokePaint)
+                c.drawPath(scaledBolt, fillColorStrokePaintCharging)
             } else {
                 c.drawPath(scaledBolt, fillColorStrokeProtection)
             }
