@@ -36,6 +36,8 @@ class CircleBatteryDrawable(private val context: Context, frameColor: Int) : Dra
     private val boltPaint: Paint
     private val plusPaint: Paint
     private val powerSavePaint: Paint
+    private val grPaint: Paint
+    private val greenPaint: Paint
     private val colors: IntArray
     private val boltPoints: FloatArray
     private val boltPath = Path()
@@ -219,7 +221,9 @@ class CircleBatteryDrawable(private val context: Context, frameColor: Int) : Dra
         if (batteryLevel > 0) {
             if (!charging && powerSaveEnabled) {
                 c.drawArc(frame, 270f, 3.6f * batteryLevel, false, powerSavePaint)
-            } else {
+            } else if (charging && batteryLevel >= 98 ) {
+               c.drawArc(frame, 270f, 3.6f * batteryLevel, false, greenPaint)
+            } else {    
                 c.drawArc(frame, 270f, 3.6f * batteryLevel, false, batteryPaint)
             }
         }
@@ -248,6 +252,7 @@ class CircleBatteryDrawable(private val context: Context, frameColor: Int) : Dra
         warningTextPaint.colorFilter = colorFilter
         boltPaint.colorFilter = colorFilter
         plusPaint.colorFilter = colorFilter
+        grPaint.colorFilter = colorFilter
     }
 
     override fun getOpacity() = PixelFormat.UNKNOWN
@@ -328,9 +333,14 @@ class CircleBatteryDrawable(private val context: Context, frameColor: Int) : Dra
             context,
             R.color.batterymeter_plus_color
         )
+        grPaint = Paint(Paint.ANTI_ALIAS_FLAG)
+        grPaint.color = Color.GREEN
         powerSavePaint = Paint(Paint.ANTI_ALIAS_FLAG)
         powerSavePaint.color = plusPaint.color
         powerSavePaint.style = Paint.Style.STROKE
+        greenPaint = Paint(Paint.ANTI_ALIAS_FLAG)
+        greenPaint.color = grPaint.color
+        greenPaint.style = Paint.Style.STROKE
         intrinsicWidth = res.getDimensionPixelSize(R.dimen.battery_width)
         intrinsicHeight = res.getDimensionPixelSize(R.dimen.battery_height)
 
