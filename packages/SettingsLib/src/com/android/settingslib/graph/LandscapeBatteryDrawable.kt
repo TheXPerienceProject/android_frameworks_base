@@ -152,6 +152,15 @@ open class LandscapeBatteryDrawable(private val context: Context, frameColor: In
         p.style = Paint.Style.FILL_AND_STROKE
     }
 
+    // set blue when charging
+    private val fillPaintBlue = Paint(Paint.ANTI_ALIAS_FLAG).also { p ->
+        p.color = Color.BLUE
+        p.alpha = 255
+        p.isDither = true
+        p.strokeWidth = 0f
+        p.style = Paint.Style.FILL_AND_STROKE
+    }
+
     private val errorPaint = Paint(Paint.ANTI_ALIAS_FLAG).also { p ->
         p.color = Utils.getColorStateListDefaultColor(context, R.color.batterymeter_plus_color)
         p.alpha = 255
@@ -229,7 +238,7 @@ open class LandscapeBatteryDrawable(private val context: Context, frameColor: In
             // Clip out the bolt shape
             unifiedPath.op(scaledBolt, Path.Op.DIFFERENCE)
             if (!invertFillIcon) {
-                c.drawPath(scaledBolt, fillPaint)
+                c.drawPath(scaledBolt, fillPaintBlue)
             }
         }
 
@@ -254,7 +263,7 @@ open class LandscapeBatteryDrawable(private val context: Context, frameColor: In
             if (batteryLevel <= Companion.CRITICAL_LEVEL && !charging) {
                 c.save()
                 c.clipPath(scaledFill)
-                c.drawPath(levelPath, fillPaint)
+                c.drawPath(levelPath, errorPaint)//set red in critical
                 c.restore()
             }
         }
@@ -435,7 +444,7 @@ open class LandscapeBatteryDrawable(private val context: Context, frameColor: In
         perimeterPath.computeBounds(RectF(), true)
 
         val errorPathString = context.resources.getString(
-                com.android.internal.R.string.config_batterymeterErrorPerimeterPath)
+                com.android.internal.R.string.config_batterymeterLandErrorPerimeterPath)
         errorPerimeterPath.set(PathParser.createPathFromPathData(errorPathString))
         errorPerimeterPath.computeBounds(RectF(), true)
 

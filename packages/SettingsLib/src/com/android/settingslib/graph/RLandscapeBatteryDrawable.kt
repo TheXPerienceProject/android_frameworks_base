@@ -124,6 +124,17 @@ open class RLandscapeBatteryDrawable(private val context: Context, frameColor: I
         p.strokeJoin = Paint.Join.ROUND
     }
 
+    private val fillColorStrokePaintCharging = Paint(Paint.ANTI_ALIAS_FLAG).also { p ->
+        p.color = Color.MAGENTA
+        p.alpha = 255
+        p.isDither = true
+        p.strokeWidth = 5f
+        p.style = Paint.Style.STROKE
+        p.blendMode = BlendMode.SRC
+        p.strokeMiter = 5f
+        p.strokeJoin = Paint.Join.ROUND
+    }
+
     private val fillColorStrokeProtection = Paint(Paint.ANTI_ALIAS_FLAG).also { p ->
         p.isDither = true
         p.strokeWidth = 5f
@@ -252,7 +263,8 @@ open class RLandscapeBatteryDrawable(private val context: Context, frameColor: I
         if (charging) {
             c.clipOutPath(scaledBolt)
             if (invertFillIcon) {
-                c.drawPath(scaledBolt, fillColorStrokePaint)
+                //c.drawPath(scaledBolt, fillColorStrokePaint)
+                c.drawPath(scaledBolt, fillColorStrokePaintCharging)
             } else {
                 c.drawPath(scaledBolt, fillColorStrokeProtection)
             }
@@ -424,7 +436,7 @@ open class RLandscapeBatteryDrawable(private val context: Context, frameColor: I
         perimeterPath.computeBounds(RectF(), true)
 
         val errorPathString = context.resources.getString(
-                com.android.internal.R.string.config_batterymeterErrorPerimeterPath)
+                com.android.internal.R.string.config_batterymeterRLandErrorPerimeterPath)
         errorPerimeterPath.set(PathParser.createPathFromPathData(errorPathString))
         errorPerimeterPath.computeBounds(RectF(), true)
 

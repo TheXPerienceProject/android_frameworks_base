@@ -38,6 +38,8 @@ class CircleBatteryDrawable(private val context: Context, frameColor: Int) : Dra
     private val powerSavePaint: Paint
     private val grPaint: Paint
     private val greenPaint: Paint
+    private val fastChargingPower: Paint
+    private val NaviBlue: Paint
     private val colors: IntArray
     private val boltPoints: FloatArray
     private val boltPath = Path()
@@ -221,8 +223,13 @@ class CircleBatteryDrawable(private val context: Context, frameColor: Int) : Dra
         if (batteryLevel > 0) {
             if (!charging && powerSaveEnabled) {
                 c.drawArc(frame, 270f, 3.6f * batteryLevel, false, powerSavePaint)
-            } else if (charging && batteryLevel >= 98 ) {
+            } else if (charging && batteryLevel >= 90 ) {
                c.drawArc(frame, 270f, 3.6f * batteryLevel, false, greenPaint)
+               // paint the battery icon to red when we have 15 or less like powersave
+            } else if (charging) {
+               c.drawArc(frame, 270f, 3.6f * batteryLevel, false, fastChargingPower)
+            } else if ( batteryLevel <= 15 ) {
+               c.drawArc(frame, 270f, 3.6f * batteryLevel, false, powerSavePaint)
             } else {    
                 c.drawArc(frame, 270f, 3.6f * batteryLevel, false, batteryPaint)
             }
@@ -253,6 +260,7 @@ class CircleBatteryDrawable(private val context: Context, frameColor: Int) : Dra
         boltPaint.colorFilter = colorFilter
         plusPaint.colorFilter = colorFilter
         grPaint.colorFilter = colorFilter
+        NaviBlue.colorFilter = colorFilter
     }
 
     override fun getOpacity() = PixelFormat.UNKNOWN
@@ -335,12 +343,17 @@ class CircleBatteryDrawable(private val context: Context, frameColor: Int) : Dra
         )
         grPaint = Paint(Paint.ANTI_ALIAS_FLAG)
         grPaint.color = Color.GREEN
+        NaviBlue = Paint(Paint.ANTI_ALIAS_FLAG)
+        NaviBlue.color = 0x00004d
         powerSavePaint = Paint(Paint.ANTI_ALIAS_FLAG)
         powerSavePaint.color = plusPaint.color
         powerSavePaint.style = Paint.Style.STROKE
         greenPaint = Paint(Paint.ANTI_ALIAS_FLAG)
         greenPaint.color = grPaint.color
         greenPaint.style = Paint.Style.STROKE
+        fastChargingPower = Paint(Paint.ANTI_ALIAS_FLAG)
+        fastChargingPower.color = NaviBlue.color
+        fastChargingPower.style = Paint.Style.STROKE
         intrinsicWidth = res.getDimensionPixelSize(R.dimen.battery_width)
         intrinsicHeight = res.getDimensionPixelSize(R.dimen.battery_height)
 
