@@ -124,6 +124,17 @@ open class ThemedBatteryDrawable(private val context: Context, frameColor: Int) 
         p.strokeJoin = Paint.Join.ROUND
     }
 
+    private val fillColorStrokePaintMagenta = Paint(Paint.ANTI_ALIAS_FLAG).also { p ->
+        p.color = Color.MAGENTA
+        p.alpha = 255
+        p.isDither = true
+        p.strokeWidth = 5f
+        p.style = Paint.Style.STROKE
+        p.blendMode = BlendMode.SRC
+        p.strokeMiter = 5f
+        p.strokeJoin = Paint.Join.ROUND
+    }
+
     private val fillColorStrokeProtection = Paint(Paint.ANTI_ALIAS_FLAG).also { p ->
         p.isDither = true
         p.strokeWidth = 5f
@@ -135,6 +146,14 @@ open class ThemedBatteryDrawable(private val context: Context, frameColor: Int) 
 
     private val fillPaint = Paint(Paint.ANTI_ALIAS_FLAG).also { p ->
         p.color = frameColor
+        p.alpha = 255
+        p.isDither = true
+        p.strokeWidth = 0f
+        p.style = Paint.Style.FILL_AND_STROKE
+    }
+
+    private val fillPaintBlue = Paint(Paint.ANTI_ALIAS_FLAG).also { p ->
+        p.color = Color.BLUE
         p.alpha = 255
         p.isDither = true
         p.strokeWidth = 0f
@@ -218,7 +237,7 @@ open class ThemedBatteryDrawable(private val context: Context, frameColor: Int) 
             // Clip out the bolt shape
             unifiedPath.op(scaledBolt, Path.Op.DIFFERENCE)
             if (!invertFillIcon) {
-                c.drawPath(scaledBolt, fillPaint)
+                c.drawPath(scaledBolt, fillPaintBlue)
             }
         }
 
@@ -251,7 +270,8 @@ open class ThemedBatteryDrawable(private val context: Context, frameColor: Int) 
         if (charging) {
             c.clipOutPath(scaledBolt)
             if (invertFillIcon) {
-                c.drawPath(scaledBolt, fillColorStrokePaint)
+                //c.drawPath(scaledBolt, fillColorStrokePaint)
+                c.drawPath(scaledBolt, fillColorStrokePaintMagenta)
             } else {
                 c.drawPath(scaledBolt, fillColorStrokeProtection)
             }
