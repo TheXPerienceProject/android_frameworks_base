@@ -210,4 +210,7 @@
 
     <!-- Whether device has VOOC charging support -->
     <bool name="config_hasVoocCharger">false</bool>
+
+    <!-- Whether device has Xiaomi Mi Turbo charging support -->
+    <bool name="config_hasMiTurboCharger">false</bool>
 </resources>
