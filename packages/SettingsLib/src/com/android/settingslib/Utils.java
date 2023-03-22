@@ -266,6 +266,21 @@ public class Utils {
                     statusString = res.getString(R.string.battery_info_status_charging);
                 } else if (batteryStatus.isPluggedInWired()) {
                     switch (batteryStatus.getChargingSpeed(context)) {
+                        case BatteryStatus.CHARGING_TURBO_POWER:
+                            statusString = res.getString(R.string.battery_info_status_turbo_charging);
+                            break;
+                        case BatteryStatus.CHARGING_VOOC:
+                            statusString = res.getString(R.string.battery_info_status_vooc_charging);
+                            break;
+                        case BatteryStatus.CHARGING_DASH:
+                            statusString = res.getString(R.string.battery_info_status_dash_charging);
+                            break;
+                        case BatteryStatus.CHARGING_WARP:
+                            statusString = res.getString(R.string.battery_info_status_warp_charging);
+                            break;
+                        case BatteryStatus.CHARGING_MI_TURBO_CHARGER:
+                            statusString = res.getString(R.string.battery_info_status_mi_turbo_charge);
+                            break;
                         case BatteryStatus.CHARGING_FAST:
                             statusString = res.getString(
                                     R.string.battery_info_status_charging_fast);
