@@ -101,34 +101,4 @@
     <string name="keyguard_indication_turbo_power_time"><xliff:g id="percentage">%2$s</xliff:g> • Turbo Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> until full)</string>
     <string name="keyguard_plugged_in_turbo_charging"><xliff:g id="percentage">%s</xliff:g> • Turbo Charging</string>
 
-
-    <!-- Label for estimated remaining duration of dash battery charging -->
-    <string name="power_remaining_dash_charging_duration_only">Dash charging (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
-
-    <!-- Battery use screen.  Battery status shown in chart label when charging from a dash source.  -->
-    <string name="battery_info_status_dash_charging">Dash charging</string>
-
-    <!-- Label for estimated remaining duration of warp battery charging -->
-    <string name="power_remaining_warp_charging_duration_only">Warp charging (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
-
-    <!-- Battery use screen. Battery status shown in chart label when charging from a warp source.  -->
-    <string name="battery_info_status_warp_charging">Warp charging</string>
-
-    <!-- Label for estimated remaining duration of vooc battery charging -->
-    <string name="power_remaining_vooc_charging_duration_only">VOOC charging (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
-
-    <!-- Battery use screen. Battery status shown in chart label when charging from a VOOC source.  -->
-    <string name="battery_info_status_vooc_charging">VOOC charging</string>
-
-    <!-- Label for estimated remaining duration of MI Turbo  battery charging -->
-    <string name="power_remaining_mi_turbo_charge_duration_only">Mi Turbo Charge (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
-
-    <!-- Battery use screen. Battery status shown in chart label when charging from a Mi Turbo source.  -->
-    <string name="battery_info_status_mi_turbo_charge">Mi Turbo Charge</string>
-
-    <!-- Label for estimated remaining duration of TurboPower battery charging -->
-    <string name="power_remaining_turbo_charging_duration_only">Turbo charging (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
-
-    <!-- Battery use screen. Battery status shown in chart label when charging from a TurboPower source.  -->
-    <string name="battery_info_status_turbo_charging">Turbo charging</string>
 </resources>
