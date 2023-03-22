@@ -5,4 +5,14 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="status_deep_sleep">(Глубокий сон: %1$d%2$s)</string>
+    <!-- Label for estimated remaining duration of dash battery charging -->
+    <!-- Battery use screen.  Battery status shown in chart label when charging from a dash source.  -->
+    <!-- Label for estimated remaining duration of warp battery charging -->
+    <!-- Battery use screen. Battery status shown in chart label when charging from a warp source.  -->
+    <!-- Label for estimated remaining duration of vooc battery charging -->
+    <!-- Battery use screen. Battery status shown in chart label when charging from a VOOC source.  -->
+    <!-- Label for estimated remaining duration of MI Turbo  battery charging -->
+    <!-- Battery use screen. Battery status shown in chart label when charging from a Mi Turbo source.  -->
+    <!-- Label for estimated remaining duration of TurboPower battery charging -->
+    <!-- Battery use screen. Battery status shown in chart label when charging from a TurboPower source.  -->
 </resources>
