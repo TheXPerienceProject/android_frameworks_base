@@ -28,6 +28,7 @@ import android.widget.FrameLayout;
 
 import com.android.systemui.R;
 import com.android.systemui.util.LargeScreenUtils;
+import com.android.systemui.tuner.TunerService;
 
 /**
  * View that contains the top-most bits of the QS panel (primarily the status bar with date, time,
