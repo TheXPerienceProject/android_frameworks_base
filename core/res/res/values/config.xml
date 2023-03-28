@@ -4481,7 +4481,7 @@
     <string name="config_bodyFontFamilyMedium" translatable="false">opposans-medium</string>
 
     <!-- Name of the font family to use in the default lockscreen clock -->
-    <string name="config_clockFontFamily" translatable="false">opposans</string>
+    <string name="config_clockFontFamily" translatable="false">opposans-clock</string>
 
     <!-- Size of icon shown beside a preference locked by admin -->
     <dimen name="config_restrictedIconSize">@dimen/restricted_icon_size_material</dimen>
