@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2022 Paranoid Android
+ * Copyright (C) 2023 The XPerience Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -77,7 +78,21 @@ public class PropImitationHooks {
         sP6Props.put("DEVICE", "raven");
         sP6Props.put("PRODUCT", "raven");
         sP6Props.put("MODEL", "Pixel 6 Pro");
-        sP6Props.put("FINGERPRINT", "google/raven/raven:13/TP1A.220624.021/8877034:user/release-keys");
+        sP6Props.put("FINGERPRINT", "google/raven/raven:13/TQ1A.230205.001.D2/9471403:user/release-keys");
+    }
+
+    //cheetah
+    private static final String PACKAGE_TURBO = "com.google.android.apps.turbo";
+    private static final String PACKAGE_SETUPWIZARD = "com.google.android.setupwizard";
+    private static final String PACKAGE_GBOARD = "com.google.android.inputmethod.latin";
+    private static final Map<String, Object> sP7Props = new HashMap<>();
+    static {
+        sP7Props.put("BRAND", "google");
+        sP7Props.put("MANUFACTURER", "Google");
+        sP7Props.put("DEVICE", "cheetah");
+        sP7Props.put("PRODUCT", "cheetah");
+        sP7Props.put("MODEL", "Pixel 7 Pro");
+        sP7Props.put("FINGERPRINT", "google/cheetah/cheetah:13/TQ2A.230305.008.C1/9619669:user/release-keys");
     }
 
     private static final boolean sSpoofGapps =
@@ -136,6 +151,9 @@ public class PropImitationHooks {
         } else if (sDolbyAtmos && packageName.equals(PACKAGE_DAX_UI) && packageName.equals(PACKAGE_DAX_SERVICE)) {
             dlog("Spoofing OnePlus device for: " + packageName);
             sDolbyAtmosProps.forEach((k, v) -> setPropValue(k, v));
+        } else if (sSpoofGapps && packageName.equals(PACKAGE_TURBO) || packageName.equals(PACKAGE_GBOARD) || packageName.equals(PACKAGE_SETUPWIZARD)) {
+            dlog("Spoofing Pixel 7 Pro for: " + packageName);
+            sP7Props.forEach((k, v) -> setPropValue(k, v));
         }
     }
 
