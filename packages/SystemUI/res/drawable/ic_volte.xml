@@ -15,7 +15,11 @@
      limitations under the License.
 
 -->
-<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="12dp" android:width="18dp" android:viewportWidth="18" android:viewportHeight="12">
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="15dp"
+    android:height="15dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
     <path android:fillColor="#ffffffff" android:pathData="M4.8739,3.7536L4.1595,1H3L4.3888,5.6327H5.359L6.6022,1H5.5307L4.8739,3.7536Z" android:strokeAlpha="0.85" android:fillAlpha="0.85"/>
     <path android:fillColor="#ffffffff" android:pathData="M9,4.3013V3.3013C9,3.0251 8.7761,2.8013 8.5,2.8013C8.2239,2.8013 8,3.0251 8,3.3013V4.3013C8,4.5774 8.2239,4.8013 8.5,4.8013C8.7761,4.8013 9,4.5774 9,4.3013ZM8.5,1.8013C7.6716,1.8013 7,2.4728 7,3.3013V4.3013C7,5.1297 7.6716,5.8013 8.5,5.8013C9.3284,5.8013 10,5.1297 10,4.3013V3.3013C10,2.4728 9.3284,1.8013 8.5,1.8013Z" android:strokeAlpha="0.85" android:fillAlpha="0.85" android:fillType="evenOdd"/>
     <path android:fillColor="#ffffffff" android:pathData="M4.3333,6.1346H3.3333V9.8013V10.8012V10.8013H5.3333V9.8013H4.3333V6.1346Z" android:strokeAlpha="0.85" android:fillAlpha="0.85" android:fillType="evenOdd"/>
