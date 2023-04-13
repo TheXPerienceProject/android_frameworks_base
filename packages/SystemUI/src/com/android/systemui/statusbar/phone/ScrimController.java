@@ -823,7 +823,7 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, Dump
                         interpolatedFraction);
             }
         } else if (mState == ScrimState.AUTH_SCRIMMED_SHADE) {
-            mNotificationsAlpha = (float) Math.pow(getInterpolatedFraction(), 0.8f);
+            mNotificationsAlpha = (float) Math.pow(getInterpolatedFraction(), 0.8f) * mCustomScrimAlpha;
         } else if (mState == ScrimState.KEYGUARD || mState == ScrimState.SHADE_LOCKED
                 || mState == ScrimState.PULSING) {
             Pair<Integer, Float> result = calculateBackStateForState(mState);
@@ -847,12 +847,13 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, Dump
                 mBehindAlpha = behindAlpha;
                 if (mState == ScrimState.KEYGUARD && mTransitionToFullShadeProgress > 0.0f) {
                     mNotificationsAlpha = MathUtils
-                            .saturate(mTransitionToLockScreenFullShadeNotificationsProgress);
+                            .saturate(mTransitionToLockScreenFullShadeNotificationsProgress)
+                            * mCustomScrimAlpha;
                 } else if (mState == ScrimState.SHADE_LOCKED) {
                     // going from KEYGUARD to SHADE_LOCKED state
-                    mNotificationsAlpha = getInterpolatedFraction();
+                    mNotificationsAlpha = getInterpolatedFraction() * mCustomScrimAlpha;
                 } else {
-                    mNotificationsAlpha = Math.max(1.0f - getInterpolatedFraction(), mQsExpansion);
+                    mNotificationsAlpha = Math.max(1.0f - getInterpolatedFraction(), mQsExpansion) * mCustomScrimAlpha;
                 }
                 mNotificationsTint = mState.getNotifTint();
                 mBehindTint = behindTint;
@@ -879,7 +880,6 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, Dump
         if (mState != ScrimState.UNLOCKED) {
             mAnimatingPanelExpansionOnUnlock = false;
         }
-
         assertAlphasValid();
     }
 
