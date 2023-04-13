@@ -804,7 +804,7 @@ public class NotificationIconContainer extends ViewGroup {
                 }
                 icon.setVisibleState(visibleState, animationsAllowed);
                 boolean newIconStyle = Settings.System.getIntForUser(getContext().getContentResolver(),
-                            Settings.System.STATUSBAR_COLORED_ICONS, 0, UserHandle.USER_CURRENT) == 1;
+                            Settings.System.STATUSBAR_COLORED_ICONS, 1, UserHandle.USER_CURRENT) == 1;
                 if (icon.getStatusBarIcon().pkg.contains("systemui") || !newIconStyle) {
                     icon.setIconColor(mInNotificationIconShelf ? mThemedTextColorPrimary : iconColor,
                             needsCannedAnimation && animationsAllowed);
@@ -832,7 +832,7 @@ public class NotificationIconContainer extends ViewGroup {
             if (view instanceof StatusBarIconView) {
                 StatusBarIconView icon = (StatusBarIconView) view;
                 boolean newIconStyle = Settings.System.getIntForUser(getContext().getContentResolver(),
-                            Settings.System.STATUSBAR_COLORED_ICONS, 0, UserHandle.USER_CURRENT) == 1;
+                            Settings.System.STATUSBAR_COLORED_ICONS, 1, UserHandle.USER_CURRENT) == 1;
                 if (icon.getStatusBarIcon().pkg.contains("systemui") || !newIconStyle) {
                     iconColor = ((StatusBarIconView) view).getStaticDrawableColor();
                 } else {
