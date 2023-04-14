@@ -87,4 +87,6 @@
     <!-- Name of the firewall status bar icon. -->
     <string name="status_bar_firewall">Cortafuegos</string>
     <string name="status_bar_call_strength">Intensidad de llamada</string>
+    <!-- Name of the VoLTE status bar icon. -->
+    <!-- Name of the VoWiFi status bar icon. -->
 </resources>
