@@ -47,4 +47,6 @@
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <!-- Name of the firewall status bar icon. -->
+    <!-- Name of the VoLTE status bar icon. -->
+    <!-- Name of the VoWiFi status bar icon. -->
 </resources>
