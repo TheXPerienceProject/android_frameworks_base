@@ -356,7 +356,7 @@ public interface StatusBarIconController {
             mIconSize = mContext.getResources().getDimensionPixelSize(
                     com.android.internal.R.dimen.status_bar_icon_size);
             mNewIconStyle = Settings.System.getIntForUser(mContext.getContentResolver(),
-                Settings.System.STATUSBAR_COLORED_ICONS, 1, UserHandle.USER_CURRENT) == 1;
+                Settings.System.STATUSBAR_COLORED_ICONS, 0, UserHandle.USER_CURRENT) == 1;
         }
 
         public boolean isDemoable() {
