@@ -805,7 +805,7 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, Dump
             }
         } else if (mState == ScrimState.AUTH_SCRIMMED_SHADE) {
             float behindFraction = getInterpolatedFraction();
-            behindFraction = (float) Math.pow(behindFraction, 0.8f) * mCustomScrimAlpha;
+            behindFraction = (float) Math.pow(behindFraction, 0.8f);
 
             mBehindAlpha = behindFraction * mDefaultScrimAlpha;
             mNotificationsAlpha = mBehindAlpha;
@@ -836,13 +836,12 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, Dump
                 mBehindAlpha = behindAlpha;
                 if (mState == ScrimState.KEYGUARD && mTransitionToFullShadeProgress > 0.0f) {
                     mNotificationsAlpha = MathUtils
-                            .saturate(mTransitionToLockScreenFullShadeNotificationsProgress)
-                            * mCustomScrimAlpha;
+                            .saturate(mTransitionToLockScreenFullShadeNotificationsProgress);
                 } else if (mState == ScrimState.SHADE_LOCKED) {
                     // going from KEYGUARD to SHADE_LOCKED state
-                    mNotificationsAlpha = getInterpolatedFraction() * mCustomScrimAlpha;
+                    mNotificationsAlpha = getInterpolatedFraction();
                 } else {
-                    mNotificationsAlpha = Math.max(1.0f - getInterpolatedFraction(), mQsExpansion) * mCustomScrimAlpha;
+                    mNotificationsAlpha = Math.max(1.0f - getInterpolatedFraction(), mQsExpansion);
                 }
                 mNotificationsTint = mState.getNotifTint();
                 mBehindTint = behindTint;
@@ -869,9 +868,6 @@ public class ScrimController implements ViewTreeObserver.OnPreDrawListener, Dump
         if (mState != ScrimState.UNLOCKED) {
             mAnimatingPanelExpansionOnUnlock = false;
         }
-        Log.e("hi", "Scrim opacity for state: " + mState
-                    + ", front: " + mInFrontAlpha + ", back: " + mBehindAlpha + ", notif: "
-                    + mNotificationsAlpha);
 
         assertAlphasValid();
     }
