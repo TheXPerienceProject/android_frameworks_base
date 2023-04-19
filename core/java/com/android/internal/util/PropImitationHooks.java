@@ -95,6 +95,12 @@ public class PropImitationHooks {
         sP7Props.put("FINGERPRINT", "google/cheetah/cheetah:13/TQ2A.230305.008.C1/9619669:user/release-keys");
     }
 
+    private static final Map<String, Object> xUserProps = new HashMap<>();
+    static {
+        xUserProps.put("TYPE", "user");
+        xUserProps.put("TAGS", "release-keys");
+    }
+
     private static final boolean sSpoofGapps =
             Resources.getSystem().getBoolean(R.bool.config_spoofGoogleApps);
 
@@ -130,6 +136,8 @@ public class PropImitationHooks {
         sIsGms = packageName.equals(PACKAGE_GMS) && processName.equals(PROCESS_GMS_UNSTABLE);
         sIsFinsky = packageName.equals(PACKAGE_FINSKY);
         sIsPhotos = sSpoofGapps && packageName.equals(PACKAGE_GPHOTOS);
+        dlog("Spoofing compile type to 'user' even if it is 'USER' build ");
+        xUserProps.forEach((k, v) -> setPropValue(k, v));
 
         if (!sCertifiedFp.isEmpty() && sIsGms) {
             dlog("Spoofing build for GMS");
