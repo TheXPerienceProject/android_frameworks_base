@@ -26,7 +26,6 @@
     android:layout_gravity="top"
     android:orientation="horizontal"
     android:importantForAccessibility="no"
-    android:clickable="true"
     android:clickable="true">
 
     <FrameLayout
