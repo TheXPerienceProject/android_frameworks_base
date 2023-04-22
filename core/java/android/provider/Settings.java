@@ -5584,6 +5584,7 @@ public final class Settings {
         public static final String VIBRATE_ON_DISCONNECT = "vibrate_on_disconnect";
 
         /**
+         * @hide
          */
         public static final String GLOBAL_ACTIONS_LIST = "global_actions_list";
 
