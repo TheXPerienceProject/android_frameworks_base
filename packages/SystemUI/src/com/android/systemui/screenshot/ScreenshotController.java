@@ -574,7 +574,7 @@ public class ScreenshotController {
 
             @Override
             public void onTouchOutside() {
-                dismissScreenshot(false);
+		dismissScreenshot(SCREENSHOT_DISMISSED_OTHER);
             }
         }, mActionExecutor, mFlags);
         mScreenshotView.setDefaultTimeoutMillis(mScreenshotHandler.getDefaultTimeoutMillis());
