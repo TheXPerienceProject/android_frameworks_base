@@ -5616,12 +5616,6 @@ public final class Settings {
                 "high_touch_sensitivity_enable";
 
         /**
-         * Show app volume rows in volume panel
-         * @hide
-         */
-        public static final String SHOW_APP_VOLUME = "show_app_volume";
-
-        /**
          * Adaptive playback
          * Automatically pause media when the volume is muted and
          * will resume automatically when volume is restored.
@@ -18506,12 +18500,6 @@ public final class Settings {
         @SdkConstant(SdkConstant.SdkConstantType.ACTIVITY_INTENT_ACTION)
         public static final String ACTION_VOLUME =
                 "android.settings.panel.action.VOLUME";
-
-        /**
-         * @hide
-         */
-        public static final String ACTION_APP_VOLUME =
-                "android.settings.panel.action.APP_VOLUME";
     }
 
     /**
