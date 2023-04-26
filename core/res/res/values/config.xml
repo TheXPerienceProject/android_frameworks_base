@@ -6074,6 +6074,4 @@
          different from the home screen wallpaper. -->
     <bool name="config_independentLockscreenLiveWallpaper">false</bool>
 
-    <bool name="config_proximityCheckOnWakeEnabledByDefault">false</bool>
-
 </resources>
