@@ -6161,6 +6161,4 @@
          the underlying display device changes. -->
     <bool name="config_persistBrightnessNitsForDefaultDisplay">false</bool>
 
-    <bool name="config_proximityCheckOnWakeEnabledByDefault">false</bool>
-
 </resources>
