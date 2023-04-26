@@ -26,6 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import com.android.systemui.Dependency;
 import com.android.systemui.R;
 import com.android.systemui.util.LargeScreenUtils;
 import com.android.systemui.tuner.TunerService;
