@@ -15,7 +15,8 @@
  */
 package com.android.systemui.battery;
 
-import static android.provider.Settings.System.SHOW_BATTERY_PERCENT;
+import static android.provider.Settings.System.STATUS_BAR_BATTERY_STYLE;
+import static android.provider.Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -37,7 +38,6 @@ import com.android.systemui.settings.UserTracker;
 import com.android.systemui.statusbar.phone.StatusBarIconController;
 import com.android.systemui.statusbar.policy.BatteryController;
 import com.android.systemui.statusbar.policy.ConfigurationController;
-import com.android.systemui.tuner.TunerService;
 import com.android.systemui.util.ViewController;
 
 import javax.inject.Inject;
@@ -45,7 +45,6 @@ import javax.inject.Inject;
 /** Controller for {@link BatteryMeterView}. **/
 public class BatteryMeterViewController extends ViewController<BatteryMeterView> {
     private final ConfigurationController mConfigurationController;
-    private final TunerService mTunerService;
     private final Handler mMainHandler;
     private final ContentResolver mContentResolver;
     private final BatteryController mBatteryController;
@@ -59,25 +58,9 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
                 @Override
                 public void onDensityOrFontScaleChanged() {
                     mView.scaleBatteryMeterViews();
+                    mView.updateSettings();
                 }
             };
-
-    private final TunerService.Tunable mTunable = new TunerService.Tunable() {
-        @Override
-        public void onTuningChanged(String key, String newValue) {
-            if (StatusBarIconController.ICON_HIDE_LIST.equals(key)) {
-                ArraySet<String> icons = StatusBarIconController.getIconHideList(
-                        getContext(), newValue);
-                mBatteryHidden = icons.contains(mSlotBattery);
-                mView.setVisibility(mBatteryHidden ? View.GONE : View.VISIBLE);
-            } else if (BatteryMeterView.STATUS_BAR_BATTERY_STYLE.equals(key)) {
-                if (!mBatteryHidden) {
-                    mView.setBatteryStyle(TunerService.parseInteger(newValue,
-                            BatteryMeterView.BATTERY_STYLE_PORTRAIT));
-                }
-            }
-        }
-    };
 
     private final BatteryController.BatteryStateChangeCallback mBatteryStateChangeCallback =
             new BatteryController.BatteryStateChangeCallback() {
@@ -108,13 +91,10 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
                 public void onUserChanged(int newUser, @NonNull Context userContext) {
                     mContentResolver.unregisterContentObserver(mSettingObserver);
                     registerShowBatteryPercentObserver(newUser);
+                    registerBatteryStyleObserver(newUserId);
                     mView.updateShowPercent();
                 }
             };
-
-    // Some places may need to show the battery conditionally, and not obey the tuner
-    private boolean mIgnoreTunerUpdates;
-    private boolean mIsSubscribedForTunerUpdates;
 
     private boolean mBatteryHidden;
 
@@ -123,7 +103,6 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
             BatteryMeterView view,
             UserTracker userTracker,
             ConfigurationController configurationController,
-            TunerService tunerService,
             @Main Handler mainHandler,
             ContentResolver contentResolver,
             FeatureFlags featureFlags,
@@ -131,7 +110,6 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
         super(view);
         mUserTracker = userTracker;
         mConfigurationController = configurationController;
-        mTunerService = tunerService;
         mMainHandler = mainHandler;
         mContentResolver = contentResolver;
         mBatteryController = batteryController;
@@ -146,10 +124,10 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
     @Override
     protected void onViewAttached() {
         mConfigurationController.addCallback(mConfigurationListener);
-        subscribeForTunerUpdates();
         mBatteryController.addCallback(mBatteryStateChangeCallback);
 
         registerShowBatteryPercentObserver(mUserTracker.getUserId());
+        registerBatteryStyleObserver(ActivityManager.getCurrentUser());
         registerGlobalBatteryUpdateObserver();
         mUserTracker.addCallback(mUserChangedCallback, new HandlerExecutor(mMainHandler));
 
@@ -159,44 +137,23 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
     @Override
     protected void onViewDetached() {
         mConfigurationController.removeCallback(mConfigurationListener);
-        unsubscribeFromTunerUpdates();
         mBatteryController.removeCallback(mBatteryStateChangeCallback);
 
         mUserTracker.removeCallback(mUserChangedCallback);
         mContentResolver.unregisterContentObserver(mSettingObserver);
     }
 
-    /**
-     * Turn off {@link BatteryMeterView}'s subscribing to the tuner for updates, and thus avoid it
-     * controlling its own visibility.
-     */
-    public void ignoreTunerUpdates() {
-        mIgnoreTunerUpdates = true;
-        unsubscribeFromTunerUpdates();
-    }
-
-    private void subscribeForTunerUpdates() {
-        if (mIsSubscribedForTunerUpdates || mIgnoreTunerUpdates) {
-            return;
-        }
-
-        mTunerService.addTunable(mTunable, StatusBarIconController.ICON_HIDE_LIST,
-                BatteryMeterView.STATUS_BAR_BATTERY_STYLE);
-        mIsSubscribedForTunerUpdates = true;
-    }
-
-    private void unsubscribeFromTunerUpdates() {
-        if (!mIsSubscribedForTunerUpdates) {
-            return;
-        }
-
-        mTunerService.removeTunable(mTunable);
-        mIsSubscribedForTunerUpdates = false;
-    }
-
-    private void registerShowBatteryPercentObserver(int user) {
+     private void registerShowBatteryPercentObserver(int user) {
         mContentResolver.registerContentObserver(
-                Settings.System.getUriFor(SHOW_BATTERY_PERCENT),
+                Settings.System.getUriFor(STATUS_BAR_SHOW_BATTERY_PERCENT),
+                false,
+                mSettingObserver,
+                user);
+    }
+
+    private void registerBatteryStyleObserver(int user) {
+       mContentResolver.registerContentObserver(
+                Settings.System.getUriFor(STATUS_BAR_BATTERY_STYLE),
                 false,
                 mSettingObserver,
                 user);
@@ -217,6 +174,7 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
         @Override
         public void onChange(boolean selfChange, Uri uri) {
             super.onChange(selfChange, uri);
+            mView.updateSettings();
             mView.updateShowPercent();
             if (TextUtils.equals(uri.getLastPathSegment(),
                     Settings.Global.BATTERY_ESTIMATES_LAST_UPDATE_TIME)) {
