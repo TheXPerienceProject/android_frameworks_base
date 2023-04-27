@@ -129,6 +129,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
     private int mShowPercentMode = MODE_DEFAULT;
     private String mEstimateText = null;
     private boolean mCharging;
+    private boolean mPCharging;
     private boolean mIsOverheated;
     private boolean mDisplayShieldEnabled;
     // Error state where we know nothing about the current battery state
@@ -536,7 +537,6 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
                         res.getDimensionPixelSize(R.dimen.battery_level_padding_start), 0, 0, 0);
             }
         } else {
-            removeBatteryPercentView();
             mThemedDrawable.setShowPercent(drawPercentInside);
             mRLandscapeDrawable.setShowPercent(drawPercentInside);
             mLandscapeDrawable.setShowPercent(drawPercentInside);
