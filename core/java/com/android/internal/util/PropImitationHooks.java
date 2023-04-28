@@ -78,7 +78,7 @@ public class PropImitationHooks {
         sP6Props.put("DEVICE", "raven");
         sP6Props.put("PRODUCT", "raven");
         sP6Props.put("MODEL", "Pixel 6 Pro");
-        sP6Props.put("FINGERPRINT", "google/raven/raven:13/TQ1A.230205.001.D2/9471403:user/release-keys");
+        sP6Props.put("FINGERPRINT", "google/raven/raven:13/TQ2A.230405.003.E1/9802792:user/release-keys");
     }
 
     //cheetah
