@@ -20,18 +20,31 @@ package com.android.internal.util.xpe;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.om.IOverlayManager;
+import android.content.om.OverlayInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.ResolveInfo;
+import android.os.Handler;
 import android.os.PowerManager;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.SystemClock;
+import android.os.UserHandle;
 
 import com.android.internal.statusbar.IStatusBarService;
+
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Some custom utilities
  * @hide
  */
 public class xperienceUtils {
+
+    private static OverlayManager mOverlayService;
+
     public static boolean isPackageInstalled(Context context, String pkg, boolean ignoreState) {
         if (pkg != null) {
             try {
@@ -69,6 +82,25 @@ public class xperienceUtils {
             } catch (RemoteException e) {
                 // do nothing.
             }
+        }
+    }
+
+    public static class OverlayManager {
+        private final IOverlayManager mService;
+
+        public OverlayManager() {
+            mService = IOverlayManager.Stub.asInterface(
+                    ServiceManager.getService(Context.OVERLAY_SERVICE));
+        }
+
+        public void setEnabled(String pkg, boolean enabled, int userId)
+                throws RemoteException {
+            mService.setEnabled(pkg, enabled, userId);
+        }
+
+        public List<OverlayInfo> getOverlayInfosForTarget(String target, int userId)
+                throws RemoteException {
+            return mService.getOverlayInfosForTarget(target, userId);
         }
     }
 

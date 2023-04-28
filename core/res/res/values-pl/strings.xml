@@ -116,7 +116,7 @@
     <string name="roamingText2" msgid="2834048284153110598">"Migający wskaźnik roamingu"</string>
     <string name="roamingText3" msgid="831690234035748988">"W innej okolicy"</string>
     <string name="roamingText4" msgid="2171252529065590728">"Poza biurem"</string>
-    <string name="roamingText5" msgid="4294671587635796641">"Roaming – preferowany system"</string>
+   <string name="roamingText5" msgid="4294671587635796641">"Roaming – preferowany system"</string>
     <string name="roamingText6" msgid="5536156746637992029">"Roaming – dostępny system"</string>
     <string name="roamingText7" msgid="1783303085512907706">"Roaming – partner stowarzyszony"</string>
     <string name="roamingText8" msgid="7774800704373721973">"Roaming – partner Premium"</string>
@@ -659,18 +659,8 @@
     <string name="face_acquired_roll_too_extreme" msgid="8261939882838881194">"Patrz prosto na telefon"</string>
     <string name="face_acquired_obscured" msgid="4917643294953326639">"Usuń wszystko, co zasłania Ci twarz."</string>
     <string name="face_acquired_sensor_dirty" msgid="8968391891086721678">"Wyczyść górną krawędź ekranu, w tym czarny pasek"</string>
-<<<<<<< HEAD
-=======
-    <!-- no translation found for face_acquired_dark_glasses_detected (5643703296620631986) -->
-    <skip />
-    <!-- no translation found for face_acquired_mouth_covering_detected (8219428572168642593) -->
-    <skip />
-    <string name="face_acquired_recalibrate_alt" msgid="5702674220280332115">"Nie można utworzyć modelu twarzy. Spróbuj ponownie."</string>
-    <string name="face_acquired_dark_glasses_detected_alt" msgid="4052123776406041972">"Wykryto ciemne okulary. Twarz musi być widoczna w całości."</string>
-    <string name="face_acquired_mouth_covering_detected_alt" msgid="1122294982850589766">"Wykryto zasłonę twarzy. Twarz musi być widoczna w całości."</string>
   <string-array name="face_acquired_vendor">
   </string-array>
->>>>>>> caf/ks-aosp.lnx.13.0.r1-rel
     <string name="face_error_hw_not_available" msgid="5085202213036026288">"Nie można zweryfikować twarzy. Sprzęt niedostępny."</string>
     <string name="face_error_timeout" msgid="2598544068593889762">"Spróbuj ponownie użyć rozpoznawania twarzy"</string>
     <string name="face_error_no_space" msgid="5649264057026021723">"Nie można przechowywać nowych danych twarzy. Usuń stare."</string>
