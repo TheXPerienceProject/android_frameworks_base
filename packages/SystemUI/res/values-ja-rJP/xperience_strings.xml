@@ -30,5 +30,45 @@
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
     <string name="screenshot_delete_description">スクリーンショットを削除する</string>
     <!-- Title of statusbar tuner -->
-    <!-- Name of the VoLTE/VoWiFi icon. -->
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">ローミングインジケーター</string>
+    <!-- PowerShare QS tile -->
+    <string name="quick_settings_powershare_label">PowerShare（パワーシェア</string>
+    <string name="quick_settings_powershare_off_powersave_label">パワーシェアOFF\nバッテリーセーバー</string>
+    <string name="quick_settings_powershare_off_low_battery_label">バッテリーシェア OFF\nバッテリー残量低下</string>
+    <string name="quick_settings_powershare_enabled_label">PowerShareが有効</string>
+    <!-- Data usage info in QS footer -->
+    <!-- Bluetooth dialog -->
+    <string name="turn_on_bluetooth">Bluetooth を使用</string>
+    <string name="bluetooth_is_off">Bluetoothがオフ</string>
+    <string name="tap_a_device_to_connect">端末をタップして接続</string>
+    <!-- Face Unlock -->
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Heads Up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads Up オフ</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads Up オン</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads Upをオフにしました</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads Upをオンにしました</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_text_1">SIM 1</string>
+    <string name="qs_data_switch_text_2">SIM 2</string>
+    <string name="qs_data_switch_changed_1">データカードをSIM 1に入れ替えた。</string>
+    <string name="qs_data_switch_changed_2">データカードをSIM 2に入れ替えた。</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time">Dash Charging • - は、（<xliff:g id="charging_time_left" example="4 hours 2 minutes">%s</xliff:g> ）で完了します。</string>
+    <string name="keyguard_plugged_in_dash_charging">急速充電中</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Warp Charging (充電完了まで残り<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • Warp Charge中</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • VOOC Charging (充電完了まで残り<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • VOOC 充電中</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_mi_turbo_charger_time"><xliff:g id="percentage">%2$s</xliff:g> • Warp Charging (充電完了まで残り<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_mi_turbo_charger"><xliff:g id="percentage">%s</xliff:g> • Mi Turbo Charge 中 </string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_turbo_power_time"><xliff:g id="percentage">%2$s</xliff:g> • Turbo Charging (充電完了まで残り<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_turbo_charging"><xliff:g id="percentage">%s</xliff:g> • Turbo Charging</string>
+    <!-- Name of the firewall status bar icon. -->
+    <string name="status_bar_firewall">ファイアウォール</string>
 </resources>

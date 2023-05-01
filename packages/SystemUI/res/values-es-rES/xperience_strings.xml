@@ -38,5 +38,52 @@
     <string name="screenshot_delete_description">Eliminar captura de pantalla</string>
     <!-- Title of statusbar tuner -->
     <string name="status_bar_icons">Iconos de la barra de estado</string>
-    <!-- Name of the VoLTE/VoWiFi icon. -->
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Indicador de itinerancia</string>
+    <!-- PowerShare QS tile -->
+    <string name="quick_settings_powershare_label">PowerShare</string>
+    <string name="quick_settings_powershare_off_powersave_label">PowerShare apagado\nAhorro de batería</string>
+    <string name="quick_settings_powershare_off_low_battery_label">Wireless PowerShare desactivado\nBatería baja</string>
+    <string name="quick_settings_powershare_enabled_label">PowerShare está activo</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">Usado hoy</string>
+    <string name="usage_data_default_suffix">Datos</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
+    <!-- Bluetooth dialog -->
+    <string name="turn_on_bluetooth">Activar Bluetooth</string>
+    <string name="bluetooth_is_off">Bluetooth está desactivado</string>
+    <string name="tap_a_device_to_connect">Pulse sobre un dispositivo para conectarse</string>
+    <!-- Face Unlock -->
+    <string name="face_unlock_recognizing">Reconociendo rostro...</string>
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Notificaciones emergentes</string>
+    <string name="accessibility_quick_settings_heads_up_off">Notificaciones emergentes desactivadas.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Notificaciones emergentes activadas.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Notificaciones emergentes desactivadas.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Notificaciones emergentes activadas.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Cambiar tarjeta de datos</string>
+    <string name="qs_data_switch_toast_0">Actualmente no se ha insertado ninguna tarjeta SIM</string>
+    <string name="qs_data_switch_toast_1">Actualmente solo se ha insertado una tarjeta SIM</string>
+    <string name="qs_data_switch_text_1">SIM 1</string>
+    <string name="qs_data_switch_text_2">SIM 2</string>
+    <string name="qs_data_switch_changed_1">Tarjeta de datos cambiada a SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Tarjeta de datos cambiada a SIM 2.</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time">Cargando con Dash • se completará en (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_dash_charging">Carga Rápida Dash</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Carga Warp • se completará en (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • Carga Warp</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Carga VOOC • se completará en (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • Carga VOOC</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_mi_turbo_charger_time"><xliff:g id="percentage">%2$s</xliff:g> • MI Turbo Charge • se completará en (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_mi_turbo_charger"><xliff:g id="porcentaje">%s</xliff:g> • Carga MI Turbo </string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_turbo_power_time"><xliff:g id="percentage">%2$s</xliff:g> • Carga Turbo • se completará en (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_turbo_charging"><xliff:g id="percentage">%s</xliff:g> • Carga Turbo</string>
+    <!-- Name of the firewall status bar icon. -->
+    <string name="status_bar_firewall">Cortafuegos</string>
 </resources>
