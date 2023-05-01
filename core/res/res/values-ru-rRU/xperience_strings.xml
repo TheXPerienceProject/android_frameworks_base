@@ -22,4 +22,6 @@
     <string name="reboot_to_recovery_message">Перезагрузка в рекавери\u2026</string>
     <string name="reboot_system_title">Перезагрузка системы</string>
     <string name="reboot_system_message">Перезапуск\u2026</string>
+    <!-- Face unlock -->
+    <string name="face_unlock_disabled_idle">Разблокировка по лицу отключена из-за бездействия</string>
 </resources>
