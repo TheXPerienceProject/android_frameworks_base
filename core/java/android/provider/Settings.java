@@ -5671,6 +5671,12 @@ public final class Settings {
         public static final String THREE_FINGER_GESTURE = "three_finger_gesture";
 
         /**
+         * Whether to disable 5G in battery saver mode
+         * @hide
+         */
+        public static final String LOW_POWER_DISABLE_5G = "low_power_disable_5g";
+
+       /**
          * These are all public system settings
          *
          * @hide
