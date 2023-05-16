@@ -162,6 +162,23 @@ public class MobileSignalController extends SignalController<MobileState, Mobile
                 }
             };
 
+    private final RegistrationCallback mRegistrationCallback = new RegistrationCallback() {
+        @Override
+        public void onRegistered(ImsRegistrationAttributes attributes) {
+            Log.d(mTag, "onRegistered: " + "attributes=" + attributes);
+            mCurrentState.imsRegistered = true;
+            mCurrentState.imsRegistrationTech = attributes.getRegistrationTechnology();
+            notifyListenersIfNecessary();
+        }
+
+        @Override
+        public void onUnregistered(ImsReasonInfo info) {
+            Log.d(mTag, "onDeregistered: " + "info=" + info);
+            mCurrentState.imsRegistered = false;
+            mCurrentState.imsRegistrationTech = REGISTRATION_TECH_NONE;
+            notifyListenersIfNecessary();
+        }
+    };
     // TODO: Reduce number of vars passed in, if we have the NetworkController, probably don't
     // need listener lists anymore.
     public MobileSignalController(
@@ -382,6 +399,8 @@ public class MobileSignalController extends SignalController<MobileState, Mobile
             Log.d(mTag, "setListeners: register CapabilitiesCallback and RegistrationCallback");
             mImsMmTelManager.registerMmTelCapabilityCallback(mContext.getMainExecutor(),
                     mCapabilityCallback);
+            mImsMmTelManager.registerImsRegistrationCallback (mContext.getMainExecutor(),
+                    mRegistrationCallback);
         } catch (ImsException e) {
             Log.e(mTag, "unable to register listeners.", e);
         }
@@ -407,6 +426,7 @@ public class MobileSignalController extends SignalController<MobileState, Mobile
             Log.d(mTag,
                     "removeListeners: unregister CapabilitiesCallback and RegistrationCallback");
             mImsMmTelManager.unregisterMmTelCapabilityCallback(mCapabilityCallback);
+            mImsMmTelManager.unregisterImsRegistrationCallback(mRegistrationCallback);
         }catch (Exception e) {
             Log.e(mTag, "removeListeners", e);
         }
