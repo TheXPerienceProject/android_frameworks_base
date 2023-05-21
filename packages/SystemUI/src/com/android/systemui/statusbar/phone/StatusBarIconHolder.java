@@ -63,24 +63,25 @@ public class StatusBarIconHolder {
      */
     @Deprecated
     public static final int TYPE_WIFI_NEW = 4;
+    public static final int TYPE_BLUETOOTH = 5;
+    public static final int TYPE_NETWORK_TRAFFIC = 42;
 
     @IntDef({
             TYPE_ICON,
             TYPE_WIFI,
             TYPE_MOBILE,
             TYPE_MOBILE_NEW,
-            TYPE_WIFI_NEW
+            TYPE_WIFI_NEW,
+            TYPE_BLUETOOTH
     })
     @Retention(RetentionPolicy.SOURCE)
     @interface IconType {}
-
-    public static final int TYPE_NETWORK_TRAFFIC = 42;
-    public static final int TYPE_BLUETOOTH = 3;
 
     private StatusBarIcon mIcon;
     private WifiIconState mWifiState;
     private MobileIconState mMobileState;
     private BluetoothIconState mBluetoothState;
+
     private int mType = TYPE_ICON;
     private int mTag = 0;
 
@@ -266,6 +267,7 @@ public class StatusBarIconHolder {
             case TYPE_WIFI_NEW:
                 // The new pipeline controls visibilities via the view model and view binder, so
                 // ignore setVisible.
+               break;
             case TYPE_BLUETOOTH:
                 mBluetoothState.visible = visible;
                 break;

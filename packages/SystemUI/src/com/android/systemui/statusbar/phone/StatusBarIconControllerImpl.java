@@ -246,17 +246,17 @@ public class StatusBarIconControllerImpl implements Tunable,
         int index = getSlotIndex(slot);
 
         if (state == null) {
-            removeIcon(index, 0);
+            removeIcon(slot, 0);
             return;
         }
 
-        StatusBarIconHolder holder = getIcon(index, 0);
+        StatusBarIconHolder holder = mStatusBarIconList.getIconHolder(slot, 0);
         if (holder == null) {
             holder = StatusBarIconHolder.fromBluetoothIconState(state);
-            setIcon(index, holder);
+            setIcon(slot, holder);
         } else {
             holder.setBluetoothState(state);
-            handleSet(index, holder);
+            handleSet(slot, holder);
         }
     }
 
