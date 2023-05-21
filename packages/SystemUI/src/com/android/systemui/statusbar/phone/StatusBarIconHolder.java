@@ -82,7 +82,7 @@ public class StatusBarIconHolder {
     private MobileIconState mMobileState;
     private BluetoothIconState mBluetoothState;
 
-    private int mType = TYPE_ICON;
+    private @IconType int mType = TYPE_ICON;
     private int mTag = 0;
 
     /** Returns a human-readable string representing the given type. */
@@ -142,14 +142,6 @@ public class StatusBarIconHolder {
         return holder;
     }
 
-    /** */
-    public static StatusBarIconHolder fromBluetoothIconState(BluetoothIconState state) {
-        StatusBarIconHolder holder = new StatusBarIconHolder();
-        holder.mBluetoothState = state;
-        holder.mType = TYPE_BLUETOOTH;
-        return holder;
-    }
-
     /**
      * ONLY for use with the new connectivity pipeline, where we only need a subscriptionID to
      * determine icon ordering and building the correct view model
@@ -159,6 +151,20 @@ public class StatusBarIconHolder {
         holder.mType = TYPE_MOBILE_NEW;
         holder.mTag = subId;
 
+        return holder;
+    }
+
+    /** */
+    public static StatusBarIconHolder fromBluetoothIconState(BluetoothIconState state) {
+        StatusBarIconHolder holder = new StatusBarIconHolder();
+        holder.mBluetoothState = state;
+        holder.mType = TYPE_BLUETOOTH;
+        return holder;
+    }
+
+    public static StatusBarIconHolder fromNetworkTraffic() {
+        StatusBarIconHolder holder = new StatusBarIconHolder();
+        holder.mType = TYPE_NETWORK_TRAFFIC;
         return holder;
     }
 
@@ -175,12 +181,6 @@ public class StatusBarIconHolder {
         holder.mIcon = new StatusBarIcon(UserHandle.SYSTEM, context.getPackageName(),
                 Icon.createWithResource(context, resId), 0, 0, contentDescription);
         holder.mTag = state.subId;
-       return holder;
-    }
-
-    public static StatusBarIconHolder fromNetworkTraffic() {
-        StatusBarIconHolder holder = new StatusBarIconHolder();
-        holder.mType = TYPE_NETWORK_TRAFFIC;
         return holder;
     }
 
@@ -240,8 +240,9 @@ public class StatusBarIconHolder {
             case TYPE_NETWORK_TRAFFIC:
                 return true;
             case TYPE_BLUETOOTH:
-		return mBluetoothState.visible;
-            default: return true;
+	            return mBluetoothState.visible;
+            default:
+                return true;
         }
     }
 
@@ -267,10 +268,11 @@ public class StatusBarIconHolder {
             case TYPE_WIFI_NEW:
                 // The new pipeline controls visibilities via the view model and view binder, so
                 // ignore setVisible.
-               break;
+                break;
             case TYPE_BLUETOOTH:
                 mBluetoothState.visible = visible;
                 break;
+
         }
     }
 
