@@ -243,7 +243,6 @@ public class StatusBarIconControllerImpl implements Tunable,
 
     @Override
     public void setBluetoothIcon(String slot, BluetoothIconState state) {
-        int index = getSlotIndex(slot);
 
         if (state == null) {
             removeIcon(slot, 0);
