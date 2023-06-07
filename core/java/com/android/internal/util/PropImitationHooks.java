@@ -161,8 +161,7 @@ public class PropImitationHooks {
         } else if (sIsPhotos) {
             dlog("Spoofing Pixel XL for Google Photos");
             sP1Props.forEach((k, v) -> setPropValue(k, v));
-        } else if (sSpoofGapps && (packageName.equals(PACKAGE_VELVET)
-                || packageName.equals(PACKAGE_WALLPAPERS))) {
+        } else if (sSpoofGapps && (packageName.equals(PACKAGE_VELVET))) {
             dlog("Spoofing Pixel 6 Pro for: " + packageName);
             sP6Props.forEach((k, v) -> setPropValue(k, v));
         } else if (!sNetflixModel.isEmpty() && packageName.equals(PACKAGE_NETFLIX)) {
@@ -171,7 +170,8 @@ public class PropImitationHooks {
         } else if (sDolbyAtmos && packageName.equals(PACKAGE_DAX_UI) && packageName.equals(PACKAGE_DAX_SERVICE)) {
             dlog("Spoofing OnePlus device for: " + packageName);
             sDolbyAtmosProps.forEach((k, v) -> setPropValue(k, v));
-        } else if (sSpoofGapps && packageName.equals(PACKAGE_TURBO) || packageName.equals(PACKAGE_GBOARD) || packageName.equals(PACKAGE_SETUPWIZARD)) {
+        } else if (sSpoofGapps && packageName.equals(PACKAGE_TURBO) || packageName.equals(PACKAGE_GBOARD) || packageName.equals(PACKAGE_SETUPWIZARD)
+                  || packageName.equals(PACKAGE_WALLPAPERS)) {
             dlog("Spoofing Pixel 7 Pro for: " + packageName);
             sP7Props.forEach((k, v) -> setPropValue(k, v));
         }
