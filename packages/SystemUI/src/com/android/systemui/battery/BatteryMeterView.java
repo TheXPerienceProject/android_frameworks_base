@@ -60,6 +60,7 @@ import com.android.settingslib.graph.LandscapeBatteryDrawableMusku;
 import com.android.settingslib.graph.LandscapeBatteryDrawablePill;
 import com.android.settingslib.graph.LandscapeBatteryDrawableiOS15;
 import com.android.settingslib.graph.LandscapeBatteryDrawableiOS16;
+import com.android.settingslib.graph.LandscapeBatteryDrawableOrigami;
 import com.android.systemui.DualToneHandler;
 import com.android.systemui.R;
 import com.android.systemui.animation.Interpolators;
@@ -106,6 +107,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
     protected static final int BATTERY_STYLE_LANDSCAPE_STYLE_B = 16;
     protected static final int BATTERY_STYLE_LANDSCAPE_IOS15 = 17;
     protected static final int BATTERY_STYLE_LANDSCAPE_IOS16 = 18;
+    protected static final int BATTERY_STYLE_LANDSCAPE_ORIGAMI = 19;
 
 
     private static final int BATTERY_PERCENT_HIDDEN = 0;
@@ -128,6 +130,8 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
     private final LandscapeBatteryDrawableSignal mLandscapeDrawableSignal;
     private final LandscapeBatteryDrawableiOS15 mLandscapeDrawableiOS15;
     private final LandscapeBatteryDrawableiOS16 mLandscapeDrawableiOS16;
+    private final LandscapeBatteryDrawableOrigami mLandscapeDrawableOrigami;
+
     private final ImageView mBatteryIconView;
     private TextView mBatteryPercentView;
 
@@ -192,6 +196,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         mLandscapeDrawableSignal = new LandscapeBatteryDrawableSignal(context, frameColor);
         mLandscapeDrawableiOS15 = new LandscapeBatteryDrawableiOS15(context, frameColor);
         mLandscapeDrawableiOS16 = new LandscapeBatteryDrawableiOS16(context, frameColor);
+        mLandscapeDrawableOrigami = new LandscapeBatteryDrawableOrigami(context, frameColor);
         atts.recycle();
 
         setupLayoutTransition();
@@ -350,7 +355,9 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
             mLandscapeDrawableSignal.setBatteryLevel(mLevel);
             mLandscapeDrawableiOS15.setBatteryLevel(mLevel);
             mLandscapeDrawableiOS16.setBatteryLevel(mLevel);
+            mLandscapeDrawableOrigami.setBatteryLevel(mLevel);
             updateShowPercent();
+            updatePercentText();
         }
         if (mCharging != pluggedIn) {
             mCharging = pluggedIn;
@@ -370,6 +377,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
             mLandscapeDrawableSignal.setCharging(mCharging);
             mLandscapeDrawableiOS15.setCharging(mCharging);
             mLandscapeDrawableiOS16.setCharging(mCharging);
+            mLandscapeDrawableOrigami.setCharging(mCharging);
             updateShowPercent();
             updatePercentText();
         }
@@ -392,6 +400,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         mLandscapeDrawableSignal.setPowerSaveEnabled(isPowerSave);
         mLandscapeDrawableiOS15.setPowerSaveEnabled(isPowerSave);
         mLandscapeDrawableiOS16.setPowerSaveEnabled(isPowerSave);
+        mLandscapeDrawableOrigami.setPowerSaveEnabled(isPowerSave);
         updateShowPercent();
     }
 
@@ -517,32 +526,35 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
     }
 
     void updateShowPercent() {
-        final boolean showing = mBatteryPercentView != null;
-        // TODO(b/140051051)
-        final boolean drawPercentInside = mShowPercentMode == MODE_DEFAULT &&
-                mShowBatteryPercent == BATTERY_PERCENT_SHOW_INSIDE;
-        final boolean drawPercentOnly = mShowPercentMode == MODE_ESTIMATE ||
-                mShowPercentMode == MODE_ON || mShowBatteryPercent == BATTERY_PERCENT_SHOW_OUTSIDE;
-        if (!(!mIsQsHeader && mBatteryStyle == BATTERY_STYLE_HIDDEN)
-                && drawPercentOnly && (!drawPercentInside || mCharging)) {
-            mThemedDrawable.setShowPercent(false);
-            mRLandscapeDrawable.setShowPercent(false);
-            mLandscapeDrawable.setShowPercent(false);
-            mCircleDrawable.setShowPercent(false);
-            mFullCircleDrawable.setShowPercent(false);
-            mRLandscapeDrawableStyleA.setShowPercent(false);
-            mLandscapeDrawableStyleA.setShowPercent(false);
-            mRLandscapeDrawableStyleB.setShowPercent(false);
-            mLandscapeDrawableStyleB.setShowPercent(false);
-            mLandscapeDrawableBuddy.setShowPercent(false);
-            mLandscapeDrawableLine.setShowPercent(false);
-            mLandscapeDrawableMusku.setShowPercent(false);
-            mLandscapeDrawablePill.setShowPercent(false);
-            mLandscapeDrawableSignal.setShowPercent(false);
-            mLandscapeDrawableiOS15.setShowPercent(false);
-            mLandscapeDrawableiOS16.setShowPercent(false);
- 
-            if (!showing) {
+        boolean drawPercentInside = mShowBatteryPercent == 1
+                                    && !mCharging && !mBatteryStateUnknown;
+        boolean showPercent = mShowBatteryPercent >= 2
+                                    || mBatteryStyle == BATTERY_STYLE_TEXT
+                                    || mShowPercentMode == MODE_ON;
+        showPercent = showPercent && !mBatteryStateUnknown
+                                    && mBatteryStyle != BATTERY_STYLE_HIDDEN;
+
+        mAccessorizedDrawable.showPercent(drawPercentInside);
+        mCircleDrawable.setShowPercent(drawPercentInside);
+        mFullCircleDrawable.setShowPercent(drawPercentInside);
+        mRLandscapeDrawable.setShowPercent(drawPercentInside);
+        mLandscapeDrawable.setShowPercent(drawPercentInside);
+        mRLandscapeDrawableStyleA.setShowPercent(drawPercentInside);
+        mLandscapeDrawableStyleA.setShowPercent(drawPercentInside);
+        mRLandscapeDrawableStyleB.setShowPercent(drawPercentInside);
+        mLandscapeDrawableStyleB.setShowPercent(drawPercentInside);
+        mLandscapeDrawableBuddy.setShowPercent(drawPercentInside);
+        mLandscapeDrawableLine.setShowPercent(drawPercentInside);
+        mLandscapeDrawableMusku.setShowPercent(drawPercentInside);
+        mLandscapeDrawablePill.setShowPercent(drawPercentInside);
+        mLandscapeDrawableSignal.setShowPercent(drawPercentInside);
+        mLandscapeDrawableiOS15.setShowPercent(drawPercentInside);
+        mLandscapeDrawableiOS16.setShowPercent(drawPercentInside);
+        mLandscapeDrawableOrigami.setShowPercent(drawPercentInside);
+
+        if (showPercent || (mBatteryPercentCharging && mCharging)
+                || mShowPercentMode == MODE_ESTIMATE) {
+            if (mBatteryPercentView == null) {
                 mBatteryPercentView = loadPercentView();
                 if (mPercentageStyleId != 0) { // Only set if specified as attribute
                     mBatteryPercentView.setTextAppearance(mPercentageStyleId);
@@ -679,6 +691,10 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
                 batteryHeight = res.getDimensionPixelSize(R.dimen.status_bar_battery_icon_height_landscape_ios16);
                 batteryWidth = res.getDimensionPixelSize(R.dimen.status_bar_battery_icon_width_landscape_ios16);
                 break;
+            case BATTERY_STYLE_LANDSCAPE_ORIGAMI:
+                batteryHeight = res.getDimensionPixelSize(R.dimen.status_bar_battery_icon_height_landscape_origami);
+                batteryWidth = res.getDimensionPixelSize(R.dimen.status_bar_battery_icon_width_landscape_origami);
+                break;
             default:
                 batteryHeight = res.getDimensionPixelSize(R.dimen.status_bar_battery_icon_height);
                 batteryWidth = res.getDimensionPixelSize(R.dimen.status_bar_battery_icon_width);
@@ -776,7 +792,16 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
                 mBatteryIconView.setVisibility(View.VISIBLE);
                 scaleBatteryMeterViews();
                 break;
-            default:
+            case BATTERY_STYLE_LANDSCAPE_ORIGAMI:
+                mBatteryIconView.setImageDrawable(mLandscapeDrawableOrigami);
+                mBatteryIconView.setVisibility(View.VISIBLE);
+                scaleBatteryMeterViews();
+                break;
+            case BATTERY_STYLE_FULL_CIRCLE:
+                mBatteryIconView.setImageDrawable(mFullCircleDrawable);
+                break;
+            case BATTERY_STYLE_CIRCLE:
+            case BATTERY_STYLE_DOTTED_CIRCLE:
                 mCircleDrawable.setMeterStyle(mBatteryStyle);
                 mBatteryIconView.setImageDrawable(mCircleDrawable);
                 break;
@@ -821,6 +846,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         mLandscapeDrawableSignal.setColors(foregroundColor, backgroundColor, singleToneColor);
         mLandscapeDrawableiOS15.setColors(foregroundColor, backgroundColor, singleToneColor);
         mLandscapeDrawableiOS16.setColors(foregroundColor, backgroundColor, singleToneColor);
+        mLandscapeDrawableOrigami.setColors(foregroundColor,backgroundColor, singleToneColor);
         mTextColor = singleToneColor;
         if (mBatteryPercentView != null) {
             mBatteryPercentView.setTextColor(singleToneColor);
