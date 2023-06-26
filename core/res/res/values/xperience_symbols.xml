@@ -83,4 +83,9 @@
     <java-symbol type="string" name="config_batterymeterLandBoltPathStyleB" />
     <java-symbol type="string" name="config_batterymeterLandPowersavePathStyleB" />
     <java-symbol type="string" name="config_batterymeterLandErrorPerimeterPathStyleB" />
+    <java-symbol type="string" name="config_batterymeterLandPerimeterPathOrigami" />
+    <java-symbol type="string" name="config_batterymeterLandFillMaskOrigami" />
+    <java-symbol type="string" name="config_batterymeterLandBoltPathOrigami" />
+    <java-symbol type="string" name="config_batterymeterLandPowersavePathOrigami" />
+    <java-symbol type="string" name="config_batterymeterLandErrorPerimeterPathOrigami" />
 </resources>
