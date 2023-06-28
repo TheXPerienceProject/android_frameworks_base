@@ -27,6 +27,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.hardware.biometrics.common.CommonProps;
 import android.hardware.biometrics.face.IFace;
 import android.hardware.biometrics.face.ISession;
@@ -40,6 +41,7 @@ import androidx.annotation.NonNull;
 import androidx.test.InstrumentationRegistry;
 import androidx.test.filters.SmallTest;
 
+import com.android.internal.R;
 import com.android.server.biometrics.log.BiometricContext;
 import com.android.server.biometrics.sensors.BaseClientMonitor;
 import com.android.server.biometrics.sensors.BiometricScheduler;
@@ -60,10 +62,14 @@ public class FaceProviderTest {
 
     private static final String TAG = "FaceProviderTest";
 
+    private static final float FRR_THRESHOLD = 0.2f;
+
     @Mock
     private Context mContext;
     @Mock
     private UserManager mUserManager;
+    @Mock
+    private Resources mResources;
     @Mock
     private IFace mDaemon;
     @Mock
@@ -86,6 +92,10 @@ public class FaceProviderTest {
         when(mContext.getSystemService(Context.USER_SERVICE)).thenReturn(mUserManager);
         when(mUserManager.getAliveUsers()).thenReturn(new ArrayList<>());
         when(mDaemon.createSession(anyInt(), anyInt(), any())).thenReturn(mock(ISession.class));
+
+        when(mContext.getResources()).thenReturn(mResources);
+        when(mResources.getFraction(R.fraction.config_biometricNotificationFrrThreshold, 1, 1))
+                .thenReturn(FRR_THRESHOLD);
 
         final SensorProps sensor1 = new SensorProps();
         sensor1.commonProps = new CommonProps();
