@@ -2349,11 +2349,6 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
 
         setStrongAuthTracker(mStrongAuthTracker);
 
-        mPocketManager = (PocketManager) context.getSystemService(Context.POCKET_SERVICE);
-        if (mPocketManager != null) {
-            mPocketManager.addCallback(mPocketCallback);
-        }
-
         if (mFpm != null) {
             mFingerprintSensorProperties = mFpm.getSensorPropertiesInternal();
             mFpm.addLockoutResetCallback(mFingerprintLockoutResetCallback);
