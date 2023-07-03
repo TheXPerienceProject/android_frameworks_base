@@ -30,6 +30,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.android.systemui.statusbar.policy.NetworkTraffic;
+
 /** A class holding the list of all the system icons that could be shown in the status bar. */
 public class StatusBarIconList {
     private final ArrayList<Slot> mSlots = new ArrayList<>();
@@ -126,7 +127,7 @@ public class StatusBarIconList {
         }
         // Auto insert new items behind network traffic
         mSlots.add(1, new Slot(slot, null));
-        return 0;
+        return 1;
     }
 
 

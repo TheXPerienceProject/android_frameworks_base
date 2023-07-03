@@ -519,12 +519,6 @@ public interface StatusBarIconController {
             return view;
         }
 
-        protected NetworkTraffic addNetworkTraffic(int index, String slot) {
-            NetworkTraffic view = onCreateNetworkTraffic(slot);
-            mGroup.addView(view, index, onCreateLayoutParams());
-            return view;
-        }
-
         protected StatusIconDisplayable addNewWifiIcon(int index, String slot) {
             if (!mStatusBarPipelineFlags.useNewWifiIcon()) {
                 throw new IllegalStateException("Attempting to add a wifi icon using the new"
@@ -538,6 +532,12 @@ public interface StatusBarIconController {
                 mDemoStatusIcons.addModernWifiView(mWifiViewModel);
             }
 
+            return view;
+        }
+
+        protected NetworkTraffic addNetworkTraffic(int index, String slot) {
+            NetworkTraffic view = onCreateNetworkTraffic(slot);
+            mGroup.addView(view, index, onCreateLayoutParams());
             return view;
         }
 

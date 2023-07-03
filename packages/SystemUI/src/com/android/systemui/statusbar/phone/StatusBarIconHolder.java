@@ -64,7 +64,8 @@ public class StatusBarIconHolder {
     @Deprecated
     public static final int TYPE_WIFI_NEW = 4;
     public static final int TYPE_BLUETOOTH = 5;
-    public static final int TYPE_NETWORK_TRAFFIC = 42;
+
+    public static final int TYPE_NETWORK_TRAFFIC = 6;
 
     @IntDef({
             TYPE_ICON,
@@ -162,12 +163,6 @@ public class StatusBarIconHolder {
         return holder;
     }
 
-    public static StatusBarIconHolder fromNetworkTraffic() {
-        StatusBarIconHolder holder = new StatusBarIconHolder();
-        holder.mType = TYPE_NETWORK_TRAFFIC;
-        return holder;
-    }
-
     /**
      * Creates a new StatusBarIconHolder from a CallIndicatorIconState.
      */
@@ -181,6 +176,12 @@ public class StatusBarIconHolder {
         holder.mIcon = new StatusBarIcon(UserHandle.SYSTEM, context.getPackageName(),
                 Icon.createWithResource(context, resId), 0, 0, contentDescription);
         holder.mTag = state.subId;
+        return holder;
+    }
+
+    public static StatusBarIconHolder fromNetworkTraffic() {
+        StatusBarIconHolder holder = new StatusBarIconHolder();
+        holder.mType = TYPE_NETWORK_TRAFFIC;
         return holder;
     }
 
@@ -237,10 +238,10 @@ public class StatusBarIconHolder {
                 // The new pipeline controls visibilities via the view model and view binder, so
                 // this is effectively an unused return value.
                 return true;
-            case TYPE_NETWORK_TRAFFIC:
-                return true;
             case TYPE_BLUETOOTH:
 	            return mBluetoothState.visible;
+            case TYPE_NETWORK_TRAFFIC:
+                return true;
             default:
                 return true;
         }
