@@ -1,4 +1,4 @@
-*
+/**
  * Copyright (C) 2023 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -32,17 +32,17 @@ interface QSModuleXPerience {
     @Binds
     @IntoMap
     @StringKey(DcDimmingTile.TILE_SPEC)
-    fun bindDcDimmingTile(DcDimmingTile: DcDimmingTile): QSTileImpl<*>
+    fun bindDcDimmingTile(dcDimmingTile: DcDimmingTile): QSTileImpl<*>
 
     /** Inject CaffeineTile into tileMap in QSModule */
     @Binds
     @IntoMap
     @StringKey(CaffeineTile.TILE_SPEC)
-    fun bindCaffeineTile(CaffeineTile: CaffeineTile): QSTileImpl<*>
+    fun bindCaffeineTile(caffeineTile: CaffeineTile): QSTileImpl<*>
 
     /** Inject HeadsUpTile into tileMap in QSModule */
     @Binds
     @IntoMap
     @StringKey(HeadsUpTile.TILE_SPEC)
-    fun bindHeadsUpTile(HeadsUpTile: HeadsUpTile): QSTileImpl<*>
+    fun bindHeadsUpTile(headsUpTile: HeadsUpTile): QSTileImpl<*>
 }

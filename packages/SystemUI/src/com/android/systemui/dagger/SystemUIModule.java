@@ -200,7 +200,7 @@ import dagger.Provides;
             UtilModule.class,
             NoteTaskModule.class,
             WalletModule.class,
-            QSModuleXPerience
+            QSModuleXPerience.class
         },
         subcomponents = {
             CentralSurfacesComponent.class,
