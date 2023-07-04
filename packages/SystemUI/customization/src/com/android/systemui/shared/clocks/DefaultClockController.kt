@@ -36,8 +36,6 @@ import java.io.PrintWriter
 import java.util.Locale
 import java.util.TimeZone
 
-import com.android.internal.util.xpe.xperienceUtils
-
 private val TAG = DefaultClockController::class.simpleName
 
 /**
