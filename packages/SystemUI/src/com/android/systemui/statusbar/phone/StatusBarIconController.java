@@ -61,8 +61,8 @@ import com.android.systemui.statusbar.pipeline.mobile.ui.viewmodel.MobileIconsVi
 import com.android.systemui.statusbar.pipeline.wifi.ui.WifiUiAdapter;
 import com.android.systemui.statusbar.pipeline.wifi.ui.view.ModernStatusBarWifiView;
 import com.android.systemui.statusbar.pipeline.wifi.ui.viewmodel.LocationBasedWifiViewModel;
+import com.android.systemui.statusbar.policy.NetworkTrafficSB;
 import com.android.systemui.util.Assert;
-import com.android.systemui.statusbar.policy.NetworkTraffic;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -483,11 +483,11 @@ public interface StatusBarIconController {
                 case TYPE_MOBILE_NEW:
                     return addNewMobileIcon(index, slot, holder.getTag());
 
-                case TYPE_NETWORK_TRAFFIC:
-                    return addNetworkTraffic(index, slot);
-
                 case TYPE_BLUETOOTH:
                     return addBluetoothIcon(index, slot, holder.getBluetoothState());
+
+                case TYPE_NETWORK_TRAFFIC:
+                    return addNetworkTraffic(index, slot);
             }
 
             return null;
@@ -535,8 +535,8 @@ public interface StatusBarIconController {
             return view;
         }
 
-        protected NetworkTraffic addNetworkTraffic(int index, String slot) {
-            NetworkTraffic view = onCreateNetworkTraffic(slot);
+        protected NetworkTrafficSB addNetworkTraffic(int index, String slot) {
+            NetworkTrafficSB view = onCreateNetworkTraffic(slot);
             mGroup.addView(view, index, onCreateLayoutParams());
             return view;
         }
@@ -628,14 +628,13 @@ public interface StatusBarIconController {
                         );
           }
 
-        private NetworkTraffic onCreateNetworkTraffic(String slot) {
-            NetworkTraffic view = new NetworkTraffic(mContext);
-            view.setPadding(4, 0, 4, 0);
+        private StatusBarBluetoothView onCreateStatusBarBluetoothView(String slot) {
+            StatusBarBluetoothView view = StatusBarBluetoothView.fromContext(mContext, slot);
             return view;
         }
 
-        private StatusBarBluetoothView onCreateStatusBarBluetoothView(String slot) {
-            StatusBarBluetoothView view = StatusBarBluetoothView.fromContext(mContext, slot);
+        private NetworkTrafficSB onCreateNetworkTraffic(String slot) {
+            NetworkTrafficSB view = new NetworkTrafficSB(mContext);
             return view;
         }
 
