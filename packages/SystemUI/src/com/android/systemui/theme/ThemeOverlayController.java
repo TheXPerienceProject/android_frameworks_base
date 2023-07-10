@@ -475,7 +475,7 @@ public class ThemeOverlayController implements CoreStartable, Dumpable {
                     @Override
                     public void onChange(boolean selfChange, Collection<Uri> collection, int flags,
                             int userId) {
-                        if (DEBUG) Log.d(TAG, "Overlay changed for user: " + userId);
+                        if (DEBUG) Log.d(TAG, "Battery Style Overlay changed for user: " + userId);
                         if (mUserTracker.getUserId() != userId) {
                             return;
                         }
