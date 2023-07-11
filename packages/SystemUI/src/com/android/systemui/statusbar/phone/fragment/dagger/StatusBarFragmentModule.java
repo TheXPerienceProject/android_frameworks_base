@@ -26,6 +26,7 @@ import com.android.systemui.statusbar.phone.PhoneStatusBarTransitions;
 import com.android.systemui.statusbar.phone.PhoneStatusBarView;
 import com.android.systemui.statusbar.phone.PhoneStatusBarViewController;
 import com.android.systemui.statusbar.phone.StatusBarBoundsProvider;
+import com.android.systemui.statusbar.phone.StatusBarLocation;
 import com.android.systemui.statusbar.phone.fragment.CollapsedStatusBarFragment;
 import com.android.systemui.statusbar.phone.userswitcher.StatusBarUserSwitcherContainer;
 import com.android.systemui.statusbar.policy.Clock;
@@ -64,6 +65,13 @@ public interface StatusBarFragmentModule {
     @StatusBarFragmentScope
     static BatteryMeterView provideBatteryMeterView(@RootView PhoneStatusBarView view) {
         return view.findViewById(R.id.battery);
+    }
+
+    /** */
+    @Provides
+    @StatusBarFragmentScope
+    static StatusBarLocation getStatusBarLocation() {
+        return StatusBarLocation.HOME;
     }
 
     /** */

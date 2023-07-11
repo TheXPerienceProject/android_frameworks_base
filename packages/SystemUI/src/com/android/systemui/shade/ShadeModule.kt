@@ -35,6 +35,7 @@ import com.android.systemui.privacy.OngoingPrivacyChip
 import com.android.systemui.settings.UserTracker
 import com.android.systemui.statusbar.LightRevealScrim
 import com.android.systemui.statusbar.notification.stack.NotificationStackScrollLayout
+import com.android.systemui.statusbar.phone.StatusBarLocation
 import com.android.systemui.statusbar.phone.StatusIconContainer
 import com.android.systemui.statusbar.phone.TapAgainView
 import com.android.systemui.statusbar.policy.BatteryController
@@ -169,6 +170,7 @@ abstract class ShadeModule {
         ): BatteryMeterViewController {
             return BatteryMeterViewController(
                 batteryMeterView,
+                StatusBarLocation.QS,
                 userTracker,
                 configurationController,
                 tunerService,
