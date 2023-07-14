@@ -371,7 +371,7 @@ public final class ShutdownThread extends Thread {
         pd.setCancelable(false);
         pd.getWindow().setType(WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG);
 
-        pd.show();
+        if (!ShutdownAnimationExists()) pd.show();
         return pd;
     }
 
@@ -479,6 +479,10 @@ public final class ShutdownThread extends Thread {
         {
             String reason = (mReboot ? "1" : "0") + (mReason != null ? mReason : "");
             SystemProperties.set(SHUTDOWN_ACTION_PROPERTY, reason);
+        }
+
+        if (ShutdownAnimationExists()) {
+            startShutdownAnimation();
         }
 
         /*
@@ -769,6 +773,7 @@ public final class ShutdownThread extends Thread {
                 }
         }
         if (reboot) {
+            stopShutdownAnimation();
             Log.i(TAG, "Rebooting, reason: " + reason);
             PowerManagerService.lowLevelReboot(reason);
             Log.e(TAG, "Reboot failed, will attempt shutdown instead");
@@ -792,6 +797,9 @@ public final class ShutdownThread extends Thread {
             }
 
         }
+
+        stopShutdownAnimation();
+
         // Shutdown power
         Log.i(TAG, "Performing low-level shutdown...");
         PowerManagerService.lowLevelShutdown(reason);
@@ -884,4 +892,25 @@ public final class ShutdownThread extends Thread {
             }
         }
     }
+
+    private static boolean ShutdownAnimationExists() {
+        return new File("/system/media/shutdownanimation.zip").exists();
+    }
+
+    private static void startShutdownAnimation() {
+        SystemProperties.set("service.bootanim.exit", "0");
+        SystemProperties.set("sys.powerctl", "animate");
+        SystemProperties.set("ctl.start", "bootanim");
+    }
+
+    private static void stopShutdownAnimation() {
+        SystemProperties.set("service.bootanim.exit", "1");
+        while (SystemProperties.get("init.svc.bootanim").equals("running")) {
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException unused) {
+            }
+        }
+    }
+
 }
