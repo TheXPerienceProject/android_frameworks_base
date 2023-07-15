@@ -69,7 +69,6 @@ import com.android.systemui.statusbar.policy.BatteryController;
 import com.android.systemui.statusbar.policy.ConfigurationController;
 import com.android.systemui.statusbar.policy.KeyguardStateController;
 import com.android.systemui.statusbar.window.StatusBarWindowStateController;
-import com.android.systemui.tuner.TunerService;
 import com.android.systemui.util.CarrierConfigTracker;
 import com.android.systemui.util.settings.SecureSettings;
 
@@ -220,7 +219,6 @@ public abstract class StatusBarViewModule {
             @Named(SHADE_HEADER) BatteryMeterView batteryMeterView,
             UserTracker userTracker,
             ConfigurationController configurationController,
-            TunerService tunerService,
             @Main Handler mainHandler,
             ContentResolver contentResolver,
             FeatureFlags featureFlags,
@@ -230,7 +228,6 @@ public abstract class StatusBarViewModule {
                 batteryMeterView,
                 userTracker,
                 configurationController,
-                tunerService,
                 mainHandler,
                 contentResolver,
                 featureFlags,
