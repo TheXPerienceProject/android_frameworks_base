@@ -61,7 +61,7 @@ import java.util.ArrayList;
 
 public class BatteryMeterView extends LinearLayout implements DarkReceiver {
 
-   protected static final String STATUS_BAR_BATTERY_STYLE = Settings.Secure.STATUS_BAR_BATTERY_STYLE;
+    protected static final String STATUS_BAR_BATTERY_STYLE = Settings.System.STATUS_BAR_BATTERY_STYLE;
 
     @Retention(SOURCE)
     @IntDef({MODE_DEFAULT, MODE_ON, MODE_OFF, MODE_ESTIMATE})
@@ -77,7 +77,8 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
     private static final int BATTERY_STYLE_CIRCLE = 1;
     private static final int BATTERY_STYLE_DOTTED_CIRCLE = 2;
     private static final int BATTERY_STYLE_FULL_CIRCLE = 3;
-    private static final int BATTERY_STYLE_HIDDEN = 4;
+    private static final int BATTERY_STYLE_TEXT = 4; /*hidden icon*/
+    private static final int BATTERY_STYLE_HIDDEN = 5;
 
     private final CircleBatteryDrawable mCircleDrawable;
     private final FullCircleBatteryDrawable mFullCircleDrawable;
@@ -91,6 +92,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
     private int mShowPercentMode = MODE_DEFAULT;
     private String mEstimateText = null;
     private boolean mCharging;
+    private boolean mPCharging;
     private boolean mIsOverheated;
     private boolean mDisplayShieldEnabled;
     // Error state where we know nothing about the current battery state
@@ -413,7 +415,6 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
                         res.getDimensionPixelSize(R.dimen.battery_level_padding_start), 0, 0, 0);
             }
         } else {
-            removeBatteryPercentView();
             mThemedDrawable.setShowPercent(drawPercentInside);
             mCircleDrawable.setShowPercent(drawPercentInside);
             mFullCircleDrawable.setShowPercent(drawPercentInside);
@@ -451,7 +452,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         if (mBatteryStateUnknown) {
             mBatteryIconView.setImageDrawable(getUnknownStateDrawable());
         } else {
-            updateBatteryStyle(mThemedDrawable);
+            updateBatteryStyle();
         }
 
         updateShowPercent();
