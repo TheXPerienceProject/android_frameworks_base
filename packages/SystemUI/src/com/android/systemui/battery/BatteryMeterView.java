@@ -76,7 +76,18 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
 
     protected static final String STATUS_BAR_BATTERY_STYLE = Settings.System.STATUS_BAR_BATTERY_STYLE;
 
-    protected static final int BATTERY_STYLE_PORTRAIT = 0;
+ 
+    @Retention(SOURCE)
+    @IntDef({MODE_DEFAULT, MODE_ON, MODE_OFF, MODE_ESTIMATE})
+    public @interface BatteryPercentMode {}
+    public static final int MODE_DEFAULT = 0;
+    public static final int MODE_ON = 1;
+    public static final int MODE_OFF = 2;
+    public static final int MODE_ESTIMATE = 3;
+
+    private final AccessorizedBatteryDrawable mDrawable;
+
+   protected static final int BATTERY_STYLE_PORTRAIT = 0;
     protected static final int BATTERY_STYLE_CIRCLE = 1;
     protected static final int BATTERY_STYLE_DOTTED_CIRCLE = 2;
     protected static final int BATTERY_STYLE_FULL_CIRCLE = 3;
@@ -96,33 +107,6 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
     protected static final int BATTERY_STYLE_LANDSCAPE_IOS15 = 17;
     protected static final int BATTERY_STYLE_LANDSCAPE_IOS16 = 18;
 
-    @Retention(SOURCE)
-    @IntDef({MODE_DEFAULT, MODE_ON, MODE_OFF, MODE_ESTIMATE})
-    public @interface BatteryPercentMode {}
-    public static final int MODE_DEFAULT = 0;
-    public static final int MODE_ON = 1;
-    public static final int MODE_OFF = 2;
-    public static final int MODE_ESTIMATE = 3;
-
-    private final AccessorizedBatteryDrawable mDrawable;
-
-    private static final int BATTERY_STYLE_PORTRAIT = 0;
-    private static final int BATTERY_STYLE_CIRCLE = 1;
-    private static final int BATTERY_STYLE_DOTTED_CIRCLE = 2;
-    private static final int BATTERY_STYLE_FULL_CIRCLE = 3;
-    private static final int BATTERY_STYLE_TEXT = 4; /*hidden icon*/
-    private static final int BATTERY_STYLE_HIDDEN = 5;
-    private static final int BATTERY_STYLE_RLANDSCAPE = 6;
-    private static final int BATTERY_STYLE_LANDSCAPE = 7;
-    private static final int BATTERY_STYLE_LANDSCAPE_BUDDY = 8;
-    private static final int BATTERY_STYLE_LANDSCAPE_LINE = 9;
-    private static final int BATTERY_STYLE_LANDSCAPE_MUSKU = 10;
-    private static final int BATTERY_STYLE_LANDSCAPE_PILL = 11;
-    private static final int BATTERY_STYLE_LANDSCAPE_SIGNAL = 12;
-    private static final int BATTERY_STYLE_RLANDSCAPE_STYLE_A = 13;
-    private static final int BATTERY_STYLE_LANDSCAPE_STYLE_A = 14;
-    private static final int BATTERY_STYLE_RLANDSCAPE_STYLE_B = 15;
-    private static final int BATTERY_STYLE_LANDSCAPE_STYLE_B = 16;
 
     private static final int BATTERY_PERCENT_HIDDEN = 0;
     private static final int BATTERY_PERCENT_SHOW_INSIDE = 1;
