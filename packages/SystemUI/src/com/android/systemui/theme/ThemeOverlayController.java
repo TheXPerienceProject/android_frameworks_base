@@ -485,7 +485,6 @@ public class ThemeOverlayController implements CoreStartable, Dumpable {
                             return;
                         }
                         reevaluateSystemTheme(true /* forceReload */);
-                        }
                     }
                 },
                 UserHandle.USER_ALL);
