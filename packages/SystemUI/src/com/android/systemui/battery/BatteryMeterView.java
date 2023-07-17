@@ -378,8 +378,6 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
             mLandscapeDrawableiOS15.setCharging(mCharging);
             mLandscapeDrawableiOS16.setCharging(mCharging);
             mLandscapeDrawableOrigami.setCharging(mCharging);
-            updateShowPercent();
-            updatePercentText();
         }
     }
 
@@ -806,6 +804,9 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
                 mBatteryIconView.setImageDrawable(mCircleDrawable);
                 break;
         }
+        scaleBatteryMeterViews();
+        updatePercentView();
+        updateVisibility();
     }
 
     @Override
