@@ -55,20 +55,6 @@
     <string name="tap_a_device_to_connect">Pulse sobre un dispositivo para conectarse</string>
     <!-- Face Unlock -->
     <string name="face_unlock_recognizing">Reconociendo rostro...</string>
-    <!-- Heads up QS tile -->
-    <string name="quick_settings_heads_up_label">Notificaciones emergentes</string>
-    <string name="accessibility_quick_settings_heads_up_off">Notificaciones emergentes desactivadas.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Notificaciones emergentes activadas.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Notificaciones emergentes desactivadas.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Notificaciones emergentes activadas.</string>
-    <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Cambiar tarjeta de datos</string>
-    <string name="qs_data_switch_toast_0">Actualmente no se ha insertado ninguna tarjeta SIM</string>
-    <string name="qs_data_switch_toast_1">Actualmente solo se ha insertado una tarjeta SIM</string>
-    <string name="qs_data_switch_text_1">SIM 1</string>
-    <string name="qs_data_switch_text_2">SIM 2</string>
-    <string name="qs_data_switch_changed_1">Tarjeta de datos cambiada a SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Tarjeta de datos cambiada a SIM 2.</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time">Cargando con Dash • se completará en (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g>)</string>
     <string name="keyguard_plugged_in_dash_charging">Carga Rápida Dash</string>
@@ -84,6 +70,9 @@
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_turbo_power_time"><xliff:g id="percentage">%2$s</xliff:g> • Carga Turbo • se completará en (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
     <string name="keyguard_plugged_in_turbo_charging"><xliff:g id="percentage">%s</xliff:g> • Carga Turbo</string>
-    <!-- Name of the firewall status bar icon. -->
-    <string name="status_bar_firewall">Cortafuegos</string>
+    <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
+    <plurals name="quick_settings_internet_hotspot_summary_num_devices">
+        <item quantity="one">%d dispositivo conectado</item>
+        <item quantity="other">%d dispositivos conectados</item>
+    </plurals>
 </resources>

@@ -55,21 +55,11 @@
     <string name="tap_a_device_to_connect">Выберите устройство для подключения</string>
     <!-- Face Unlock -->
     <string name="face_unlock_recognizing">Распознавание лица...</string>
-    <!-- Heads up QS tile -->
-    <string name="quick_settings_heads_up_label">Всплывающие уведомления</string>
-    <string name="accessibility_quick_settings_heads_up_off">Всплывающие уведомления выключены.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Всплывающие уведомления включены.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Всплывающие уведомления выключены.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Всплывающие уведомления включены.</string>
-    <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Переключить сим-карту для интернета</string>
-    <string name="qs_data_switch_toast_0">Нет SIM карты</string>
-    <string name="qs_data_switch_toast_1">Установлена только одна SIM-карта</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_plugged_in_dash_charging">Быстрая зарядка</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
     <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-    <!-- Name of the firewall status bar icon. -->
+    <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
 </resources>

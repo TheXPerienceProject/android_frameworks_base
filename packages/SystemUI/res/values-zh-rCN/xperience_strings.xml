@@ -19,23 +19,50 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Custom QS tiles -->
     <!-- Caffeine QS tile -->
+    <string name="quick_settings_caffeine_label">屏幕常亮</string>
+    <string name="accessibility_quick_settings_caffeine_off">保持亮屏关闭</string>
+    <string name="accessibility_quick_settings_caffeine_on">保持亮屏开启</string>
     <!-- Power Menu -->
     <!-- DC Dimming -->
+    <string name="quick_settings_dc_dimming_label">DC 调光</string>
     <!-- Screenshot delete action -->
     <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <string name="screenshot_delete_label">删除</string>
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
+    <string name="screenshot_delete_description">删除屏幕截图</string>
     <!-- Title of statusbar tuner -->
+    <string name="status_bar_icons">状态栏图标</string>
     <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">漫游指示器</string>
     <!-- PowerShare QS tile -->
+    <string name="quick_settings_powershare_label">电源共享</string>
+    <string name="quick_settings_powershare_off_powersave_label">电源共享已关闭\n省电模式</string>
+    <string name="quick_settings_powershare_off_low_battery_label">电源共享已关闭\n电量过低</string>
+    <string name="quick_settings_powershare_enabled_label">电源共享已启用</string>
     <!-- Data usage info in QS footer -->
+    <string name="usage_data">今日使用</string>
+    <string name="usage_data_default_suffix">数据</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi 无线网络</string>
     <!-- Bluetooth dialog -->
+    <string name="turn_on_bluetooth">使用蓝牙</string>
+    <string name="bluetooth_is_off">蓝牙已关闭</string>
+    <string name="tap_a_device_to_connect">点击以连接设备</string>
     <!-- Face Unlock -->
-    <!-- Heads up QS tile -->
-    <!-- DataSwitch Tile -->
+    <string name="face_unlock_recognizing">正在识别面部...</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • 快速充电 (预计<xliff:g id="charging_time_left" >%1$s</xliff:g> 后充满)</string>
+    <string name="keyguard_plugged_in_dash_charging">快速充电中</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • 快速充电 (预计<xliff:g id="charging_time_left" >%1$s</xliff:g> 后充满)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • 快速充电中</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • 快速充电 (预计<xliff:g id="charging_time_left" >%1$s</xliff:g> 后充满)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • 快速充电中</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_mi_turbo_charger_time"><xliff:g id="percentage">%2$s</xliff:g> • 快速充电 (预计<xliff:g id="charging_time_left" >%1$s</xliff:g> 后充满)</string>
+    <string name="keyguard_plugged_in_mi_turbo_charger"><xliff:g id="percentage">%s</xliff:g> • 快速充电</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-    <!-- Name of the firewall status bar icon. -->
+    <string name="keyguard_indication_turbo_power_time"><xliff:g id="percentage">%2$s</xliff:g> • 快速充电 (预计<xliff:g id="charging_time_left" >%1$s</xliff:g> 后充满)</string>
+    <string name="keyguard_plugged_in_turbo_charging"><xliff:g id="percentage">%s</xliff:g> • 快速充电中</string>
+    <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
 </resources>
