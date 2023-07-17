@@ -350,6 +350,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
             mLandscapeDrawableSignal.setBatteryLevel(mLevel);
             mLandscapeDrawableiOS15.setBatteryLevel(mLevel);
             mLandscapeDrawableiOS16.setBatteryLevel(mLevel);
+            updateShowPercent();
         }
         if (mCharging != pluggedIn) {
             mCharging = pluggedIn;
@@ -370,7 +371,6 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
             mLandscapeDrawableiOS15.setCharging(mCharging);
             mLandscapeDrawableiOS16.setCharging(mCharging);
             updateShowPercent();
-        } else {
             updatePercentText();
         }
     }
