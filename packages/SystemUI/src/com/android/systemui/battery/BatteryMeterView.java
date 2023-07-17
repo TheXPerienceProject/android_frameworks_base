@@ -350,8 +350,6 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
             mLandscapeDrawableSignal.setBatteryLevel(mLevel);
             mLandscapeDrawableiOS15.setBatteryLevel(mLevel);
             mLandscapeDrawableiOS16.setBatteryLevel(mLevel);
-
-            updatePercentText();
         }
         if (mCharging != pluggedIn) {
             mCharging = pluggedIn;
@@ -372,6 +370,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
             mLandscapeDrawableiOS15.setCharging(mCharging);
             mLandscapeDrawableiOS16.setCharging(mCharging);
             updateShowPercent();
+        } else {
             updatePercentText();
         }
     }
@@ -442,35 +441,35 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         }
 
         if (mBatteryPercentView != null) {
-            setPercentTextAtCurrentLevel();
+            if (mShowPercentMode == MODE_ESTIMATE && !mCharging) {
+                mBatteryEstimateFetcher.fetchBatteryTimeRemainingEstimate(
+                        (String estimate) -> {
+                    if (mBatteryPercentView == null) {
+                        return;
+                    }
+                    if (estimate != null) {
+                        if (mBatteryPercentView != null) {
+                            batteryPercentViewSetText(estimate);
+                        }
+                        setContentDescription(getContext().getString(
+                                R.string.accessibility_battery_level_with_estimate,
+                                mLevel, estimate));
+                    } else {
+                        setPercentTextAtCurrentLevel();
+                    }
+                });
+            } else {
+                setPercentTextAtCurrentLevel();
+            }
         } else {
             updateContentDescription();
         }
     }
 
     private void setPercentTextAtCurrentLevel() {
+        if (mBatteryPercentView == null) return;
 
         String percentText = NumberFormat.getPercentInstance().format(mLevel / 100f);
-        mEstimateText = null;
-
-        if (mBatteryEstimateFetcher != null && mShowPercentMode == MODE_ESTIMATE && !mCharging) {
-                mBatteryEstimateFetcher.fetchBatteryTimeRemainingEstimate(
-                        (String estimate) -> {
-                if (mBatteryPercentView == null) {
-                    return;
-                }
-                if (estimate != null) {
-                    mEstimateText = estimate;
-                    if (!TextUtils.equals(mBatteryPercentView.getText(), text)) {
-                       mBatteryPercentView.setText(estimate);
-                    }
-                } else {
-                    if (!TextUtils.equals(mBatteryPercentView.getText(), text)) {
-                       mBatteryPercentView.setText(text);
-                    }
-                }
-            });
-        } else {
         // Setting text actually triggers a layout pass (because the text view is set to
         // wrap_content width and TextView always relayouts for this). Avoid needless
         // relayout if the text didn't actually change.
@@ -483,7 +482,8 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
             String bolt = "\u26A1\uFE0E";
             CharSequence mChargeIndicator = mCharging && (mBatteryStyle == BATTERY_STYLE_TEXT)
                 ? (bolt + " ") : "";
-            batteryPercentViewSetText(mChargeIndicator + percentText);
+            batteryPercentViewSetText(mChargeIndicator +
+                NumberFormat.getPercentInstance().format(mLevel / 100f));
             setContentDescription(
                     getContext().getString(mCharging ? R.string.accessibility_battery_level_charging
                             : R.string.accessibility_battery_level, mLevel));
@@ -630,9 +630,6 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
      * Looks up the scale factor for status bar icons and scales the battery view by that amount.
      */
     void scaleBatteryMeterViews() {
-        if (mBatteryIconView == null) {
-            return;
-        }
         Resources res = getContext().getResources();
         TypedValue typedValue = new TypedValue();
 
