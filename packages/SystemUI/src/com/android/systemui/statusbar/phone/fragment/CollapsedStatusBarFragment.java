@@ -302,7 +302,8 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mStatusIcons = mStatusBar.findViewById(R.id.statusIcons);
         int batteryStyle = Settings.System.getInt(getContext().getContentResolver(),
                 Settings.System.STATUS_BAR_BATTERY_STYLE, 0);
-        mStatusIcons.setPadding(mStatusIcons.getPaddingLeft(), mStatusIcons.getPaddingTop(), (batteryStyle == 5/*hidden*/ ? 0 : mSignalClusterEndPadding), mStatusIcons.getPaddingBottom());
+        mStatusIcons.setPadding(mStatusIcons.getPaddingLeft(), mStatusIcons.getPaddingTop(),
+              (batteryStyle == 5/*hidden*/ ? 0 : mSignalClusterEndPadding), mStatusIcons.getPaddingBottom());
         mBatteryMeterView = mStatusBar.findViewById(R.id.battery);
         mBatteryMeterView.addCallback(mBatteryMeterViewCallback);
 
@@ -393,6 +394,9 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     public void onDestroyView() {
         super.onDestroyView();
         mStatusBarIconController.removeIconGroup(mDarkIconManager);
+        if (mBatteryMeterView != null) {
+            mBatteryMeterView.removeCallback(mBatteryMeterViewCallback);
+        }
         mCarrierConfigTracker.removeCallback(mCarrierConfigCallback);
         mCarrierConfigTracker.removeDataSubscriptionChangedListener(mDefaultDataListener);
 
@@ -402,10 +406,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
             mStartableStates.put(startable, Startable.State.STOPPED);
         }
         mDumpManager.unregisterDumpable(getClass().getSimpleName());
-
-        if (mBatteryMeterView != null) {
-            mBatteryMeterView.removeCallback(mBatteryMeterViewCallback);
-        }
 
     }
 
