@@ -206,6 +206,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         addView(mBatteryIconView, mlp);
 
         updateShowPercent();
+        updateVisibility();
         mDualToneHandler = new DualToneHandler(context);
         // Init to not dark at all.
         if (isNightMode()) {
