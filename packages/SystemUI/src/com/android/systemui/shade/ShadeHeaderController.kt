@@ -281,6 +281,7 @@ constructor(
         privacyIconsController.chipVisibilityListener = chipVisibilityListener
         updateVisibility()
         updateTransition()
+        updateResources()
 
         header.setOnApplyWindowInsetsListener(insetListener)
 
@@ -297,7 +298,6 @@ constructor(
         demoModeController.addCallback(demoModeReceiver)
         statusBarIconController.addIconGroup(iconManager)
 
-        updateResources()
     }
 
     override fun onViewDetached() {
@@ -468,7 +468,6 @@ constructor(
         val padding = resources.getDimensionPixelSize(R.dimen.qs_panel_padding)
         header.setPadding(padding, header.paddingTop, padding, header.paddingBottom)
         updateQQSPaddings()
-        qsBatteryModeController.updateResources()
 
         val fillColor = Utils.getColorAttrDefaultColor(context, android.R.attr.textColorPrimary)
         iconManager.setTint(fillColor)
@@ -486,6 +485,7 @@ constructor(
             qsCarrierGroup.updateColors(textColorPrimary, colorStateList)
             batteryIcon.updateColors(textColorPrimary, textColorSecondary, textColorPrimary)
         }
+        qsBatteryModeController.updateResources()
     }
 
     private fun updateQQSPaddings() {
