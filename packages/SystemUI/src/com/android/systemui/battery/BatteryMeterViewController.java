@@ -51,6 +51,7 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
     private final TunerService mTunerService;
     private final Handler mMainHandler;
     private final ContentResolver mContentResolver;
+    private final FeatureFlags mFeatureFlags;
     private final BatteryController mBatteryController;
 
     private final String mSlotBattery;
@@ -100,6 +101,13 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
                 }
 
                 @Override
+                public void onIsIncompatibleChargingChanged(boolean isIncompatibleCharging) {
+                    if (mFeatureFlags.isEnabled(Flags.INCOMPATIBLE_CHARGING_BATTERY_ICON)) {
+                        mView.onIsIncompatibleChargingChanged(isIncompatibleCharging);
+                    }
+                }
+
+                @Override
                 public void dump(@NonNull PrintWriter pw, @NonNull String[] args) {
                     pw.print(super.toString());
                     pw.println(" location=" + mLocation);
@@ -139,6 +147,7 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
         mTunerService = tunerService;
         mMainHandler = mainHandler;
         mContentResolver = contentResolver;
+        mFeatureFlags = featureFlags;
         mBatteryController = batteryController;
 
         mView.setBatteryEstimateFetcher(mBatteryController::getEstimatedTimeRemainingString);

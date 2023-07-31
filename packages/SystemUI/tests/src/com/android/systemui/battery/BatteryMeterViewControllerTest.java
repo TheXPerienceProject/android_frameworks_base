@@ -65,6 +65,7 @@ public class BatteryMeterViewControllerTest extends SysuiTestCase {
     private FakeFeatureFlags mFeatureFlags;
     @Mock
     private BatteryController mBatteryController;
+    private FakeFeatureFlags mFakeFeatureFlags = new FakeFeatureFlags();
 
     private BatteryMeterViewController mController;
 
@@ -161,6 +162,7 @@ public class BatteryMeterViewControllerTest extends SysuiTestCase {
                 mHandler,
                 mContentResolver,
                 mFeatureFlags,
+                mFakeFeatureFlags,
                 mBatteryController
         );
     }
