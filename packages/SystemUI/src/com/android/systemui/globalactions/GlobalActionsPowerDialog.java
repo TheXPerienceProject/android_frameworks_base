@@ -98,7 +98,10 @@ public class GlobalActionsPowerDialog {
         BlurUtils blurUtils = new BlurUtils(context.getResources(),
                 CrossWindowBlurListeners.getInstance(), new DumpManager());
 
-        window.setDimAmount(blurUtils.supportsBlursOnWindows() ? 0.54f : 0.88f);
+        // Set dim only when blur is enabled.
+        if (blurUtils.supportsBlursOnWindows()) {
+             window.setDimAmount(0.54f);
+        }
 
         return dialog;
     }
