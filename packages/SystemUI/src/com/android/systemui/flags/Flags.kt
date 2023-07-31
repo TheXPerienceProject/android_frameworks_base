@@ -366,6 +366,10 @@ object Flags {
     @JvmField
     val NEW_BLUETOOTH_REPOSITORY = unreleasedFlag(612, "new_bluetooth_repository")
 
+    // TODO(b/293863612): Tracking Bug
+    @JvmField val INCOMPATIBLE_CHARGING_BATTERY_ICON =
+        unreleasedFlag(614, "incompatible_charging_battery_icon")
+
     // 700 - dialer/calls
     // TODO(b/254512734): Tracking Bug
     val ONGOING_CALL_STATUS_BAR_CHIP = releasedFlag(700, "ongoing_call_status_bar_chip")
