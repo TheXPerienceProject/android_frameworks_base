@@ -65,6 +65,7 @@ import com.android.server.biometrics.log.BiometricLogger;
 import com.android.server.biometrics.sensors.AuthSessionCoordinator;
 import com.android.server.biometrics.sensors.AuthenticationClient;
 import com.android.server.biometrics.sensors.BaseClientMonitor;
+import com.android.server.biometrics.sensors.BiometricNotificationImpl;
 import com.android.server.biometrics.sensors.BiometricScheduler;
 import com.android.server.biometrics.sensors.BiometricStateCallback;
 import com.android.server.biometrics.sensors.ClientMonitorCallback;
@@ -176,7 +177,7 @@ public class FingerprintProvider implements IBinder.DeathRecipient, ServiceProvi
         mAuthSessionCoordinator = mBiometricContext.getAuthSessionCoordinator();
 
         mAuthenticationStatsCollector = new AuthenticationStatsCollector(mContext,
-                BiometricsProtoEnums.MODALITY_FINGERPRINT);
+                BiometricsProtoEnums.MODALITY_FINGERPRINT, new BiometricNotificationImpl());
 
         final List<SensorLocationInternal> workaroundLocations = getWorkaroundSensorProps(context);
 
