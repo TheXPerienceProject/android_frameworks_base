@@ -49,7 +49,7 @@ public class AuthenticationStatsCollector {
     private static final int AUTHENTICATION_UPLOAD_INTERVAL = 50;
     // The maximum number of eligible biometric enrollment notification can be sent.
     @VisibleForTesting
-    static final int MAXIMUM_ENROLLMENT_NOTIFICATIONS = 1;
+    static final int MAXIMUM_ENROLLMENT_NOTIFICATIONS = 2;
 
     @NonNull private final Context mContext;
 
@@ -114,6 +114,10 @@ public class AuthenticationStatsCollector {
         }
 
         AuthenticationStats authenticationStats = mUserAuthenticationStatsMap.get(userId);
+
+        if (authenticationStats.getEnrollmentNotifications() >= MAXIMUM_ENROLLMENT_NOTIFICATIONS) {
+            return;
+        }
 
         authenticationStats.authenticate(authenticated);
 
