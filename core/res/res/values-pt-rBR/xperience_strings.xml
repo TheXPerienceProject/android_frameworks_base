@@ -16,5 +16,12 @@
 -->
 <resources>
     <!-- Global actions -->
+    <string name="reboot_to_bootloader_title">Reiniciar para o Bootloader</string>
+    <string name="reboot_to_bootloader_message">Reiniciando para o bootloader\u2026</string>
+    <string name="reboot_to_recovery_title">Reiniciar em Modo de Recuperação</string>
+    <string name="reboot_to_recovery_message">Reiniciando para a recuperação\u2026</string>
+    <string name="reboot_system_title">Reiniciar o sistema</string>
+    <string name="reboot_system_message">Reiniciando sistema\u2026</string>
     <!-- Face unlock -->
+    <string name="face_unlock_disabled_idle">Desbloqueio facial desativado devido à inatividade</string>
 </resources>

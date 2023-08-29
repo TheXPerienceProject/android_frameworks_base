@@ -23,21 +23,56 @@
     <string name="accessibility_quick_settings_caffeine_off">Modo cafeína desativado.</string>
     <string name="accessibility_quick_settings_caffeine_on">Modo cafeína ativado.</string>
     <!-- Power Menu -->
+    <string name="global_action_reboot">Reiniciar</string>
+    <string name="global_action_reboot_more">Reiniciar\u2026</string>
+    <string name="global_action_reboot_sub">Sistema</string>
+    <string name="global_action_reboot_recovery">Recuperação</string>
+    <string name="global_action_reboot_bootloader">Bootloader</string>
+    <string name="global_action_settings">Configurações</string>
     <!-- DC Dimming -->
+    <string name="quick_settings_dc_dimming_label">Anti-oscilação</string>
     <!-- Screenshot delete action -->
     <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <string name="screenshot_delete_label">Excluir</string>
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
+    <string name="screenshot_delete_description">Excluir captura de tela</string>
     <!-- Title of statusbar tuner -->
+    <string name="status_bar_icons">Ícones da barra de status</string>
     <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Indicador de Roaming</string>
     <!-- PowerShare QS tile -->
+    <string name="quick_settings_powershare_label">Carregamento reverso</string>
+    <string name="quick_settings_powershare_off_powersave_label">Carregamento reverso desativado\Economia de bateria</string>
+    <string name="quick_settings_powershare_off_low_battery_label">Carregamento reverso desativado\Bateria fraca</string>
+    <string name="quick_settings_powershare_enabled_label">Carregamento reverso ativado</string>
     <!-- Data usage info in QS footer -->
+    <string name="usage_data">usado hoje</string>
+    <string name="usage_data_default_suffix">Dados</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
     <!-- Bluetooth dialog -->
+    <string name="turn_on_bluetooth">Usar Bluetooth</string>
+    <string name="bluetooth_is_off">O Bluetooth está desligado</string>
+    <string name="tap_a_device_to_connect">Toque em um dispositivo para conectar-se</string>
     <!-- Face Unlock -->
+    <string name="face_unlock_recognizing">Reconhecendo rosto...</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time">Carregamento Dash • será concluído em (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g>)</string>
     <string name="keyguard_plugged_in_dash_charging">Carregamento rápido</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Carregamento de Warp • será concluído em (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • Carregamento Warp</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • VOOC Carregamento • será concluído em (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • Carregando com VOOC</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_mi_turbo_charger_time"><xliff:g id="percentage">%2$s</xliff:g> •Carregamento Turbo • será concluído em (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_mi_turbo_charger"><xliff:g id="percentage">%s</xliff:g> • Carregamento Turbo </string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_turbo_power_time"><xliff:g id="percentage">%2$s</xliff:g> • Carregamento Turbo • será concluído em (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
+    <string name="keyguard_plugged_in_turbo_charging"><xliff:g id="percentage">%s</xliff:g> • Carregamento Turbo</string>
     <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
+    <plurals name="quick_settings_internet_hotspot_summary_num_devices">
+        <item quantity="one">%d Dispositivo conectado</item>
+        <item quantity="other">%d dispositivos conectados</item>
+    </plurals>
 </resources>
