@@ -38,7 +38,7 @@ import androidx.annotation.IntDef;
 import androidx.annotation.Nullable;
 import androidx.asynclayoutinflater.view.AsyncLayoutInflater;
 
-import com.android.internal.util.xpe.xperienceUtils
+import com.android.internal.util.xpe.xperienceUtils;
 import com.android.settingslib.Utils;
 import com.android.systemui.R;
 import com.android.systemui.animation.Interpolators;
