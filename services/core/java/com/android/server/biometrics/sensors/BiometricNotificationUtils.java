@@ -180,6 +180,7 @@ public class BiometricNotificationUtils {
                 .setSmallIcon(R.drawable.ic_lock)
                 .setContentTitle(title)
                 .setContentText(content)
+                .setStyle(new Notification.BigTextStyle().bigText(content))
                 .setSubText(name)
                 .setOnlyAlertOnce(true)
                 .setLocalOnly(true)
