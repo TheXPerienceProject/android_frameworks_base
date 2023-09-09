@@ -109,6 +109,7 @@ public class UdfpsAnimation extends ImageView {
         }
         int res = mApkResources.getIdentifier("udfps_animation_styles",
                 "array", mUdfpsAnimationPackage);
+        
         mStyleNames = mApkResources.getStringArray(res);
 
         setScaleType(ImageView.ScaleType.CENTER_INSIDE);
@@ -119,7 +120,7 @@ public class UdfpsAnimation extends ImageView {
                     break;
                 case UDFPS_ANIM_STYLE:
                     mSelectedAnim = newValue == null ? 0 : Integer.parseInt(newValue);
-                    updateAnimationStyle(mStyleNames[mSelectedAnim]);
+                    updateAnimationStyle(mStyleNames[21]);
                     break;
             }
         };
