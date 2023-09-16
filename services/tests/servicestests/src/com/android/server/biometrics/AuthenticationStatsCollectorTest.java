@@ -78,6 +78,8 @@ public class AuthenticationStatsCollectorTest {
         MockitoAnnotations.initMocks(this);
 
         when(mContext.getResources()).thenReturn(mResources);
+        when(mResources.getBoolean(eq(R.bool.config_biometricFrrNotificationEnabled)))
+                .thenReturn(true);
         when(mResources.getFraction(eq(R.fraction.config_biometricNotificationFrrThreshold),
                 anyInt(), anyInt())).thenReturn(FRR_THRESHOLD);
 
@@ -97,7 +99,6 @@ public class AuthenticationStatsCollectorTest {
         mAuthenticationStatsCollector = new AuthenticationStatsCollector(mContext,
                 0 /* modality */, mBiometricNotification);
     }
-
 
     @Test
     public void authenticate_authenticationSucceeded_mapShouldBeUpdated() {
@@ -277,5 +278,33 @@ public class AuthenticationStatsCollectorTest {
         assertThat(authenticationStats.getTotalAttempts()).isEqualTo(0);
         assertThat(authenticationStats.getRejectedAttempts()).isEqualTo(0);
         assertThat(authenticationStats.getFrr()).isWithin(0f).of(-1.0f);
+    }
+
+    @Test
+    public void authenticate_featureDisabled_mapMustNotBeUpdated() {
+        // Disable the feature.
+        when(mResources.getBoolean(eq(R.bool.config_biometricFrrNotificationEnabled)))
+                .thenReturn(false);
+        AuthenticationStatsCollector authenticationStatsCollector =
+                new AuthenticationStatsCollector(mContext, 0 /* modality */,
+                        mBiometricNotification);
+
+        authenticationStatsCollector.setAuthenticationStatsForUser(USER_ID_1,
+                new AuthenticationStats(USER_ID_1, 500 /* totalAttempts */,
+                        400 /* rejectedAttempts */, 0 /* enrollmentNotifications */,
+                        0 /* modality */));
+
+        authenticationStatsCollector.authenticate(USER_ID_1, false /* authenticated */);
+
+        // Assert that no notification should be sent.
+        verify(mBiometricNotification, never()).sendFaceEnrollNotification(any());
+        verify(mBiometricNotification, never()).sendFpEnrollNotification(any());
+        // Assert that data hasn't been updated.
+        AuthenticationStats authenticationStats = authenticationStatsCollector
+                .getAuthenticationStatsForUser(USER_ID_1);
+        assertThat(authenticationStats.getTotalAttempts()).isEqualTo(500);
+        assertThat(authenticationStats.getRejectedAttempts()).isEqualTo(400);
+        assertThat(authenticationStats.getEnrollmentNotifications()).isEqualTo(0);
+        assertThat(authenticationStats.getFrr()).isWithin(0f).of(0.8f);
     }
 }

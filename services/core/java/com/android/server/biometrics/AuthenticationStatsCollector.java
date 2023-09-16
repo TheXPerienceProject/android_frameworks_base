@@ -53,6 +53,7 @@ public class AuthenticationStatsCollector {
 
     @NonNull private final Context mContext;
 
+    private final boolean mEnabled;
     private final float mThreshold;
     private final int mModality;
 
@@ -76,6 +77,7 @@ public class AuthenticationStatsCollector {
     public AuthenticationStatsCollector(@NonNull Context context, int modality,
             @NonNull BiometricNotification biometricNotification) {
         mContext = context;
+        mEnabled = context.getResources().getBoolean(R.bool.config_biometricFrrNotificationEnabled);
         mThreshold = context.getResources()
                 .getFraction(R.fraction.config_biometricNotificationFrrThreshold, 1, 1);
         mUserAuthenticationStatsMap = new HashMap<>();
@@ -94,6 +96,12 @@ public class AuthenticationStatsCollector {
 
     /** Update total authentication and rejected attempts. */
     public void authenticate(int userId, boolean authenticated) {
+
+        // Don't collect data if the feature is disabled.
+        if (!mEnabled) {
+            return;
+        }
+
         // SharedPreference is not ready when starting system server, initialize
         // mUserAuthenticationStatsMap in authentication to ensure SharedPreference
         // is ready for application use.
