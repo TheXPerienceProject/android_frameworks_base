@@ -17,4 +17,5 @@
 <resources>
     <!-- Global actions -->
     <!-- Face unlock -->
+    <string name="face_unlock_disabled_idle">Sblocco viso disabilitato a causa di inattività</string>
 </resources>

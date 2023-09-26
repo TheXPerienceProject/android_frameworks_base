@@ -21,15 +21,28 @@
     <!-- Caffeine QS tile -->
     <!-- Power Menu -->
     <!-- DC Dimming -->
+    <string name="quick_settings_dc_dimming_label">Dimmatura DC</string>
     <!-- Screenshot delete action -->
     <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <string name="screenshot_delete_label">Elimina</string>
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
+    <string name="screenshot_delete_description">Elimina screenshot</string>
     <!-- Title of statusbar tuner -->
+    <string name="status_bar_icons">Icone barra di stato</string>
     <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Indicatore roaming</string>
     <!-- PowerShare QS tile -->
+    <string name="quick_settings_powershare_label">PowerShare</string>
+    <string name="quick_settings_powershare_off_powersave_label">PowerShare off Risparmio batteria\n</string>
+    <string name="quick_settings_powershare_off_low_battery_label">PowerShare off\nBatteria troppo bassa</string>
+    <string name="quick_settings_powershare_enabled_label">PowerShare è abilitato</string>
     <!-- Data usage info in QS footer -->
+    <string name="usage_data">usato oggi</string>
+    <string name="usage_data_default_suffix">Dati</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
     <!-- Bluetooth dialog -->
     <!-- Face Unlock -->
+    <string name="face_unlock_recognizing">Riconoscimento faccia...</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
     <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->

@@ -5,9 +5,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Label for estimated remaining duration of dash battery charging -->
+    <string name="power_remaining_dash_charging_duration_only">Ricarica rapida (<xliff:g id="time">%1$s</xliff:g> rimasta fino al completo)</string>
     <!-- Battery use screen.  Battery status shown in chart label when charging from a dash source.  -->
+    <string name="battery_info_status_dash_charging">Ricarica rapida</string>
     <!-- Label for estimated remaining duration of warp battery charging -->
+    <string name="power_remaining_warp_charging_duration_only">Ricarica Warp (<xliff:g id="time">%1$s</xliff:g> a sinistra fino al completo)</string>
     <!-- Battery use screen. Battery status shown in chart label when charging from a warp source.  -->
+    <string name="battery_info_status_warp_charging">Carica Warp</string>
     <!-- Label for estimated remaining duration of vooc battery charging -->
     <!-- Battery use screen. Battery status shown in chart label when charging from a VOOC source.  -->
     <!-- Label for estimated remaining duration of MI Turbo  battery charging -->
