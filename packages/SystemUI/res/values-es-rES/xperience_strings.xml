@@ -75,4 +75,26 @@
         <item quantity="one">%d dispositivo conectado</item>
         <item quantity="other">%d dispositivos conectados</item>
     </plurals>
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Notificaciones emergentes</string>
+    <string name="accessibility_quick_settings_heads_up_off">Notificaciones emergentes desactivadas.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Notificaciones emergentes activadas.</string>
+    <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">Anclaje de red por USB</string>
+    <!-- Compass QS Tile -->
+    <string name="quick_settings_compass_label">Brújula</string>
+    <string name="quick_settings_compass_value"><xliff:g id="grados">%1$.0f</xliff:g>\u00b0 <xliff:g id="dirección">%2$s</xliff:g></string>
+    <string name="quick_settings_compass_init">Inicializando\u2026</string>
+    <string name="accessibility_quick_settings_compass_off">Brújula desactivada</string>
+    <string name="accessibility_quick_settings_compass_on">Brújula activada</string>
+    <string name="accessibility_quick_settings_compass_changed_off">La brújula ha sido deshabilitada</string>
+    <string name="accessibility_quick_settings_compass_changed_on">La brújula ha sido habilitada</string>
+    <string name="quick_settings_compass_N">N</string>
+    <string name="quick_settings_compass_NE">NE</string>
+    <string name="quick_settings_compass_E">E</string>
+    <string name="quick_settings_compass_SE">SE</string>
+    <string name="quick_settings_compass_S">S</string>
+    <string name="quick_settings_compass_SW">SO</string>
+    <string name="quick_settings_compass_W">O</string>
+    <string name="quick_settings_compass_NW">NO</string>
 </resources>

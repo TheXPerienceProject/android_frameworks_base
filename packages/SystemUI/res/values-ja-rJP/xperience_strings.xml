@@ -59,4 +59,22 @@
     <string name="keyguard_indication_turbo_power_time"><xliff:g id="percentage">%2$s</xliff:g> • Turbo Charging (充電完了まで残り<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g>)</string>
     <string name="keyguard_plugged_in_turbo_charging"><xliff:g id="percentage">%s</xliff:g> • Turbo Charging</string>
     <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Heads Up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads Up オフ</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads Up オン</string>
+    <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">USB テザリング</string>
+    <!-- Compass QS Tile -->
+    <string name="quick_settings_compass_label">コンパス</string>
+    <string name="quick_settings_compass_value"><xliff:g id="degrees">%1$.0f</xliff:g>\u00b0 <xliff:g id="direction">%2$s</xliff:g></string>
+    <string name="quick_settings_compass_init">初期化中...</string>
+    <string name="quick_settings_compass_N">北</string>
+    <string name="quick_settings_compass_NE">北東</string>
+    <string name="quick_settings_compass_E">東</string>
+    <string name="quick_settings_compass_SE">南東</string>
+    <string name="quick_settings_compass_S">南</string>
+    <string name="quick_settings_compass_SW">南西</string>
+    <string name="quick_settings_compass_W">西</string>
+    <string name="quick_settings_compass_NW">北西</string>
 </resources>
