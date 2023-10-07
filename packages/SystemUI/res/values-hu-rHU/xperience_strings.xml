@@ -19,24 +19,82 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Custom QS tiles -->
     <!-- Caffeine QS tile -->
+    <string name="quick_settings_caffeine_label">Koffein</string>
+    <string name="accessibility_quick_settings_caffeine_off">Koffein ki.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Koffein be.</string>
     <!-- Power Menu -->
+    <string name="global_action_reboot">Újraindítás</string>
+    <string name="global_action_reboot_more">Újraindítás\u2026</string>
+    <string name="global_action_reboot_sub">Rendszer</string>
+    <string name="global_action_reboot_recovery">Recovery-be</string>
+    <string name="global_action_reboot_bootloader">Bootloader-be</string>
+    <string name="global_action_settings">Beállítások</string>
     <!-- DC Dimming -->
+    <string name="quick_settings_dc_dimming_label">DC-kiegyenlítés</string>
     <!-- Screenshot delete action -->
     <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <string name="screenshot_delete_label">Törlés</string>
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
+    <string name="screenshot_delete_description">Képernyőkép-törlés</string>
     <!-- Title of statusbar tuner -->
+    <string name="status_bar_icons">Állapotsori ikonok</string>
     <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Barangoláskijelző</string>
     <!-- PowerShare QS tile -->
+    <string name="quick_settings_powershare_label">PowerShare</string>
+    <string name="quick_settings_powershare_off_powersave_label">PowerShare ki\nAkkumulátorkímélő</string>
+    <string name="quick_settings_powershare_off_low_battery_label">PowerShare ki\nAlacsony akkuszint</string>
+    <string name="quick_settings_powershare_enabled_label">A PowerShare engedélyezve</string>
     <!-- Data usage info in QS footer -->
+    <string name="usage_data">ma felhasználva</string>
+    <string name="usage_data_default_suffix">Mobiladat</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
     <!-- Bluetooth dialog -->
+    <string name="turn_on_bluetooth">Bluetooth-használat</string>
+    <string name="bluetooth_is_off">A Bluetooth ki van kapcsolva</string>
+    <string name="tap_a_device_to_connect">Kapcsolódáshoz koppintson a kívánt készülékre</string>
     <!-- Face Unlock -->
+    <string name="face_unlock_recognizing">Arcfelismerés...</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time">A Dash töltés elkészül <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> múlva</string>
+    <string name="keyguard_plugged_in_dash_charging">Dash-töltés</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a warp charger. Should match keyguard_plugged_in_warp_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_warp_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • A Warp töltés elkészül <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> múlva</string>
+    <string name="keyguard_plugged_in_warp_charging"><xliff:g id="percentage">%s</xliff:g> • Warp töltés</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a VOOC charger. Should match keyguard_plugged_in_vooc_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_vooc_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • A VOOC töltés elkészül <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> múlva</string>
+    <string name="keyguard_plugged_in_vooc_charging"><xliff:g id="percentage">%s</xliff:g> • VOOC Töltés</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_mi_turbo_charger_time"><xliff:g id="percentage">%2$s</xliff:g> • A MI Turbótöltés elkészül <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> múlva</string>
+    <string name="keyguard_plugged_in_mi_turbo_charger"><xliff:g id="percentage">%s</xliff:g> • MI Turbótöltés </string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_turbo_power_time"><xliff:g id="percentage">%2$s</xliff:g> • A Turbótöltés elkészül <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> múlva</string>
+    <string name="keyguard_plugged_in_turbo_charging"><xliff:g id="percentage">%s</xliff:g> • Turbótöltés</string>
     <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
+    <plurals name="quick_settings_internet_hotspot_summary_num_devices">
+        <item quantity="one">%d készülék csatlakoztatva</item>
+        <item quantity="other">%d készülék csatlakoztatva</item>
+    </plurals>
     <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Lebegő értesítések</string>
+    <string name="accessibility_quick_settings_heads_up_off">Lebegő értesítések ki.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Lebegő értesítések be.</string>
     <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">USB-megosztás</string>
     <!-- Compass QS Tile -->
+    <string name="quick_settings_compass_label">Iránytű</string>
+    <string name="quick_settings_compass_value"><xliff:g id="degrees">%1$.0f</xliff:g>\u00b0<xliff:g id="direction">%2$s</xliff:g></string>
+    <string name="quick_settings_compass_init">Előkészítés\u2026</string>
+    <string name="accessibility_quick_settings_compass_off">Iránytű ki</string>
+    <string name="accessibility_quick_settings_compass_on">Iránytű be</string>
+    <string name="accessibility_quick_settings_compass_changed_off">Az Iránytű kikapcsolva</string>
+    <string name="accessibility_quick_settings_compass_changed_on">Az Iránytű bekapcsolva</string>
+    <string name="quick_settings_compass_N">É</string>
+    <string name="quick_settings_compass_NE">ÉK</string>
+    <string name="quick_settings_compass_E">K</string>
+    <string name="quick_settings_compass_SE">DK</string>
+    <string name="quick_settings_compass_S">D</string>
+    <string name="quick_settings_compass_SW">DNy</string>
+    <string name="quick_settings_compass_W">Ny</string>
+    <string name="quick_settings_compass_NW">ÉNy</string>
 </resources>

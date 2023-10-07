@@ -4,14 +4,25 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="status_deep_sleep">(Mélyalvás: %1$d%2$s)</string>
     <!-- Label for estimated remaining duration of dash battery charging -->
+    <string name="power_remaining_dash_charging_duration_only">Dash töltés (<xliff:g id="time">%1$s</xliff:g> van vissza a teljes töltöttségig)</string>
     <!-- Battery use screen.  Battery status shown in chart label when charging from a dash source.  -->
+    <string name="battery_info_status_dash_charging">Gyorstöltés</string>
     <!-- Label for estimated remaining duration of warp battery charging -->
+    <string name="power_remaining_warp_charging_duration_only">Warp töltés (<xliff:g id="time">%1$s</xliff:g> van a teljes töltöttségig)</string>
     <!-- Battery use screen. Battery status shown in chart label when charging from a warp source.  -->
+    <string name="battery_info_status_warp_charging">Lassútöltés</string>
     <!-- Label for estimated remaining duration of vooc battery charging -->
+    <string name="power_remaining_vooc_charging_duration_only">VOOC töltés (<xliff:g id="time">%1$s</xliff:g> van a teljes töltöttségig)</string>
     <!-- Battery use screen. Battery status shown in chart label when charging from a VOOC source.  -->
+    <string name="battery_info_status_vooc_charging">VOOC-töltés</string>
     <!-- Label for estimated remaining duration of MI Turbo  battery charging -->
+    <string name="power_remaining_mi_turbo_charge_duration_only">MI Turbótöltés (<xliff:g id="time">%1$s</xliff:g> van a teljes töltöttségig)</string>
     <!-- Battery use screen. Battery status shown in chart label when charging from a Mi Turbo source.  -->
+    <string name="battery_info_status_mi_turbo_charge">MI Turbótöltés</string>
     <!-- Label for estimated remaining duration of TurboPower battery charging -->
+    <string name="power_remaining_turbo_charging_duration_only">Turbo töltés (<xliff:g id="time">%1$s</xliff:g> van a teljes töltöttségig)</string>
     <!-- Battery use screen. Battery status shown in chart label when charging from a TurboPower source.  -->
+    <string name="battery_info_status_turbo_charging">Turbótöltés</string>
 </resources>

@@ -16,5 +16,12 @@
 -->
 <resources>
     <!-- Global actions -->
+    <string name="reboot_to_bootloader_title">Újraindítás: Bootloader</string>
+    <string name="reboot_to_bootloader_message">Újraindítás Bootloader módba\u2026</string>
+    <string name="reboot_to_recovery_title">Újraindítás: Recovery</string>
+    <string name="reboot_to_recovery_message">Újraindítás Recovery módba\u2026</string>
+    <string name="reboot_system_title">Rendszerújraindítás</string>
+    <string name="reboot_system_message">Rendszer-újraindítás\u2026</string>
     <!-- Face unlock -->
+    <string name="face_unlock_disabled_idle">Az arcalapú feloldás inaktivitás miatt letiltásra került</string>
 </resources>
