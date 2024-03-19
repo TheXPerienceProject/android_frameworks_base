@@ -456,7 +456,7 @@ public class FingerprintProvider implements IBinder.DeathRecipient, ServiceProvi
                     mFingerprintSensors.get(sensorId).getLazySession(), token, id, callback,
                     options,
                     createLogger(BiometricsProtoEnums.ACTION_AUTHENTICATE, statsClient,
-                            mAuthenticationStatsCollector
+                            mAuthenticationStatsCollector,
                     mBiometricContext,
                     mUdfpsOverlayController, mUdfpsOverlay, isStrongBiometric);
             scheduleForSensor(sensorId, client, mBiometricStateCallback);
