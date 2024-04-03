@@ -18,4 +18,5 @@
 <resources>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
+    <string name="volume_dialog_ringer_guidance_normal">Las llamadas y notificaciones sonarán</string>
 </resources>
