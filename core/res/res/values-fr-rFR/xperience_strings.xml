@@ -16,6 +16,13 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Advanced reboot -->
+    <string name="reboot_to_recovery_title">Recovery</string>
+    <string name="reboot_to_recovery_message">Redémarrer dans le Recovery</string>
+    <string name="reboot_to_bootloader_title">Bootloader</string>
+    <string name="reboot_to_bootloader_message">Redémarrage dans le bootloader</string>
+    <string name="reboot_title">Redémarrer</string>
+    <string name="reboot_message">Redémarrage du système</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
 </resources>
