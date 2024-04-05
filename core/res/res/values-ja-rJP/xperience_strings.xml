@@ -16,6 +16,13 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Advanced reboot -->
+    <string name="reboot_to_recovery_title">リカバリー</string>
+    <string name="reboot_to_recovery_message">リカバリーへ再起動中...</string>
+    <string name="reboot_to_bootloader_title">ブートローダー</string>
+    <string name="reboot_to_bootloader_message">ブートローダーへ再起動...</string>
+    <string name="reboot_title">再起動</string>
+    <string name="reboot_message">システムを再起動中...</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
 </resources>
