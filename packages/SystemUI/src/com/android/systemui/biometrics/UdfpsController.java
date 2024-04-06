@@ -917,7 +917,7 @@ public class UdfpsController implements DozeReceiver, Dumpable {
         udfpsShell.setUdfpsOverlayController(mUdfpsOverlayController);
         mPerf = new BoostFramework();
 
-        if (com.android.internal.util.bliss.BlissUtils.isPackageInstalled(mContext,
+        if (com.android.internal.util.xpe.xperienceUtils.isPackageInstalled(mContext,
                 "mx.xperience.udfps.animations")) {
             mUdfpsAnimation = new UdfpsAnimation(mContext, mWindowManager, mSensorProps);
         }
