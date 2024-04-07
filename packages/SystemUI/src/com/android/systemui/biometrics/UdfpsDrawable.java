@@ -34,7 +34,7 @@ import androidx.annotation.Nullable;
 
 import com.android.internal.util.xpe.xperienceUtils;
 import com.android.systemui.Dependency;
-import com.android.systemui.res.R;
+import com.android.systemui.R;
 import com.android.systemui.tuner.TunerService;
 
 /**
