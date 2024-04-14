@@ -16,6 +16,11 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Advanced reboot -->
+    <string name="reboot_to_recovery_message">Đang khởi động lại vào Recovery</string>
+    <string name="reboot_to_bootloader_message">Đang khởi động lại vào bộ nạp khởi động</string>
+    <string name="reboot_title">Khởi động lại</string>
+    <string name="reboot_message">Đang khởi động lại hệ thống</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
     <string name="volume_dialog_ringer_guidance_normal">Cuộc gọi và thông báo sẽ rung</string>

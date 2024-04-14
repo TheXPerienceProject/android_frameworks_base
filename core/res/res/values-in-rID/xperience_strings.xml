@@ -16,6 +16,13 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Advanced reboot -->
+    <string name="reboot_to_recovery_title">Pemulihan</string>
+    <string name="reboot_to_recovery_message">Memulai ulang ke pemulihan</string>
+    <string name="reboot_to_bootloader_title">Bootloader</string>
+    <string name="reboot_to_bootloader_message">Memulai ulang ke bootloader</string>
+    <string name="reboot_title">Mulai ulang</string>
+    <string name="reboot_message">Memulai Ulang Sistem</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
 </resources>

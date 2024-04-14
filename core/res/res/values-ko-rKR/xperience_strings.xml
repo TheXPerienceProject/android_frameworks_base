@@ -16,6 +16,13 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Advanced reboot -->
+    <string name="reboot_to_recovery_title">리커버리</string>
+    <string name="reboot_to_recovery_message">복구 모드로 다시 시작</string>
+    <string name="reboot_to_bootloader_title">부트로더</string>
+    <string name="reboot_to_bootloader_message">부트로더로 다시 시작</string>
+    <string name="reboot_title">재부팅</string>
+    <string name="reboot_message">다시 시작 중</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
 </resources>
