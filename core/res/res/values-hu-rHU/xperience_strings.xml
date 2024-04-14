@@ -16,6 +16,13 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Advanced reboot -->
+    <string name="reboot_to_recovery_title">Recovery-be</string>
+    <string name="reboot_to_recovery_message">Újraindítás Recovery módba</string>
+    <string name="reboot_to_bootloader_title">Bootloader-be</string>
+    <string name="reboot_to_bootloader_message">Újraindítás Bootloader módba</string>
+    <string name="reboot_title">Újraindítás</string>
+    <string name="reboot_message">Rendszer-újraindítás</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
     <string name="volume_dialog_ringer_guidance_normal">A hívások és az értesítések rezegnek</string>

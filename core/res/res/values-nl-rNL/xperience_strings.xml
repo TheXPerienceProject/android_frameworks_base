@@ -16,6 +16,13 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Advanced reboot -->
+    <string name="reboot_to_recovery_title">Herstelmodus</string>
+    <string name="reboot_to_recovery_message">Opnieuw opstarten naar herstel</string>
+    <string name="reboot_to_bootloader_title">Bootloader</string>
+    <string name="reboot_to_bootloader_message">Opnieuw opstarten naar bootloader</string>
+    <string name="reboot_title">Opnieuw opstarten</string>
+    <string name="reboot_message">Systeem wordt opnieuw opgestart</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
 </resources>
