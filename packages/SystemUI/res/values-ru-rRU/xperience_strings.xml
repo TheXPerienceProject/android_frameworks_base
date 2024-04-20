@@ -18,4 +18,31 @@
     <!-- Statusbar Icons -->
     <!-- Text while recognizing face -->
     <string name="face_unlock_recognizing">Распознавание лица...</string>
+    <!-- Caffeine tile -->
+    <string name="quick_settings_caffeine_label">Запрет сна</string>
+    <string name="accessibility_quick_settings_caffeine_off">Запрет сна выкл</string>
+    <string name="accessibility_quick_settings_caffeine_on">Запрет сна вкл</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Переключить сим-карту для интернета</string>
+    <string name="qs_data_switch_toast_0">Нет SIM карты</string>
+    <string name="qs_data_switch_toast_1">Установлена только одна SIM-карта</string>
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Всплывающие уведомления</string>
+    <string name="accessibility_quick_settings_heads_up_off">Всплывающие уведомления выключены.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Всплывающие уведомления включены.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Всплывающие уведомления выключены.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Всплывающие уведомления включены.</string>
+    <!-- DC Dimming tile -->
+    <string name="quick_settings_dc_dimming_label">DC Dimming</string>
+    <!-- Always-on Display QS tile -->
+    <!-- PowerShare QS tile -->
+    <string name="quick_settings_powershare_label">Индикатор батареи</string>
+    <string name="quick_settings_powershare_off_powersave_label">PowerShare выкл.\nЭкономия заряда батареи</string>
+    <string name="quick_settings_powershare_off_low_battery_label">PowerShare выкл.\nНизкий заряд батареи</string>
+    <string name="quick_settings_powershare_enabled_label">Режим энергосбережения включен</string>
+    <!-- Bluetooth dialog -->
+    <string name="bluetooth_is_off">Bluetooth отключен</string>
+    <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">USB-модем</string>
+    <!-- Sound QS Tile -->
 </resources>

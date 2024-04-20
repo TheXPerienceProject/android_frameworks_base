@@ -17,4 +17,14 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Statusbar Icons -->
     <!-- Text while recognizing face -->
+    <!-- Caffeine tile -->
+    <string name="quick_settings_caffeine_label">Cafeïne</string>
+    <!-- DataSwitch Tile -->
+    <!-- Heads up QS tile -->
+    <!-- DC Dimming tile -->
+    <!-- Always-on Display QS tile -->
+    <!-- PowerShare QS tile -->
+    <!-- Bluetooth dialog -->
+    <!-- USB tethering QS tile -->
+    <!-- Sound QS Tile -->
 </resources>

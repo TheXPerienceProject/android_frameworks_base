@@ -17,4 +17,19 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Statusbar Icons -->
     <!-- Text while recognizing face -->
+    <!-- Caffeine tile -->
+    <string name="quick_settings_caffeine_label">Caféine</string>
+    <!-- DataSwitch Tile -->
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Notifications flottantes</string>
+    <string name="accessibility_quick_settings_heads_up_off">Notifications flottantes désactivées.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Notifications flottantes activées.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Notifications flottantes désactivées.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Notifications flottantes activées.</string>
+    <!-- DC Dimming tile -->
+    <!-- Always-on Display QS tile -->
+    <!-- PowerShare QS tile -->
+    <!-- Bluetooth dialog -->
+    <!-- USB tethering QS tile -->
+    <!-- Sound QS Tile -->
 </resources>
