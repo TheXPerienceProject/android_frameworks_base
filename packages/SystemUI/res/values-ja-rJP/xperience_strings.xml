@@ -17,4 +17,21 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Statusbar Icons -->
     <!-- Text while recognizing face -->
+    <!-- Caffeine tile -->
+    <string name="quick_settings_caffeine_label">カフェイン</string>
+    <!-- DataSwitch Tile -->
+    <!-- Heads up QS tile -->
+    <string name="quick_settings_heads_up_label">Heads Up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads Up オフ</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads Up オン</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads Upをオフにしました</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads Upをオンにしました</string>
+    <!-- DC Dimming tile -->
+    <!-- Always-on Display QS tile -->
+    <!-- PowerShare QS tile -->
+    <!-- Bluetooth dialog -->
+    <string name="bluetooth_is_off">Bluetoothがオフ</string>
+    <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">USB テザリング</string>
+    <!-- Sound QS Tile -->
 </resources>
