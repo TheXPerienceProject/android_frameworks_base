@@ -135,6 +135,7 @@ import com.android.systemui.util.time.SystemClock;
 import com.android.systemui.util.time.SystemClockImpl;
 import com.android.systemui.wallet.dagger.WalletModule;
 import com.android.systemui.wmshell.BubblesManager;
+import com.android.systemui.xperience.XPerienceModule;
 import com.android.wm.shell.bubbles.Bubbles;
 
 import com.google.android.systemui.smartspace.BcSmartspaceDataProvider;
@@ -187,6 +188,7 @@ import javax.inject.Named;
             GarbageMonitorModule.class,
             KeyboardModule.class,
             LetterboxModule.class,
+            XPerienceModule.class,
             LogModule.class,
             MediaProjectionModule.class,
             MotionToolModule.class,
