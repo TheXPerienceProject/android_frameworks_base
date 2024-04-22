@@ -26,4 +26,5 @@
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
     <string name="volume_dialog_ringer_guidance_normal">A hívások és az értesítések rezegnek</string>
+    <!-- Health interface -->
 </resources>

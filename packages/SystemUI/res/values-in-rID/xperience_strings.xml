@@ -45,4 +45,12 @@
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB tethering</string>
     <!-- Sound QS Tile -->
+    <!-- Title of statusbar tuner -->
+    <string name="status_bar_icons">Ikon bilah status</string>
+    <!-- Name of the VPN status bar icon. -->
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Indikator Roaming</string>
+    <!-- Name of the data saver status bar icon. -->
+    <!-- Name of the location status bar icon. -->
+    <!-- Name of the microphone status bar icon. -->
 </resources>
