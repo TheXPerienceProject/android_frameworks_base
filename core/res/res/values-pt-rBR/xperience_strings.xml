@@ -25,4 +25,5 @@
     <string name="reboot_message">Reiniciando o sistema</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
+    <!-- Health interface -->
 </resources>

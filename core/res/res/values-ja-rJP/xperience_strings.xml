@@ -25,4 +25,5 @@
     <string name="reboot_message">システムを再起動中...</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
+    <!-- Health interface -->
 </resources>

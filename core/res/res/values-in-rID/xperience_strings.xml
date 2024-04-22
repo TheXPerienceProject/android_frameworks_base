@@ -25,4 +25,5 @@
     <string name="reboot_message">Memulai Ulang Sistem</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
+    <!-- Health interface -->
 </resources>

@@ -25,4 +25,5 @@
     <string name="reboot_message">Restart systemu</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
+    <!-- Health interface -->
 </resources>

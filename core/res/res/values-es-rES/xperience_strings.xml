@@ -26,4 +26,12 @@
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
     <string name="volume_dialog_ringer_guidance_normal">Las llamadas y notificaciones sonarán</string>
+    <!-- Health interface -->
+    <string name="charging_control_notification_channel">Control de carga</string>
+    <string name="charging_control_notification_title">Control de carga</string>
+    <string name="charging_control_notification_cancel_once">Cancelar</string>
+    <string name="charging_control_notification_content_limit">La batería se cargará hasta %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">La batería se cargó al %1$d%%</string>
+    <string name="charging_control_notification_content_target">La batería estará completamente cargada en %1$s</string>
+    <string name="charging_control_notification_content_target_reached">La batería está cargada</string>
 </resources>

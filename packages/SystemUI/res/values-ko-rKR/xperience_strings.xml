@@ -33,4 +33,10 @@
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB 테더링</string>
     <!-- Sound QS Tile -->
+    <!-- Title of statusbar tuner -->
+    <!-- Name of the VPN status bar icon. -->
+    <!-- Name of the roaming status bar icon. -->
+    <!-- Name of the data saver status bar icon. -->
+    <!-- Name of the location status bar icon. -->
+    <!-- Name of the microphone status bar icon. -->
 </resources>
