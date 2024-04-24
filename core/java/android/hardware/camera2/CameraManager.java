@@ -70,6 +70,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.Executor;
@@ -1961,7 +1963,6 @@ public final class CameraManager {
         }
 
         private String[] extractCameraIdListLocked() {
-            String[] cameraIds = null;
             boolean exposeAuxCamera = false;
             String packageName = ActivityThread.currentOpPackageName();
             String packageList = SystemProperties.get("vendor.camera.aux.packagelist");
@@ -1975,24 +1976,21 @@ public final class CameraManager {
                     }
                 }
             }
-            int idCount = 0;
+	    List<String> cameraIdList = new ArrayList<>();
             for (int i = 0; i < mDeviceStatus.size(); i++) {
                 if(!exposeAuxCamera && (i == 2)) break;
                 int status = mDeviceStatus.valueAt(i);
                 if (status == ICameraServiceListener.STATUS_NOT_PRESENT
-                        || status == ICameraServiceListener.STATUS_ENUMERATING) continue;
-                idCount++;
+                        || status == ICameraServiceListener.STATUS_ENUMERATING) {
+                    continue;
+                }
+                String cameraId = mDeviceStatus.keyAt(i);
+                cameraIdList.add(cameraId);
             }
-            cameraIds = new String[idCount];
-            idCount = 0;
-            for (int i = 0; i < mDeviceStatus.size(); i++) {
-                if(!exposeAuxCamera && (i == 2)) break;
-                int status = mDeviceStatus.valueAt(i);
-                if (status == ICameraServiceListener.STATUS_NOT_PRESENT
-                        || status == ICameraServiceListener.STATUS_ENUMERATING) continue;
-                cameraIds[idCount] = mDeviceStatus.keyAt(i);
-                idCount++;
+            if (cameraIdList.isEmpty()) {
+                return null;
             }
+            String[] cameraIds = cameraIdList.toArray(new String[0]);
             return cameraIds;
         }
 
