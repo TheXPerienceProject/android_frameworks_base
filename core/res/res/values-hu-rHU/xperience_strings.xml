@@ -27,4 +27,11 @@
     <!-- Cycle through ringer modes -->
     <string name="volume_dialog_ringer_guidance_normal">A hívások és az értesítések rezegnek</string>
     <!-- Health interface -->
+    <string name="charging_control_notification_channel">Kontrollált töltés</string>
+    <string name="charging_control_notification_title">Kontrollált töltés</string>
+    <string name="charging_control_notification_cancel_once">Elutasítás</string>
+    <string name="charging_control_notification_content_limit">Az akkumulátor %1$d%% -ig lesz feltöltve</string>
+    <string name="charging_control_notification_content_limit_reached">Az akkumulátor feltöltődött %1$d%% -ig</string>
+    <string name="charging_control_notification_content_target">Az akkumulátor teljesen feltöltődik ekkorra %1$s</string>
+    <string name="charging_control_notification_content_target_reached">Az akku feltöltve</string>
 </resources>
