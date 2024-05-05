@@ -2,6 +2,7 @@
  * Copyright (C) 2022 Paranoid Android
  *           (C) 2023 ArrowOS
  *           (C) 2023 The LibreMobileOS Foundation
+ *           (C) 2024 The XPerience Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,6 +36,8 @@ import com.android.internal.R;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class PropImitationHooks {
@@ -48,6 +51,9 @@ public class PropImitationHooks {
     private static final String PROCESS_GMS_UNSTABLE = PACKAGE_GMS + ".unstable";
     private static final String PACKAGE_NETFLIX = "com.netflix.mediaclient";
     private static final String PACKAGE_GPHOTOS = "com.google.android.apps.photos";
+    private static final String PACKAGE_TURBO = "com.google.android.apps.turbo";
+    private static final String PACKAGE_SETUPWIZARD = "com.google.android.setupwizard";
+    private static final String PACKAGE_GBOARD = "com.google.android.inputmethod.latin";
 
     private static final String PROP_SECURITY_PATCH = "persist.sys.pihooks.security_patch";
     private static final String PROP_FIRST_API_LEVEL = "persist.sys.pihooks.first_api_level";
@@ -64,6 +70,49 @@ public class PropImitationHooks {
         "PIXEL_2020_MIDYEAR_EXPERIENCE",
         "PIXEL_EXPERIENCE"
     );
+    // Packages to Keep with original device
+    private static final String[] packagesToKeep = {
+            PACKAGE_TURBO,
+            PACKAGE_SETUPWIZARD,
+            PACKAGE_GBOARD,
+            "com.google.android.apps.bard",
+            "com.google.android.apps.customization.pixel",
+            "com.google.android.apps.emojiwallpaper",
+            "com.google.android.apps.privacy.wildlife",
+            "com.google.android.apps.subscriptions.red",
+            "com.google.android.apps.wallpaper",
+            "com.google.android.apps.wallpaper.pixel",
+            "com.google.android.wallpaper.effects",
+            "com.google.pixel.livewallpaper",
+            "com.google.android.apps.motionsense.bridge",
+            "com.google.android.apps.nexuslauncher",
+            "com.google.android.apps.pixelmigrate",
+            "com.google.android.apps.recorder",
+            "com.google.android.apps.restore",
+            "com.google.android.apps.tachyon",
+            "com.google.android.apps.tycho",
+            "com.google.android.apps.wearables.maestro.companion",
+            "com.google.android.apps.youtube.kids",
+            "com.google.android.apps.youtube.music",
+            "com.google.android.as",
+            "com.google.android.dialer",
+            "com.google.android.googlequicksearchbox",
+            "com.google.android.setupwizard",
+            "com.google.ar.core",
+            "com.google.oslo"
+    };
+
+    private static final Map<String, String> sP8Props = new HashMap<>();
+    static {
+        sP8Props.put("BRAND", "google");
+        sP8Props.put("MANUFACTURER", "Google");
+        sP8Props.put("DEVICE", "husky");
+        sP8Props.put("PRODUCT", "husky");
+        sP8Props.put("HARDWARE", "husky");
+        sP8Props.put("MODEL", "Pixel 8 Pro");
+        sP8Props.put("ID", "UQ1A.240205.004");
+        sP8Props.put("FINGERPRINT", "google/husky/husky:14/UQ1A.240205.004/11269751:user/release-keys");
+    }
 
     private static volatile String[] sCertifiedProps;
     private static volatile String sStockFp, sNetflixModel;
@@ -108,6 +157,9 @@ public class PropImitationHooks {
         } else if (!sNetflixModel.isEmpty() && packageName.equals(PACKAGE_NETFLIX)) {
             dlog("Setting model to " + sNetflixModel + " for Netflix");
             setPropValue("MODEL", sNetflixModel);
+        } else if (Arrays.asList(packagesToKeep).contains(packageName)) {
+            dlog("Spoofing Pixel 8 Pro for: " + packageName);
+            sP8Props.forEach((k, v) -> setPropValue(k, v));
         }
     }
 
