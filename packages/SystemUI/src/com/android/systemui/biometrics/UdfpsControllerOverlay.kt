@@ -358,10 +358,13 @@ class UdfpsControllerOverlay @JvmOverloads constructor(
             else -> false
         }
 
+        val customUdfpsIcon = Settings.System.getInt(context.contentResolver,
+            Settings.System.UDFPS_ICON, 0) != 0
+
         // Use expanded overlay unless touchExploration enabled
         var rotatedBounds =
             if (featureFlags.isEnabled(Flags.UDFPS_NEW_TOUCH_DETECTION)) {
-                if (accessibilityManager.isTouchExplorationEnabled && isEnrollment) {
+                if (customUdfpsIcon || (accessibilityManager.isTouchExplorationEnabled && isEnrollment)) {
                     Rect(overlayParams.sensorBounds)
                 } else {
                     Rect(
@@ -394,12 +397,14 @@ class UdfpsControllerOverlay @JvmOverloads constructor(
                 )
 
                 if (featureFlags.isEnabled(Flags.UDFPS_NEW_TOUCH_DETECTION)) {
-                    RotationUtils.rotateBounds(
+                    if (!customUdfpsIcon) {
+                        RotationUtils.rotateBounds(
                             sensorBounds,
                             overlayParams.naturalDisplayWidth,
                             overlayParams.naturalDisplayHeight,
                             rot
-                    )
+                        )
+                    }
                 }
             }
         }

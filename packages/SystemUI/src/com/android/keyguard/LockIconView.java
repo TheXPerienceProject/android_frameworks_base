@@ -21,6 +21,7 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.RectF;
+import android.provider.Settings;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -35,6 +36,8 @@ import com.android.internal.graphics.ColorUtils;
 import com.android.settingslib.Utils;
 import com.android.systemui.Dumpable;
 import com.android.systemui.R;
+import com.android.systemui.biometrics.UdfpsDrawable;
+import com.android.systemui.biometrics.UdfpsFpDrawable;
 
 import java.io.PrintWriter;
 
@@ -64,10 +67,12 @@ public class LockIconView extends FrameLayout implements Dumpable {
     private int mLockIconColor;
     private boolean mUseBackground = false;
     private float mDozeAmount = 0f;
+    private UdfpsDrawable mFingerprintDrawable; // placeholder
 
     public LockIconView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mSensorRect = new RectF();
+        mFingerprintDrawable = new UdfpsFpDrawable(context);
     }
 
     @Override

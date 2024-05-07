@@ -328,17 +328,21 @@ public class UdfpsKeyguardViewLegacy extends UdfpsAnimationView {
             updateIcon();
 
             if (mUseExpandedOverlay) {
-                final LayoutParams lp = (LayoutParams) view.getLayoutParams();
-                lp.width = mSensorBounds.width();
-                lp.height = mSensorBounds.height();
-                RectF relativeToView = getBoundsRelativeToView(new RectF(mSensorBounds));
-                lp.setMarginsRelative(
-                        (int) relativeToView.left,
-                        (int) relativeToView.top,
-                        (int) relativeToView.right,
-                        (int) relativeToView.bottom
-                );
-                parent.addView(view, lp);
+                    if (mCustomUdfpsIcon) {
+                        parent.addView(view);
+                    } else {
+                        final LayoutParams lp = (LayoutParams) view.getLayoutParams();
+                        lp.width = mSensorBounds.width();
+                        lp.height = mSensorBounds.height();
+                        RectF relativeToView = getBoundsRelativeToView(new RectF(mSensorBounds));
+                        lp.setMarginsRelative(
+                                (int) relativeToView.left,
+                                (int) relativeToView.top,
+                                (int) relativeToView.right,
+                                (int) relativeToView.bottom
+                        );
+                        parent.addView(view, lp);
+                    }
             } else {
                 parent.addView(view);
             }
