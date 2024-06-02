@@ -73,4 +73,5 @@
         <item quantity="one">%d dispositivo conectado</item>
         <item quantity="other">%d dispositivos conectados</item>
     </plurals>
+    <!-- Text to use when the number in a notification info is too large -->
 </resources>

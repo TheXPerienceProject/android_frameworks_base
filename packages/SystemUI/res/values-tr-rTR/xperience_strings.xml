@@ -58,4 +58,5 @@
         <item quantity="one">%d cihaz bağlandı</item>
         <item quantity="other">%d cihazlar bağlandı</item>
     </plurals>
+    <!-- Text to use when the number in a notification info is too large -->
 </resources>
