@@ -57,4 +57,5 @@
     <plurals name="quick_settings_internet_hotspot_summary_num_devices">
         <item quantity="other">%d perangkat terhubung</item>
     </plurals>
+    <!-- Text to use when the number in a notification info is too large -->
 </resources>

@@ -24,4 +24,5 @@
     <string name="charging_control_notification_content_target">Az akkumulátor teljesen feltöltődik ekkorra %1$s</string>
     <string name="charging_control_notification_content_target_reached">Az akku feltöltve</string>
     <!-- App lock -->
+    <string name="unlock_application"><xliff:g id="label" example="Telegram">%1$s</xliff:g> feloldása</string>
 </resources>

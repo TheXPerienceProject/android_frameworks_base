@@ -60,4 +60,5 @@
         <item quantity="many">%d połączonych urządzeń</item>
         <item quantity="other">%d połączonych urządzeń</item>
     </plurals>
+    <!-- Text to use when the number in a notification info is too large -->
 </resources>

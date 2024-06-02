@@ -73,4 +73,5 @@
         <item quantity="one">%d készülék csatlakoztatva</item>
         <item quantity="other">%d készülék csatlakoztatva</item>
     </plurals>
+    <!-- Text to use when the number in a notification info is too large -->
 </resources>
