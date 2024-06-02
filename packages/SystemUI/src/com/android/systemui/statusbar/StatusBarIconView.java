@@ -60,7 +60,6 @@ import com.android.internal.util.ContrastColorUtil;
 import com.android.systemui.R;
 import com.android.systemui.statusbar.notification.NotificationIconDozeHelper;
 import com.android.systemui.statusbar.notification.NotificationUtils;
-import com.android.systemui.statusbar.notification.shared.NotificationIconContainerRefactor;
 import com.android.systemui.util.drawable.DrawableSize;
 
 import java.lang.annotation.Retention;
