@@ -934,7 +934,7 @@ public class CompanionDeviceManagerService extends SystemService {
                 @NonNull String[] args) {
             return new CompanionDeviceShellCommand(CompanionDeviceManagerService.this,
                     mAssociationStore, mDevicePresenceMonitor, mTransportManager,
-                    mSystemDataTransferProcessor, mAssociationRequestsProcessor)
+                    mSystemDataTransferRequestStore, mAssociationRequestsProcessor)
                     .exec(this, in.getFileDescriptor(), out.getFileDescriptor(),
                             err.getFileDescriptor(), args);
         }
