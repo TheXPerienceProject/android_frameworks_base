@@ -186,7 +186,6 @@ class StatusBarNotificationActivityStarter implements NotificationActivityStarte
         mFeatureFlags = featureFlags;
         mMetricsLogger = metricsLogger;
         mLogger = logger;
-        mCentralSurfaces = centralSurfaces;
         mOnUserInteractionCallback = onUserInteractionCallback;
         // TODO: use KeyguardStateController#isOccluded to remove this dependency
         mCentralSurfaces = centralSurfaces;
