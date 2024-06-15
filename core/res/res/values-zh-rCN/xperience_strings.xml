@@ -14,6 +14,15 @@
     <string name="reboot_message">正在重启...</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
+    <string name="volume_dialog_ringer_guidance_normal">来电或有通知时响铃</string>
     <!-- Health interface -->
+    <string name="charging_control_notification_channel">充电控制</string>
+    <string name="charging_control_notification_title">充电控制</string>
+    <string name="charging_control_notification_cancel_once">取消</string>
+    <string name="charging_control_notification_content_limit">电池将充电至 %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">电池已充电至 %1$d%%</string>
+    <string name="charging_control_notification_content_target">电池将在 %1$s 完全充满</string>
+    <string name="charging_control_notification_content_target_reached">电池已充满</string>
     <!-- App lock -->
+    <string name="unlock_application">解锁 <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
 </resources>
