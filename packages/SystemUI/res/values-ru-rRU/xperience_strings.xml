@@ -26,6 +26,8 @@
     <string name="qs_data_switch_label">Переключить сим-карту для интернета</string>
     <string name="qs_data_switch_toast_0">Нет SIM карты</string>
     <string name="qs_data_switch_toast_1">Установлена только одна SIM-карта</string>
+    <string name="qs_data_switch_text_1">SIM 1</string>
+    <string name="qs_data_switch_text_2">SIM 2</string>
     <!-- Heads up QS tile -->
     <string name="quick_settings_heads_up_label">Всплывающие уведомления</string>
     <string name="accessibility_quick_settings_heads_up_off">Всплывающие уведомления выключены.</string>
@@ -35,24 +37,35 @@
     <!-- DC Dimming tile -->
     <string name="quick_settings_dc_dimming_label">DC Dimming</string>
     <!-- Always-on Display QS tile -->
+    <string name="quick_settings_aod_label">Дисплей всегда включен (AOD)</string>
     <!-- PowerShare QS tile -->
     <string name="quick_settings_powershare_label">Индикатор батареи</string>
     <string name="quick_settings_powershare_off_powersave_label">PowerShare выкл.\nЭкономия заряда батареи</string>
     <string name="quick_settings_powershare_off_low_battery_label">PowerShare выкл.\nНизкий заряд батареи</string>
     <string name="quick_settings_powershare_enabled_label">Режим энергосбережения включен</string>
     <!-- Bluetooth dialog -->
+    <string name="turn_on_bluetooth">Bluetooth</string>
     <string name="bluetooth_is_off">Bluetooth отключен</string>
+    <string name="tap_a_device_to_connect">Нажмите на устройство для подключения/отключения</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB-модем</string>
     <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">Звук</string>
+    <string name="quick_settings_sound_ring">Рингтон</string>
+    <string name="quick_settings_sound_vibrate">Вибрация</string>
+    <string name="quick_settings_sound_silent">Без звука</string>
     <!-- Title of statusbar tuner -->
     <string name="status_bar_icons">Значки строки состояния</string>
     <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
     <!-- Name of the roaming status bar icon. -->
     <string name="status_bar_roaming">Индикатор роуминга</string>
     <!-- Name of the data saver status bar icon. -->
+    <string name="status_bar_data_saver">Экономия трафика</string>
     <!-- Name of the location status bar icon. -->
+    <string name="status_bar_location">Местоположение</string>
     <!-- Name of the microphone status bar icon. -->
+    <string name="status_bar_microphone">Микрофон</string>
     <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
     <!-- Text to use when the number in a notification info is too large -->
 </resources>

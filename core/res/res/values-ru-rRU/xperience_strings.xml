@@ -14,6 +14,15 @@
     <string name="reboot_message">Перезагрузка системы</string>
     <!-- Alert slider proc nodes paths. -->
     <!-- Cycle through ringer modes -->
+    <string name="volume_dialog_ringer_guidance_normal">Звук в звонках и уведомлениях включён</string>
     <!-- Health interface -->
+    <string name="charging_control_notification_channel">Управление зарядкой</string>
+    <string name="charging_control_notification_title">Управление зарядкой</string>
+    <string name="charging_control_notification_cancel_once">Отмена</string>
+    <string name="charging_control_notification_content_limit">Батарея будет заряжена до %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">Батарея заряжена до %1$d%%</string>
+    <string name="charging_control_notification_content_target">Батарея будет полностью заряжена в %1$s</string>
+    <string name="charging_control_notification_content_target_reached">Батарея заряжена</string>
     <!-- App lock -->
+    <string name="unlock_application">Разблокировать <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
 </resources>
