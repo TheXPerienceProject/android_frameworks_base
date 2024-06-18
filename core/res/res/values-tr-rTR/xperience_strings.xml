@@ -16,5 +16,13 @@
     <!-- Cycle through ringer modes -->
     <string name="volume_dialog_ringer_guidance_normal">Çağrılar ve bildirimler için zil sesi</string>
     <!-- Health interface -->
+    <string name="charging_control_notification_channel">Şarj kontrolü</string>
+    <string name="charging_control_notification_title">Şarj kontrolü</string>
+    <string name="charging_control_notification_cancel_once">İptal</string>
+    <string name="charging_control_notification_content_limit">Pil %1$d%% seviyesine kadar şarj edilecek</string>
+    <string name="charging_control_notification_content_limit_reached">Pil %1$d%% seviyesine kadar şarj edildi</string>
+    <string name="charging_control_notification_content_target">Batarya %1$s%% saatinde şarj edilmiş olacak</string>
+    <string name="charging_control_notification_content_target_reached">Batarya şarj oldu</string>
     <!-- App lock -->
+    <string name="unlock_application">Kilidi aç <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
 </resources>
