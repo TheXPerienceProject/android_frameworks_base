@@ -2717,7 +2717,7 @@ public class NetworkPolicyManagerService extends INetworkPolicyManager.Stub {
                         } else {
                             Slog.w(TAG, "unable to apply policy to UID " + uid + "; ignoring");
                         }
-                    } else if (TAG_ALLOWLIST.equals(tag)) {
+                    } else if (TAG_WHITELIST.equals(tag)) {
                         insideAllowlist = true;
                     } else if (TAG_RESTRICT_BACKGROUND.equals(tag) && insideAllowlist) {
                         final int uid = readIntAttribute(in, ATTR_UID);
@@ -2727,7 +2727,7 @@ public class NetworkPolicyManagerService extends INetworkPolicyManager.Stub {
                         mRestrictBackgroundAllowlistRevokedUids.put(uid, true);
                     }
                 } else if (type == END_TAG) {
-                    if (TAG_ALLOWLIST.equals(tag)) {
+                    if (TAG_WHITELIST.equals(tag)) {
                         insideAllowlist = false;
                     }
 
