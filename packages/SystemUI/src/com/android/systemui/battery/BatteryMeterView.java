@@ -261,11 +261,11 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
             mFullCircleDrawable.setBatteryLevel(mLevel);
             updatePercentText();
         }
-        if (mCharging != pluggedIn) {
-            mCharging = pluggedIn;
-            mAccessorizedDrawable.setCharging(mCharging);
-            mCircleDrawable.setCharging(mCharging);
-            mFullCircleDrawable.setCharging(mCharging);
+        if (mPluggedIn != pluggedIn) {
+            mPluggedIn = pluggedIn;
+            mAccessorizedDrawable.setCharging(isCharging());
+            mCircleDrawable.setCharging(isCharging());
+            mFullCircleDrawable.setCharging(isCharging());
             updateShowPercent();
             updatePercentText();
         }
@@ -342,7 +342,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
 
         mEstimateText = null;
 
-        if (mBatteryEstimateFetcher != null && mShowPercentMode == MODE_ESTIMATE && !mCharging) {
+        if (mBatteryEstimateFetcher != null && mShowPercentMode == MODE_ESTIMATE && !isCharging()) {
             mBatteryEstimateFetcher.fetchBatteryTimeRemainingEstimate(
                     (String estimate) -> {
                 if (mBatteryPercentView == null) {
@@ -363,7 +363,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
             // Use the high voltage symbol ⚡ (u26A1 unicode) but prevent the system
             // to load its emoji colored variant with the uFE0E flag
             String bolt = "\u26A1\uFE0E";
-            CharSequence mChargeIndicator = mCharging && (mBatteryStyle == BATTERY_STYLE_HIDDEN ||
+            CharSequence mChargeIndicator = isCharging() && (mBatteryStyle == BATTERY_STYLE_HIDDEN ||
                     mBatteryStyle == BATTERY_STYLE_TEXT) ? (bolt + " ") : "";
             String percentText = mChargeIndicator + text;
             // Setting text actually triggers a layout pass (because the text view is set to
@@ -412,7 +412,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
 
     void updateShowPercent() {
         boolean drawPercentInside = mShowBatteryPercent == 1
-                                    && !mCharging && !mBatteryStateUnknown;
+                                    && !isCharging() && !mBatteryStateUnknown;
         boolean showPercent = mShowBatteryPercent == 2
                                     || mBatteryStyle == BATTERY_STYLE_TEXT
                                     || mShowPercentMode == MODE_ON;
@@ -423,7 +423,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         mCircleDrawable.setShowPercent(drawPercentInside);
         mFullCircleDrawable.setShowPercent(drawPercentInside);
 
-        if (showPercent || (mBatteryPercentCharging && mCharging)
+        if (showPercent || (mBatteryPercentCharging && isCharging())
                 || mShowPercentMode == MODE_ESTIMATE) {
             if (mBatteryPercentView == null) {
                 mBatteryPercentView = loadPercentView();
