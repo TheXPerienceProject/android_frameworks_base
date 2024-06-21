@@ -5935,6 +5935,11 @@ public final class Settings {
         public static final String SHOW_BATTERY_PERCENT_INSIDE = "status_bar_show_battery_percent_inside";
 
         /**
+         * @hide
+         */
+        public static final String UDFPS_ICON = "udfps_icon";
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -5995,11 +6000,6 @@ public final class Settings {
          * @hide
          */
         public static final String UDFPS_ANIM_STYLE = "udfps_anim_style";
-
-        /**
-         * @hide
-         */
-        public static final String UDFPS_ICON = "udfps_icon";
 
         /**
          * Whether to enable smart 5G mode
