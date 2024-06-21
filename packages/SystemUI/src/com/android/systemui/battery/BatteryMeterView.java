@@ -99,17 +99,17 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
     // Lazily-loaded since this is expected to be a rare-if-ever state
     private Drawable mUnknownStateDrawable;
 
-    private int mBatteryStyle = BATTERY_STYLE_PORTRAIT;
+    private int mBatteryStyle = BATTERY_STYLE_RLANDSCAPE;
     private int mShowBatteryPercent;
     private boolean mBatteryPercentCharging;
 
     private DualToneHandler mDualToneHandler;
 
+    private final ArrayList<BatteryMeterViewCallbacks> mCallbacks = new ArrayList<>();
+
     private int mNonAdaptedSingleToneColor;
     private int mNonAdaptedForegroundColor;
     private int mNonAdaptedBackgroundColor;
-
-    private final ArrayList<BatteryMeterViewCallbacks> mCallbacks = new ArrayList<>();
 
     private BatteryEstimateFetcher mBatteryEstimateFetcher;
 
@@ -205,7 +205,7 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         updateVisibility();
     }
 
-    protected void setBatteryPercent(int showBatteryPercent) {
+    public void setBatteryPercent(int showBatteryPercent) {
         if (showBatteryPercent == mShowBatteryPercent) return;
         mShowBatteryPercent = showBatteryPercent;
         updatePercentView();
