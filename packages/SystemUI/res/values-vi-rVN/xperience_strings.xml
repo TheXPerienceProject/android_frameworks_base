@@ -52,4 +52,5 @@
         <item quantity="other">%d thiết bị đã kết nối</item>
     </plurals>
     <!-- Text to use when the number in a notification info is too large -->
+    <!-- Name of the firewall status bar icon. -->
 </resources>
