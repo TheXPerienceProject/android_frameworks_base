@@ -712,14 +712,14 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
                 res.getDimensionPixelSize(R.dimen.status_bar_battery_icon_height_landscape_origami) : batteryHeight;
         batteryHeight = mBatteryStyle == BATTERY_STYLE_LANDSCAPE_MIUI_PILL ?
                 res.getDimensionPixelSize(R.dimen.status_bar_battery_icon_height_landscape_miui_pill) : batteryHeight;
-        batteryHeight = mBatteryStyle == BATTERY_STYLE_LANDSCAPEA ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEB ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEC ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPED ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEJ ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEM ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEN ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEO ?
+        batteryHeight = mBatteryStyle == BATTERY_STYLE_LANDSCAPE_SIMPLY ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_NENINE ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_COLOROS ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_LOVE ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_STRIP ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_IOS_OUTLINE ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_RULER ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_WINDOWS ?
         res.getDimensionPixelSize(R.dimen.status_bar_battery_icon_height_landscape_a_o) : batteryHeight;   
 
         int batteryWidth = mBatteryStyle == BATTERY_STYLE_CIRCLE || mBatteryStyle == BATTERY_STYLE_DOTTED_CIRCLE
@@ -745,14 +745,14 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
         batteryWidth = mBatteryStyle == BATTERY_STYLE_LANDSCAPE_MIUI_PILL ?
                res.getDimensionPixelSize(R.dimen.status_bar_battery_icon_width_landscape_miui_pill) : batteryWidth;
 
-        batteryWidth = mBatteryStyle == BATTERY_STYLE_LANDSCAPEA ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEB ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEC ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPED ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEJ ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEM ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEN ||
-                	mBatteryStyle == BATTERY_STYLE_LANDSCAPEO ?
+        batteryWidth = mBatteryStyle == BATTERY_STYLE_LANDSCAPE_SIMPLY ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_NENINE ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_COLOROS ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_LOVE ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_STRIP ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_IOS_OUTLINE ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_RULER ||
+                	mBatteryStyle == BATTERY_STYLE_LANDSCAPE_WINDOWS ?
         res.getDimensionPixelSize(R.dimen.status_bar_battery_icon_width_landscape_a_o) : batteryWidth;
 
         float mainBatteryHeight = batteryHeight * iconScaleFactor;
@@ -859,28 +859,28 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
                 addOrRemoveIcon(mLandscapeDrawableMiUIPill);
                 scaleBatteryMeterViews();
                 break;
-            case BATTERY_STYLE_LANDSCAPEA:
+            case BATTERY_STYLE_LANDSCAPE_SIMPLY:
                 addOrRemoveIcon(mLandscapeBatteryA);
                 break;
-            case BATTERY_STYLE_LANDSCAPEB:
+            case BATTERY_STYLE_LANDSCAPE_NENINE:
                 addOrRemoveIcon(mLandscapeBatteryB);
                 break;
-            case BATTERY_STYLE_LANDSCAPEC:
+            case BATTERY_STYLE_LANDSCAPE_COLOROS:
                 addOrRemoveIcon(mLandscapeBatteryC);
                 break;
-            case BATTERY_STYLE_LANDSCAPED:
+            case BATTERY_STYLE_LANDSCAPE_LOVE:
                 addOrRemoveIcon(mLandscapeBatteryD);
                 break;
-            case BATTERY_STYLE_LANDSCAPEJ:
+            case BATTERY_STYLE_LANDSCAPE_STRIP:
                 addOrRemoveIcon(mLandscapeBatteryJ);
                 break;
-            case BATTERY_STYLE_LANDSCAPEM:
+            case BATTERY_STYLE_LANDSCAPE_IOS_OUTLINE:
                 addOrRemoveIcon(mLandscapeBatteryM);
                 break;
-            case BATTERY_STYLE_LANDSCAPEN:
+            case BATTERY_STYLE_LANDSCAPE_RULER:
                 addOrRemoveIcon(mLandscapeBatteryN);
                 break;
-            case BATTERY_STYLE_LANDSCAPEO:
+            case BATTERY_STYLE_LANDSCAPE_WINDOWS:
                 addOrRemoveIcon(mLandscapeBatteryO);
                 break;
             case BATTERY_STYLE_FULL_CIRCLE:
