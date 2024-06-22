@@ -59,4 +59,5 @@
         <item quantity="other">%d dispositivos conectados</item>
     </plurals>
     <!-- Text to use when the number in a notification info is too large -->
+    <!-- Name of the firewall status bar icon. -->
 </resources>
