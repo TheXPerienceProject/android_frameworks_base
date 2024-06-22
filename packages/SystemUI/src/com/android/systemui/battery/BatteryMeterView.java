@@ -536,15 +536,15 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
                 scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_RLANDSCAPE:
-                mBatteryIconView.setImageDrawable(mRLandscapeDrawable);
+                addOrRemoveIcon(mRLandscapeDrawable);
                 scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_LANDSCAPE:
-                mBatteryIconView.setImageDrawable(mLandscapeDrawable);
+                addOrRemoveIcon(mLandscapeDrawable);
                 scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_FULL_CIRCLE:
-                mBatteryIconView.setImageDrawable(mFullCircleDrawable);
+                addOrRemoveIcon(mFullCircleDrawable);
                 scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_CIRCLE:
