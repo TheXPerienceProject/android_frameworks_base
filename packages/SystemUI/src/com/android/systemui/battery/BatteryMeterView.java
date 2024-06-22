@@ -861,27 +861,35 @@ public class BatteryMeterView extends LinearLayout implements DarkReceiver {
                 break;
             case BATTERY_STYLE_LANDSCAPE_SIMPLY:
                 addOrRemoveIcon(mLandscapeBatteryA);
+                scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_LANDSCAPE_NENINE:
                 addOrRemoveIcon(mLandscapeBatteryB);
+                scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_LANDSCAPE_COLOROS:
                 addOrRemoveIcon(mLandscapeBatteryC);
+                scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_LANDSCAPE_LOVE:
                 addOrRemoveIcon(mLandscapeBatteryD);
+                scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_LANDSCAPE_STRIP:
                 addOrRemoveIcon(mLandscapeBatteryJ);
+                scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_LANDSCAPE_IOS_OUTLINE:
                 addOrRemoveIcon(mLandscapeBatteryM);
+                scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_LANDSCAPE_RULER:
                 addOrRemoveIcon(mLandscapeBatteryN);
+                scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_LANDSCAPE_WINDOWS:
                 addOrRemoveIcon(mLandscapeBatteryO);
+                scaleBatteryMeterViews();
                 break;
             case BATTERY_STYLE_FULL_CIRCLE:
                 addOrRemoveIcon(mFullCircleDrawable);
