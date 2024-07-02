@@ -61,7 +61,7 @@ public class GlobalActionsPowerDialog {
         }
 
         final Dialog dialog = new Dialog(context,
-                com.android.systemui.res.R.style.Theme_SystemUI_Dialog_GlobalActionsLite) {
+                com.android.systemui.R.style.Theme_SystemUI_Dialog_GlobalActionsLite) {
             @Override
             protected void onStart() {
                 super.onStart();
