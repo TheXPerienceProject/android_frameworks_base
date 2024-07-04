@@ -75,4 +75,5 @@
     </plurals>
     <!-- Text to use when the number in a notification info is too large -->
     <!-- Name of the firewall status bar icon. -->
+    <string name="status_bar_firewall">Tűzfal</string>
 </resources>
