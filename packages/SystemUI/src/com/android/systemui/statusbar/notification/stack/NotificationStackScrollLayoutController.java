@@ -1146,8 +1146,9 @@ public class NotificationStackScrollLayoutController {
     }
 
     public void setAlpha(float alpha) {
+	alpha2 = alpha < 0.95f ? 0f : alpha;
         if (mView != null) {
-            mView.setAlpha(alpha);
+            mView.setAlpha(alpha2);
         }
     }
 
