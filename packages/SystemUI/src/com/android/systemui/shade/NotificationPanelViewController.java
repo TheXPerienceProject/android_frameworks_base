@@ -2489,6 +2489,9 @@ public final class NotificationPanelViewController implements ShadeSurface, Dump
         if (mClosingWithAlphaFadeOut && !mExpandingFromHeadsUp
                 && !mHeadsUpManager.hasPinnedHeadsUp()) {
             alpha = getFadeoutAlpha();
+            if (alpha < 0.95f) {
+                alpha = 0f;
+            }
         }
         if (mBarState == KEYGUARD && !mHintAnimationRunning
                 && !mKeyguardBypassController.getBypassEnabled()) {

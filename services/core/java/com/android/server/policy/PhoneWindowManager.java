@@ -998,7 +998,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         }
 
         // Still allow muting call with power button press.
-        boolean blockInputs = mIsDeviceInPocket && (!interactive || mPocketLockShowing);
+        boolean blockInputs = mIsDeviceInPocket && !interactive;
 
         mWindowManagerFuncs.onPowerKeyDown(interactive);
 
