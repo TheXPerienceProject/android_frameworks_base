@@ -41,7 +41,8 @@ final class DisplayEngineController extends TintController {
     private int mBlue = 255;
 
     // Mode presets {r ,g ,b ,sat, cont, val}
-    private static final int[] X_REALITY_MODE = {237, 238, 240, 275, 258, 233};
+    private static final int[] X_REALITY_MODE = {252, 227, 228, 278, 260, 264};
+    private static final int[] TRILUMINOUS_MODE = {255, 250, 251, 291, 260, 264};
     private static final int[] VIVID_MODE = {240, 240, 225, 281, 251, 262};
 
     @Override
@@ -84,6 +85,9 @@ final class DisplayEngineController extends TintController {
                 break;
             case 2:
                 mode = VIVID_MODE;
+                break;
+            case 3:
+                mode = TRILUMINOUS_MODE;
                 break;
             case 0:
             default:
