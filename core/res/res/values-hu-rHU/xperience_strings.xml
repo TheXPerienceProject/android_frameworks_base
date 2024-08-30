@@ -25,4 +25,9 @@
     <string name="charging_control_notification_content_target_reached">Az akku feltöltve</string>
     <!-- App lock -->
     <string name="unlock_application"><xliff:g id="label" example="Telegram">%1$s</xliff:g> feloldása</string>
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Tartsa lenyomva a bekapcsoló gombot a feloldáshoz</string>
+    <string name="pocket_view_title">A Zsebmód bekapcsolva</string>
+    <string name="pocket_view_top_tag_cancel2">A Bekapcsológomb hosszan nyomása azonnal kikapcsolja a Zsebmódot</string>
+    <!-- Pocket mode -->
 </resources>

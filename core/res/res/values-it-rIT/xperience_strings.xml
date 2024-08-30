@@ -10,4 +10,8 @@
     <!-- Cycle through ringer modes -->
     <!-- Health interface -->
     <!-- App lock -->
+    <!-- Pocket Lock -->
+    <string name="pocket_view_title">Modalità tascabile attiva</string>
+    <string name="pocket_view_top_tag_cancel2">Tieni premuto il pulsante di accensione per forzare l\'uscita dalla modalità tasca.</string>
+    <!-- Pocket mode -->
 </resources>

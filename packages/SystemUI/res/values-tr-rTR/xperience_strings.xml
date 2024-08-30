@@ -75,4 +75,10 @@
     </plurals>
     <!-- Text to use when the number in a notification info is too large -->
     <!-- Name of the firewall status bar icon. -->
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">bugün kullanılan</string>
+    <string name="usage_data_default_suffix">Veri</string>
+    <string name="usage_wifi_default_suffix">Kablosuz ağ</string>
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Kilidi açmak için güç tuşuna basılı tutun</string>
 </resources>

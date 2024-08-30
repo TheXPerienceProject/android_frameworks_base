@@ -76,4 +76,10 @@
     <!-- Text to use when the number in a notification info is too large -->
     <!-- Name of the firewall status bar icon. -->
     <string name="status_bar_firewall">Cortafuegos</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">Usado hoy</string>
+    <string name="usage_data_default_suffix">Datos</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Pulse y mantenga el botón de encendido para desbloquear</string>
 </resources>

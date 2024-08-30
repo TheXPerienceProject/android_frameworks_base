@@ -53,4 +53,10 @@
     </plurals>
     <!-- Text to use when the number in a notification info is too large -->
     <!-- Name of the firewall status bar icon. -->
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">đã dùng hôm nay</string>
+    <string name="usage_data_default_suffix">Dữ liệu</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Nhấn và giữ nút nguồn để mở khoá</string>
 </resources>

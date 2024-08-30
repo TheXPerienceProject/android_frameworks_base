@@ -25,4 +25,9 @@
     <string name="charging_control_notification_content_target_reached">La batería está cargada</string>
     <!-- App lock -->
     <string name="unlock_application">Desbloquear <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Pulse y mantenga el botón de encendido para desbloquear</string>
+    <string name="pocket_view_title">Modo bolsillo activado</string>
+    <string name="pocket_view_top_tag_cancel2">Mantener presionado el botón de encendido para forzar la salida del modo bolsillo.</string>
+    <!-- Pocket mode -->
 </resources>
