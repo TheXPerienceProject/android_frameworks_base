@@ -1,6 +1,8 @@
 #!/bin/bash
 # Author: Carlos 'klozz' jesus
 # Date: 10/jun/2023
+# if using manjaro and not installed use
+# sudo pacman -S sox vorbis-tools
 
 oggname=$1
 
