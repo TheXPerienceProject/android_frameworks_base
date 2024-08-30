@@ -998,7 +998,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         }
 
         // Still allow muting call with power button press.
-        boolean blockInputs = mIsDeviceInPocket && !interactive;
+        boolean blockInputs = mPocketMode.isDeviceInPocket() && (!interactive || mPocketMode.isOverlayShowing());
 
         mWindowManagerFuncs.onPowerKeyDown(interactive);
 
@@ -1434,10 +1434,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         }
 
         if (mPocketMode.isOverlayShowing()) {
-            return LONG_PRESS_POWER_HIDE_POCKET_LOCK;
-        }
-
-        if (mPocketLockShowing) {
             return LONG_PRESS_POWER_HIDE_POCKET_LOCK;
         }
 
