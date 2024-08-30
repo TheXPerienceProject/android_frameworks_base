@@ -704,30 +704,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
     };
 
-    private PocketManager mPocketManager;
-    private PocketLock mPocketLock;
-    private boolean mPocketLockShowing;
-    private boolean mIsDeviceInPocket;
-    private final IPocketCallback mPocketCallback = new IPocketCallback.Stub() {
-
-        @Override
-        public void onStateChanged(boolean isDeviceInPocket, int reason) {
-            boolean wasDeviceInPocket = mIsDeviceInPocket;
-            if (reason == PocketManager.REASON_SENSOR) {
-                mIsDeviceInPocket = isDeviceInPocket;
-            } else {
-                mIsDeviceInPocket = false;
-            }
-            if (wasDeviceInPocket != mIsDeviceInPocket) {
-                handleDevicePocketStateChanged();
-                //if (mKeyHandler != null) {
-                    //mKeyHandler.setIsInPocket(mIsDeviceInPocket);
-                //}
-            }
-        }
-
-    };
-
     private static final int MSG_DISPATCH_MEDIA_KEY_WITH_WAKE_LOCK = 3;
     private static final int MSG_DISPATCH_MEDIA_KEY_REPEAT_WITH_WAKE_LOCK = 4;
     private static final int MSG_KEYGUARD_DRAWN_COMPLETE = 5;
@@ -1463,6 +1439,19 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 sleepDefaultDisplay(eventTime, PowerManager.GO_TO_SLEEP_REASON_SLEEP_BUTTON, 0);
                 break;
         }
+    }
+
+    private boolean isDozeMode() {
+        IDreamManager dreamManager = getDreamManager();
+
+        try {
+            if (dreamManager != null && dreamManager.isDreaming()) {
+                return true;
+            }
+        } catch (RemoteException e) {
+            Slog.e(TAG, "RemoteException when checking if dreaming", e);
+        }
+        return false;
     }
 
     private int getResolvedLongPressOnPowerBehavior() {

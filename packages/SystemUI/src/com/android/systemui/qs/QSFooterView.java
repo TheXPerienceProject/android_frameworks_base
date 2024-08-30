@@ -111,7 +111,7 @@ public class QSFooterView extends FrameLayout {
         });
     }
 
-    private void setBuildText() {
+/*    private void setBuildText() {
         if (mBuildText == null) return;
         if (DevelopmentSettingsEnabler.isDevelopmentSettingsEnabled(mContext)) {
             mBuildText.setText(mContext.getString(
@@ -127,7 +127,7 @@ public class QSFooterView extends FrameLayout {
             mShouldShowBuildText = false;
             mBuildText.setSelected(false);
       }
-    }
+    }*/
 
     private void setUsageText() {
         if (mUsageText == null || !mExpanded) return;
