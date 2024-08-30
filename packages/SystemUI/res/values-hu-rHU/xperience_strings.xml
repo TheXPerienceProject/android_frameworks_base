@@ -76,4 +76,10 @@
     <!-- Text to use when the number in a notification info is too large -->
     <!-- Name of the firewall status bar icon. -->
     <string name="status_bar_firewall">Tűzfal</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">ma felhasználva</string>
+    <string name="usage_data_default_suffix">Mobiladat</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Tartsa lenyomva a bekapcsoló gombot a feloldáshoz</string>
 </resources>

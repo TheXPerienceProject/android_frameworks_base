@@ -25,4 +25,9 @@
     <string name="charging_control_notification_content_target_reached">电池已充满</string>
     <!-- App lock -->
     <string name="unlock_application">解锁 <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">长按电源键以解锁</string>
+    <string name="pocket_view_title">防误触模式已打开</string>
+    <string name="pocket_view_top_tag_cancel2">长按电源键强制退出防误触模式</string>
+    <!-- Pocket mode -->
 </resources>

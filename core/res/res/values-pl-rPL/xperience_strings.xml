@@ -16,4 +16,9 @@
     <!-- Cycle through ringer modes -->
     <!-- Health interface -->
     <!-- App lock -->
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Naciśnij i przytrzymaj przycisk zasilania, aby odblokować</string>
+    <string name="pocket_view_title">Tryb kieszeniowy jest włączony</string>
+    <string name="pocket_view_top_tag_cancel2">Przytrzymaj przycisk zasilania, aby wymusić wyjście z trybu kieszonkowego.</string>
+    <!-- Pocket mode -->
 </resources>

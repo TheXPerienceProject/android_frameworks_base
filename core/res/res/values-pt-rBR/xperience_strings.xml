@@ -16,4 +16,9 @@
     <!-- Cycle through ringer modes -->
     <!-- Health interface -->
     <!-- App lock -->
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Segure o botão de ligar pra desbloquear</string>
+    <string name="pocket_view_title">Modo bolso está ativado</string>
+    <string name="pocket_view_top_tag_cancel2">Pressione e segure o botão liga/desliga para forçar a saída do modo de bolso.</string>
+    <!-- Pocket mode -->
 </resources>

@@ -25,4 +25,9 @@
     <string name="charging_control_notification_content_target_reached">Batarya şarj oldu</string>
     <!-- App lock -->
     <string name="unlock_application">Kilidi aç <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Kilidi açmak için güç tuşuna basılı tutun</string>
+    <string name="pocket_view_title">Cep modu açık</string>
+    <string name="pocket_view_top_tag_cancel2">Cep modundan çıkmak için güç tuşuna basılı tutun.</string>
+    <!-- Pocket mode -->
 </resources>

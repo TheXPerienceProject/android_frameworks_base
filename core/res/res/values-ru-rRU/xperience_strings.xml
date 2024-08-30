@@ -25,4 +25,9 @@
     <string name="charging_control_notification_content_target_reached">Батарея заряжена</string>
     <!-- App lock -->
     <string name="unlock_application">Разблокировать <xliff:g id="label" example="Telegram">%1$s</xliff:g></string>
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Нажмите и удерживайте кнопку питания для разблокировки</string>
+    <string name="pocket_view_title">Режим \"В кармане\" включен</string>
+    <string name="pocket_view_top_tag_cancel2">Нажмите и удерживайте кнопку питания, чтобы принудительно выйти из карманного режима.</string>
+    <!-- Pocket mode -->
 </resources>
