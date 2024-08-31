@@ -182,7 +182,7 @@ public class NavigationBarInflaterView extends FrameLayout implements TunerServi
     @Override
     protected void onDetachedFromWindow() {
         Dependency.get(NavigationModeController.class).removeListener(mListener);
-        Dependency.get(TunerService.class).removeTunable(mListener);
+        Dependency.get(TunerService.class).removeTunable(this);
         super.onDetachedFromWindow();
     }
 
