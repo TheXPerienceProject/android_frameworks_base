@@ -34,7 +34,7 @@ public interface ScreenStateAnimator {
 
     public void dismiss();
 
-    public void destroy();
+//    public void destroy();
 
     public boolean draw(float level);
 
