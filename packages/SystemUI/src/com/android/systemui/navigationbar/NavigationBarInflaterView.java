@@ -49,7 +49,7 @@ import java.io.PrintWriter;
 import java.lang.ref.WeakReference;
 import java.util.Objects;
 
-public class NavigationBarInflaterView extends FrameLayout, TunerService.Tunable  {
+public class NavigationBarInflaterView extends FrameLayout implements TunerService.Tunable  {
 
     private static final String TAG = "NavBarInflater";
 
