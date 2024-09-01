@@ -68,6 +68,9 @@ import com.android.internal.org.bouncycastle.cert.X509v3CertificateBuilder;
 import com.android.internal.org.bouncycastle.operator.ContentSigner;
 import com.android.internal.org.bouncycastle.operator.jcajce.JcaContentSignerBuilder;
 
+/**
+ * @hide
+ */
 public class PropImitationHooks {
 
     private static final String TAG = "PropImitationHooks";
