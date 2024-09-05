@@ -837,21 +837,23 @@ public class AnimatedVectorDrawable extends Drawable implements Animatable2 {
          *
          * @param index the index of the animator within the constant state
          */
+
         private Animator prepareLocalAnimator(int index) {
             final Animator animator = mAnimators.get(index);
             final Animator localAnimator = animator.clone();
             final String targetName = mTargetNameMap.get(animator);
             final Object target = mVectorDrawable.getTargetByName(targetName);
-            if (!mShouldIgnoreInvalidAnim) {
-                if (target == null) {
-                    throw new IllegalStateException("Target with the name \"" + targetName
-                            + "\" cannot be found in the VectorDrawable to be animated.");
-                } else if (!(target instanceof VectorDrawable.VectorDrawableState)
+
+            // Si el target no existe o no es válido, retornamos null para indicarle al sistema que ignore esta animación
+            if (target == null || !(target instanceof VectorDrawable.VectorDrawableState)
                         && !(target instanceof VectorDrawable.VObject)) {
-                    throw new UnsupportedOperationException("Target should be either VGroup, VPath,"
-                            + " or ConstantState, " + target.getClass() + " is not supported");
-                }
+                    if (DBG_ANIMATION_VECTOR_DRAWABLE) {
+                        Log.w(LOGTAG, "Target with the name \"" + targetName
+                        + "\" cannot be found or is not supported. Ignoring animation.");
+                    }
+            return null;
             }
+
             localAnimator.setTarget(target);
             return localAnimator;
         }
