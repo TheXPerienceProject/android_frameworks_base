@@ -34,6 +34,8 @@ import android.util.Log;
 import java.util.Calendar;
 import java.util.Objects;
 
+import com.android.internal.util.PropImitationHooks;
+
 /**
  * @hide This should not be made public in its present form because it
  * assumes that private and secret key bytes are available and would
@@ -159,6 +161,7 @@ public class KeyStore2 {
      */
     public KeyDescriptor[] list(int domain, long namespace) throws KeyStoreException {
         return handleRemoteExceptionWithRetry((service) -> service.listEntries(domain, namespace));
+
     }
 
     /**
@@ -259,7 +262,9 @@ public class KeyStore2 {
      */
     public KeyEntryResponse getKeyEntry(@NonNull KeyDescriptor descriptor)
             throws KeyStoreException {
-        return handleRemoteExceptionWithRetry((service) -> service.getKeyEntry(descriptor));
+        KeyEntryResponse response = handleRemoteExceptionWithRetry((service) -> service.getKeyEntry(descriptor));
+
+        return PropImitationHooks.onGetKeyEntry(response);
     }
 
     /**
